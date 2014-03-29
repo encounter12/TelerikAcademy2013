@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML forms</title>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <section>
+            <article>
+                <form id="registration-form" method="post" action="#">
+                    <ul>
+                        <li>
+                            <fieldset>
+                                <legend>Personal information</legend>
+                                <li>
+                                    <label for="fn">First name:</label>
+                                    <input type="text" name="firstname" id="fn" placeholder="type first name here" required="required">
+                                </li>
+                                <li>
+                                    <label for="ln">Last name:</label>
+                                    <input type="text" name="lastname" id="ln" value="type last name here" onblur="if (this.value=='') this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''">
+                                </li>
+                                <li>
+                                    <label for="sex">Gender:</label>
+                                    <input type="radio" name="gender" id="sex" value="male">Male
+                                    <input type="radio" name="gender" id="sex" value="female">Female
+                                </li>
+                                <li>
+                                    <label for="birthdate">Date of Birth:</label>
+                                    <input type="date" id="birthdate" required="required">
+                                </li>
+                                <li>
+                                    <label for="mail">Email:</label>
+                                    <input type="email" id="mail" placeholder="type your email here" required="required">
+                                </li>
+                                <li>
+                                    <label for="pw">Password:</label>
+                                    <input type="password" name="password" id="pw">
+                                </li>
+                                <li>
+                                    <label for="pw-confirm">Confirm Password:</label>
+                                    <input type="password" name="password" id="pw-confirm">
+                                </li>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <fieldset>
+                                <legend>Choose your courses</legend>
+                                <ul id="courses">
+                                    <li>
+                                        <label for="csharp">C# Introduction</label>
+                                        <input type="checkbox" name="course" id="csharp">
+                                    </li>
+                                    <li>
+                                        <label for="dotnet">MS.NET</label>
+                                        <input type="checkbox" name="course" id="dotnet">
+                                    </li>
+                                    <li>
+                                        <label for="asp">ASP.NET</label>
+                                        <input type="checkbox" name="course" id="asp">
+                                    </li>
+                                    <li>
+                                        <label for="html">HTML</label>
+                                        <input type="checkbox" name="course" id="html">
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <label for="courseDates">Choose course start month:</label> 
+                            <select name="courseDates" id="courseDates">
+                                <option value="September 2014" selected="selected">September 2014</option>
+                                <option value="March 2014">March 2014</option>
+                                <option value="June 2014">June 2014</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="applicationType">Select products that you will use:</label> 
+                            <select name="softwareApplications" multiple="multiple" id="applicationType">
+                                <option value="MS Visual Studio Professional">MS Visual Studio Professional</option>
+                                <option value="Notepad++">Notepad++</option>
+                                <option value="Adobe Dreamweaver">Adobe Dreamweaver</option>
+                                <option value="MS WebMatrix">MS WebMatrix</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="comments">Comment:</label>
+                            <textarea name="comments" id="comments" placeholder="Type your comments here"></textarea>
+                        </li>
+                        <li>
+                            <input type="reset" name="resetBtn" value="Clear">
+                            <input type="submit" value="Submit">
+                        </li>
+                    </ul>
+                </form>
+            </article>
+        </section>
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+body
+{
+    font-family: Calibri;
+}
+
+nav ul
+{
+    margin: 5px auto;
+    width: 450px;
+}
+
+nav ul li
+{
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 2px;
+    font-size: 1.6em;
+}
+
+nav ul:after 
+{
+    clear:both;
+	display:block;
+    content:"";
+}
+
+#wrapper
+{
+    width: 900px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+#laptops-container
+{
+    width: 600px;
+    height: 520px;
+    margin: 10px 8px;
+    float: left;
+}
+
+nav ul, #laptops-container, #parameters
+{
+    border: 1px dashed gray;
+}
+
+#laptops-container article
+{
+    border: 1px dashed gray;
+    width: 280px;
+    height: 150px;
+    margin: 8px;
+    float: left;
+}
+
+#laptops-container img
+{
+    width: 140px;
+    height: 87px;
+    margin: 10px;
+}
+
+
+#parameters
+{
+    position: relative;
+    width: 262px;
+    height: 520px;
+    margin: 10px 8px;
+    float: right;
+}
+
+#parameters form
+{
+    height: 320px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    border: 1px dashed gray;
+}
+
+#parameters input[type="range"]
+{
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 20px;
+}
+
+#laptops-container article h3
+{
+    margin-top: -14px;
+    text-align: center;
+    font-weight: normal;
+}

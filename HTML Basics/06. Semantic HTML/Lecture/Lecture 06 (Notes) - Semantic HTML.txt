@@ -1,0 +1,13 @@
+CSS Zen Garden
+
+Disable all styles: 
+pendule for Chrome
+web developer for Firefox
+
+www.ro.me
+
+Pavel Kolev HTML5 Snippets
+
+w3c validator
+
+The global structure of an HTML element

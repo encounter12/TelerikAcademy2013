@@ -1,0 +1,31 @@
+body
+{
+    font-family: Calibri;
+}
+
+table 
+{
+	background-color: #FFF675;
+	border-radius: 5px;
+	border-collapse: collapse;
+}
+
+table, th, td
+{
+	border: 1px solid gray;
+	padding: 1px 6px;
+}
+
+table th
+{
+	text-align: left;
+	width: 180px;
+	background-color: #CCCA00;
+}
+
+footer
+{	
+	font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+}
+

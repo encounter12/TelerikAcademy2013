@@ -1,0 +1,12 @@
+HirePilot Ivan
+ManufactureTank Tank 100 100
+ManufactureFighter Fighter 150 200 StealthON
+Report Ivan
+Engage Ivan Tank
+Engage Ivan Fighter
+Report Ivan
+HirePilot Gosho
+Report Gosho
+Engage Gosho Tank
+Engage Gosho Fighter
+Report Gosho

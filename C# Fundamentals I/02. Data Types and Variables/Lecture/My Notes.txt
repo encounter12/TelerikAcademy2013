@@ -1,0 +1,44 @@
+Refactoring - replacing variable name in every occurrence of the variable in the code. 
+
+Variable type: char
+
+----------------------------------------------------------------
+
+string input = "Hello World!";
+        char[] values = input.ToCharArray();
+        foreach (char letter in values)
+        {
+            // Get the integral value of the character. 
+            int value = Convert.ToInt32(letter);
+            // Convert the decimal value to a hexadecimal value in string form. 
+            string hexOutput = String.Format("{0:X}", value);
+            Console.WriteLine("Hexadecimal value of {0} is {1}", letter, hexOutput);
+        }
+----------------------------------------------------------------
+Escape sequences: 
+\t - insert tabulation between strings 
+\n - goes to new line after the symbol 
+
+----------------------------------------------------------------
+using System;
+
+class Objects
+{
+	static void Main()
+	{
+        var varFirstName = "Ivan";
+        var varLastName = "Ivanov";
+        Console.WriteLine(varFirstName + " " + varLastName);
+		object dataContainer = 5;
+		Console.Write("The value of dataContainer is: ");
+		Console.WriteLine(dataContainer);
+
+		dataContainer = "Five";
+		Console.Write("The value of dataContainer is: ");
+		Console.WriteLine(dataContainer);
+	}
+}
+----------------------------------------------------------------
+
+value
+

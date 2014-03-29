@@ -1,0 +1,52 @@
+HTML Test Design Analysis
+
+1. Web general questions (definitions, Web Infrastructure concepts)
+
+2. HTML general questions (definitions, basic concepts, html structure) 
+
+3. HTML Syntax general questions 
+
+3.1. Tags 
+
+3.1.1. Choose tag according to known function
+
+3.1.2. What is particular tag used for? 
+
+3.1.3. Choose a tag definition amongst a list of definitions
+
+3.1.2. Choose function according to displayed tag
+
+3.1.3. Group tags according to their function. Choose which group of tags have particular functionality (e.g. block or inline)
+
+3.1.4. Tags related to other tags. Which tags are related to a specific tag? 
+
+
+3.2. Attributes 
+
+3.2.1. What is the function of specific attribute 
+
+3.2.2. Which attribute implements given function
+
+3.2.3. Can an attribute be used with particular tag
+
+3.2.4. Can a tag have given attribute
+
+3.3. How to create HTML structural element (choose from list of different html code snippets) 
+
+- correct use 
+
+
+4. Find correct HTML code snippet according to image
+
+5. Find correct HTML attribute according to image 
+
+6. Search Engine Optimization 
+
+
+6.1. Semantic tags 
+
+6.2. HTML document structure
+
+6.3. Web ontology - microdata (schema.org), rich snippets, RDF, RDFa, OWL
+
+ 

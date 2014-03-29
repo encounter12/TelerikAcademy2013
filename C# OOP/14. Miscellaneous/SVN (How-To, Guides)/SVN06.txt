@@ -1,0 +1,44 @@
+Имаш 3 основни варианта за работа с SVN:
+1. Инсталиране на TortoiseSVN и комитване извън Visual Studio 
+2. Инсталиране на плъгин за Visual Studio (например: http://ankhsvn.open.collab.net/) и комитване директно от Visual Studio 
+3. Чрез инсталация на SVN и бинарните файлове за работа с конзолата , комитваш извън Visual Studio с команди
+
+----------------------------------------------------------------
+
+трябва да си генерираш парола на: https://code.google.com/p/team-kyanite/source/checkout
+[8:56:36 PM] Ivo: When prompted, enter your generated googlecode.com password.
+[8:56:43 PM] Ivo: кликваш на password
+
+-----------------
+
+Connect a project to AnkhSVN
+[9:06:10 PM] Ivo: When you have a different source control system set as your default for VS.NET, and you want to start using AnkhSVN, the first step is to "connect" to AnkhSVN.
+
+    Open the project in Solution Explorer.
+    From the File menu in Visual Studio, select Subversion > Change Source Control .
+    In the Change Source Control window, select the row containing your project or solution, and click Connect.
+    Click OK.
+    
+    
+    
+    https://team-kyanite.googlecode.com/svn/
+
+    
+    ----------------
+
+1. Дясно копче на Solution-a - Update solution to latest version 
+2. Правиш си промени по Solution-a 
+
+Точка 3 е препоръчителна, но не е задължителна: 
+3. Дясно копче на променените от теб файлове (те трябва да са с червено квадратче) - Show Changes 
+
+4. Aко има конфликт го разрешаваш 
+
+5. Дясно копче на Solution - Commit Solution Changes 
+
+
+
+
+
+    
+    

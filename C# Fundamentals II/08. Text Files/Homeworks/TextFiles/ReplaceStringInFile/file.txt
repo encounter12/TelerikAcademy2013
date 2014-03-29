@@ -1,0 +1,2 @@
+Start string will be replaced with finish string.
+finishup lorem ipsum dolor sit amet.

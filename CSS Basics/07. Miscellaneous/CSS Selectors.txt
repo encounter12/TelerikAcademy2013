@@ -1,0 +1,21 @@
+Adjacent Sibling Combinator
+Descendant selectors
+Child selectors
+A child selector matches when an element is the child of some element. A child selector is made up of two or more selectors separated by ">".
+
+Pseudo-classes
+CSS :hover Selector 
+
+Pseudo-elements
+
+:first-line
+:before
+:after
+:root
+:first-child
+:nth-child
+
+------------------
+properties: 
+text-transform
+content

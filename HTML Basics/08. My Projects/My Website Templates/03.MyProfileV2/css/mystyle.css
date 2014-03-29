@@ -1,0 +1,192 @@
+/*html { margin:0; padding:0; width:100%; height: 100%;}*/
+/*body{margin:0; padding:0; height:100%; width: 100%; text-align:center;}*/
+/*body { background: #7FFFD4;font: 12px/18px Arial, Verdana, sans-serif;color: #000;margin: 0;}*/
+
+
+body{
+    background: #ADD8E6;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    width:100%}
+
+
+
+/*Displays block on the left side*/
+
+
+
+#header {
+    margin:10px;  
+    height: 40px;
+    border: 1px dashed #333;
+
+}
+
+#nav ul
+{
+	list-style-type:none;
+	display:block;	
+}
+
+#nav ul li
+{
+	float:left;
+	margin: 5px;
+	padding:5px;
+}
+#nav ul:after
+{
+	clear:both;
+	display:block;
+	content:"";
+}
+
+#aside
+{
+	float:right;
+	width:10%;
+}
+
+#aside ul li
+{
+	font-size:1.5em;
+	margin:5px;
+	padding:5px;
+}
+
+#section{
+    margin:10px;
+    width:1000px;
+    border:1px dashed #333;
+    }
+
+#article1{
+    margin:10px; 
+    padding:10px;	
+	text-align:left;
+	border:1px dashed #333;
+    }
+
+#article2{
+    margin:10px; 
+    padding:10px;	
+	text-align:left;
+	border:1px dashed #333;
+    }
+
+
+#footer {
+    margin:10px;  
+    height: 30px;
+    border: 1px dashed #333;
+
+}
+
+
+
+/*Displays block on the left side*/
+
+/*
+#main-old0{
+	width: 700px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+*/
+
+
+
+/*Centers block with some default height*/
+
+/*
+#main-old1{
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+*/
+
+/*Centers block, but block height is greater (than the page height)*/
+
+/*#main-old2{
+	width: 700px;
+	height:1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+*/
+
+/*Displays block on the left side with margin-right auto*/
+
+/*#main-old3{
+	width: 700px;
+	margin-left: 2%;
+	margin-right: auto;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+*/
+	
+/*Positions block to the Left with fixed width and height*/
+
+/*#main-old4{
+	height:600px;
+	width:800px;
+	text-align:left;
+	padding:15px;
+	margin:20px;
+	border:1px dashed #333;
+    }
+*/
+
+/*Centers block with fixed width and margin:0px auto*/
+
+/*#main-old5{
+	width:800px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+    }
+*/
+
+/*This code fixes the main section to fullscreen overlaping the header and nav elements. Such code could cause various issues, that is why absolute position is rarely used*/
+
+/*#main-old6{ 
+	position:absolute;
+    top:0;
+    left:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+*/
+
+/*This code fixes the main section to the right extending the window width. Such code could cause various issues, that is why absolute position is rarely used*/    
+
+/*#main-old7{ 
+	position:absolute;
+	width:80%;
+	height:90%;
+	margin:0;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+*/
+
+

@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using TeamKyanite.SchoolObjects;
+
+namespace TeamKyanite
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            using (SchoolDatabaseContext context = new SchoolDatabaseContext())
+            {
+
+                if (context.Database.Exists() == false)
+                {
+                    School school = SchoolTest.CreateSchool();
+                    context.Schools.Add(school);
+                    context.SaveChanges();
+                    MessageBox.Show("School database created");
+                }
+                else
+                {
+                    MessageBox.Show("School database already exists");
+                }            
+            }
+
+
+        }
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("To be implemented");
+        }        
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            SchoolClassesWindow classesListWindow = new SchoolClassesWindow();
+            classesListWindow.ShowDialog();
+
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            AllStudentsWindow allStudentsListWindow = new AllStudentsWindow();
+            allStudentsListWindow.ShowDialog();
+        }
+
+        private void Button5_Click(object sender, RoutedEventArgs e)
+        {
+            using (SchoolDatabaseContext context = new SchoolDatabaseContext())
+            {
+                if (context.Database.Exists() == true)
+                {
+                    context.Database.Delete();
+                    MessageBox.Show("Whole database deleted");
+                }
+                else
+                {
+                    MessageBox.Show("There is no database created");
+                }
+                              
+            }            
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+    }
+}

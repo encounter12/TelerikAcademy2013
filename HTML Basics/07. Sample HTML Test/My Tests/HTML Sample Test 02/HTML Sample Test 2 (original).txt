@@ -1,0 +1,823 @@
+1. Which of the code snippets below is syntactically correct?
+
+A. 
+
+<table>
+    <thead>
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>D<td><td>E</td><td>F</td>
+        </tr>
+        <tr>
+            <td>G</td><td>H</td><td>I</td>
+        </tr>
+        <tr>
+            <td>J</td><td>K</td><td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+B. 
+
+
+<table>
+    <thead>
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td>M</td><td>N</td><td>O</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr><td>D</td><td>E</td><td>F</td>
+        </tr>
+        <tr>
+            <td>G</td><td>H</td><td>I</td>
+        </tr>
+        <tr>
+            <td>J</td><td>K</td><td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+
+C. 
+
+<table>
+    <thead>
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+    </thead>
+    <tfooter>
+        <tr>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+        </tr>
+    </tfooter>
+    <tbody>
+        <tr>
+            <td>D</td><td>E</td><td>F</td>
+        </tr>
+        <tr>
+            <td>G</td><td>H</td><td>I</td>
+        </tr>
+        <tr>
+            <td>J</td><td>K</td><td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+D. 
+<table>
+    <thead>
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+    </thead>
+    <tfoot>
+        <tr><td>M</td><td/>N</td><td>O</td></tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>D</td><td>E</td><td>F</td>
+        </tr>
+        <tr>
+            <td>G</td><td>H</td><td>I</td>
+        </tr>
+        <tr>
+            <td>J</td><td>K</td><td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+Correct Answer: B. 
+
+
+2. Which of the HTML codes below displays the table from the picture (on the right)?
+
+
+A. 
+
+<table>
+    <thead>
+        <tr><th>Name</th><th>Subjects</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Biology</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Michael Jordan</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>History</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+B. 
+
+<table>
+    <thead>
+        <tr><th>Name</th><th>Subjects</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Biology</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Michael Jordan</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>History</td>
+                        <td>Literature</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+C. 
+
+<table>
+    <thead>
+        <tr><th>Name</th><th>Subjects</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Biology</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+D. 
+
+<table>
+    <thead>
+        <tr><td>Name</td><td>Subjects</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Biology</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Michael Jordan</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>History</td>
+                        <td>Literature</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+3. Which is the missing tag from the code? 
+
+<table>
+    <thead><tr><th>A</th>
+        <th>B</th><th>C</th><th>D</th></tr>
+    </thead>
+    <tfoot>
+        <tr><td>Y</td><td>Z</td><td>A</td><td>B</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>E</td><td>F</td><td>G</td><td>H</td></tr><tr>
+                <td>I</td><td>J</td><td>K<td>L</td></tr>
+        <tr><td>M
+            </td><td>N</td><td>O</td><td>P</td>
+        </tr>
+        <tr><td>Q</td>
+            <td>R</td>
+            <td>S</td><td>T</td></tr>
+        <tr>
+            <td>U</td>
+            <td>V</td><td>W</td>
+            <td>X</td>
+        </tr>
+    </tbody>
+</table>
+
+A. <td>
+B. </td>
+C. <tr>
+D. </tr>
+E. <th>
+F. </th>
+
+
+Correct answer: B. </td>
+
+4. Which of the below is true? 
+
+<thead> should be below <tbody>
+<tbody> should be above <thead>
+<tfoot> should be above <tbody>
+<tfoot> should be above <thead>
+
+Correct Answer: B. 
+
+
+5. Which of the below are the correct tags and order in a table? 
+
+
+A. 
+<thead><tr><th></th></tr></thead>
+<tbody><tr><td></td></tr></tbody>
+<tfoot><tr><td></td></tr></tfoot>
+
+B. 
+<thead><tr><td></td></tr></thead>
+<tfoot><tr><td></td></tr></tfoot>
+<tbody><tr><td></td></tr></tbody>
+
+C. 
+<thead><tr><th></th></tr></thead>
+<tbody><tr><td></td></tr></tbody>
+<tfoot><tr><td></td></tr></tfoot>
+
+D. 
+<thead><tr><th></th></tr></thead> 
+<tfoot><tr><td></td></tr></tfoot>
+<tbody><tr><td></td></tr></tbody>
+
+E. 
+<thead><tr><th></th></tr></thead>
+<tfoot><tr><th></th></tr></tfoot>
+<tbody><tr><td></td></tr></tbody>
+
+
+Correct answer: D. 
+
+
+6. How many rows can be nested in <thead></thead>? 
+
+A. not more than 1 row
+B. 2 rows 
+C. 3 rows
+D. There is no limitation
+E. there is no <thead> tag
+
+
+7. The <colgroup> and <col> tags are used for: 
+
+A. grouping all table cells into columns and displaying them within browser
+B. hiding columns
+C. specifying table columns width
+D. storing meta information for each column within a table 
+E. styling the table columns
+
+
+8. The colgroup element should be inserted: 
+
+A. before any caption, thead, tbody, tfoot and tr elements
+B. after any caption and before any thead, tbody, tfoot and tr elements 
+C. after any thead, tbody, tfoot and tr elements
+D. in the first tr element
+
+
+Correct answer: B. 
+
+
+9. Which one of the below code snippets has the right syntax: 
+
+A. 
+
+<colgroup>
+    <cols />
+    <cols />
+    <cols />
+</colgroup>
+
+B. 
+
+<colgroup>
+    <column />
+    <column />
+    <column />
+</colgroup>
+
+C. 
+
+<col>
+    <colgroup />
+    <colgroup />
+    <colgroup />
+</col>
+
+D. 
+
+<colgroup>
+    <col />
+    <col />
+    <col />
+</colgroup>
+
+
+Correct answer: D 
+
+
+10. Which one of the below list is true for table and colgroup elements? 
+
+A. a table can contain only one colgroup element
+B. a table cannot contain colgroup element
+C. a table can contain more than one colgroup elements
+D. a table can contain at most 2 colgroup elements 
+
+Correct Answer: C. 
+
+
+11. Which one of the below code snippets renders the picture on the right? 
+
+
+
+A. 
+
+<form name="application" method="post" action="apply.aspx">
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn" name="firstname"/><br />
+        <label for="ln">Last Name:</label>
+        <input type="text" id="ln" name="lastname" /><br />
+        Gender: 
+        <input type="radio" id="male" name="gender"/>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender"/>
+        <label for="female">Female</label><br />
+        <label for="bday">Birth date:</label>
+        <input type="date" id="bday" name="birthdate" />
+    </fieldset>
+    <fieldset>
+        <legend>Desired Occupation</legend>
+        <label for="desiredjob">Choose a job:</label><br />
+        <select id="desiredjob">
+            <option value="aspdev">ASP.NET Developer</option>
+            <option value="frontenddev">Front-End Developer</option>
+            <option value="serveradmin">Server Administrator</option>
+            <option value="javadev">Java Developer</option>
+        </select><br />
+        <label for="comment">Expectations for the job:</label><br />
+        <textarea id="comment" rows="8" cols="40"></textarea>
+    </fieldset>
+</form>
+
+B. 
+
+<form name="application" method="post" action="apply.aspx">
+<fieldset>
+    <legend>Personal Details</legend>
+    <label for="fn">First Name:</label>
+    <input type="text" id="fn" name="firstname"/><br />
+    <label for="ln">Last Name:</label>
+    <input type="text" id="ln" name="lastname" /><br />
+    Gender: 
+    <input type="radio" id="male" name="gender"/>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender"/>
+    <label for="female">Female</label><br />
+    <label for="bday">Birth date:</label>
+    <input type="date" id="bday" name="birthdate" />
+</fieldset>
+<fieldset>
+    <legend>Desired Occupation</legend>
+    <label for="desiredjob">Choose a job:</label><br />
+    <select id="desiredjob" multiple="multiple">
+        <option value="aspdev">ASP.NET Developer</option>
+        <option value="frontenddev">Front-End Developer</option>
+        <option value="serveradmin">Server Administrator</option>
+        <option value="javadev">Java Developer</option>
+    </select><br />
+    <label for="comment">Expectations for the job:</label><br />
+    <textarea id="comment" rows="8" cols="40"></textarea>
+</fieldset>
+
+C. 
+
+<form name="application" method="post" action="apply.aspx">
+    <label for="fn">First Name:</label>
+    <input type="text" id="fn" name="firstname"/><br />
+    <label for="ln">Last Name:</label>
+    <input type="text" id="ln" name="lastname" /><br />
+    Gender: 
+    <input type="radio" id="male" name="gender"/>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender"/>
+    <label for="female">Female</label><br />
+    <label for="bday">Birth date:</label>
+    <input type="date" id="bday" name="birthdate" />
+    <fieldset>
+        <legend>Desired Occupation</legend>
+        <label for="desiredjob">Choose a job:</label><br />
+        <select id="desiredjob">
+            <option value="aspdev">ASP.NET Developer</option>
+            <option value="frontenddev">Front-End Developer</option>
+            <option value="serveradmin">Server Administrator</option>
+            <option value="javadev">Java Developer</option>
+        </select><br />
+        <label for="comment">Expectations for the job:</label><br />
+        <textarea id="comment" rows="8" cols="40"></textarea>
+    </fieldset>
+</form>
+
+
+Answer: B. 
+
+
+
+
+12. Which of the listed below are inline elements: 
+
+
+1. fieldset
+2. input
+3. select
+4. textarea
+5. form
+
+A. 1,2,3,4
+B. 1,2,3
+C. 2,3,4
+D. 1,2,4
+E. 1,2,4,5
+
+
+Answer: C. 2,3,4
+
+
+13. The fieldset element is inline element? 
+
+A. true
+B. false
+
+
+14. Which one of the below specifies a regular expression that the <input> element's value is checked against? 
+
+A. placeholder
+B. regex
+C. pattern
+D. autocomplete
+E. regexpattern
+F. autofocus
+G. autopattern
+
+
+Correct answer: C. pattern
+
+
+15. The HTML5 input type="email" checks if the entered value is an email address pattern.
+
+A. True
+B. False
+
+
+
+16. Which attribute specifies a short hint that describes the expected value of an input field?
+
+A. pattern 
+B. placeholder 
+C. name
+D. selected
+E. type
+
+
+Correct Answer: B. placeholder
+
+
+17. To which tag is <legend> related? 
+
+A. <aside>
+B. <header>
+C. <p>
+D. <article>
+E. <nav>
+F. <fieldset>
+
+Answer: F. 
+
+
+
+18. What is wrong with the form code? 
+
+
+
+<form name="purchase" method="post" action="buy.aspx">
+    <fieldset>
+        <legend>Step 1</legend>
+        <label for="fn" required="required">First Name:</label>
+        <input type="text" id="fn" /><br />
+        <label for="ln" required="required">Last Name:</label>
+        <input type="text" id="ln" /><br />
+        <label for="prdlist">Select products:</label>
+        <select name="productslist" id="prdlist" multiple="multiple">
+            <option>Laptop</option>
+            <option selected="selected">Desktop</option>
+            <option>Accessories</option>
+            <option>External Hard disk drives</option>
+        </select>
+    </fieldset>
+</form>
+
+
+A. select does not have attribute multiple
+B. label does not have attribute required
+C. option does not have attribute selected
+D. forms attribute method cannot take value "post"
+
+
+Answer: B. label does not have attribute required 
+
+
+19. Which one is not true for the maxlength attribute: 
+
+
+A. it specifies the maximum number of characters allowed in <input type="text"> element.
+B. it specifies the maximum number of characters allowed in <textarea> element.
+C. it specifies the maximum number of characters allowed in <input type="password"> element.
+D. it specifies the maximum number of characters allowed in <p> element.
+E. it specifies the maximum number of characters allowed in <input type="email"> element.
+
+Answer: D. it specifies the maximum number of characters allowed in <p> element.
+
+
+20. The three dots below should be replaced with which tag: 
+
+<!DOCTYPE html>
+<html lang="en">
+<...>
+    <meta charset="utf-8" />
+    <title>This is the webpage title</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
+</...>
+<body>
+
+</body>
+</html>
+
+
+A. header
+B. head
+C. nav
+D. footer
+E. aside
+
+
+
+
+
+21. The three dots should be replaced with which of the tags (specify them in the order)
+
+<...>
+    <...>
+        This is the page header
+    </...>
+    <...>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </...>
+    <...>
+        <...>
+            <h2>Article Title</h2>
+            <...>
+                This is article paragraph with some text.
+            </...>
+        </...>
+    </...>
+    <...>
+        This is the page footer
+    </...>
+</...>
+
+
+A. html, header, nav, section, article, p, footer
+B. nav, section, footer, p, article, body, header
+C. body, header, section, nav, article, p, footer
+D. body, header, nav, section, article, p, footer
+E. footer, header, section, article, p, html, nav
+
+
+
+22. Which of the code snippets below is the syntactically correct?
+
+
+A. 
+
+<head>
+    <meta charset="utf-8" />
+    <title>Webpage title</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
+    <script type="text/javascript" src="js/scripts.js" />
+</head>
+
+B. 
+
+<head>
+    <meta charset="utf-8" />
+    <title>Webpage title</title>
+    <link relative="stylesheet" type="text/css" href="css/mystyles.css" />
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+C. 
+
+<head>
+    <meta charset="utf-8" />
+    <title>Webpage title</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+
+D. 
+
+<head>
+    <meta char="utf-8" />
+    <title>Webpage title</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+
+Answer: C. 
+
+
+23. The declaration of the <meta> tag should fit completely within the first:
+
+A. 1024 bytes at the start of the file
+B. 512 bytes at the start of the file
+C. 256 bytes at the start of the file
+D. 2056 bytes at the start of the file
+
+
+
+24. Which one below is not client-server architecture?
+
+A. FTP Server (ftpd) - FTP client (FileZilla) 
+B. MS Exchange Server - MS Outlook
+C. Web server (IIS / Apache) - web browser 
+D. P2P
+E. SMB Server (Windows) - SMB Client (Windows)
+
+
+
+25. From the list below which one is not a cloud architecture?
+
+A. Infrastructure as a Service (IaaS)
+B. Shared hosting
+C. Platform as a Service (PaaS)
+D. Software as a Service (SaaS)
+
+
+26. From the list below which ones are commercial cloud services: 
+
+1. Amazon Web Services (AWS)
+2. Google App Engine
+3. Heroku
+4. MS SharePoint
+5. MS Windows Azure
+
+A. 1,2,4,5
+B. 2,4,5
+C. 1,2,3,5
+D. 1,4,5
+
+Answer: C. 
+
+
+27. Which version of Internet Explorer started supporting the placeholder attribute? 
+
+A. Internet Explorer 8
+B. Internet Explorer 9
+C. Internet Explorer 10
+D. Internet Explorer 11
+
+Correct answer: C. Internet Explorer 10
+
+
+28. The below description defines which version of the Web?
+
+Definition: Collaborative, Group Participation, Two-Way Communication, Active Involvement, User-Generated Content & Blogging
+
+A. Web 1.0
+B. Web 2.0
+C. Web 3.0
+
+
+29. Which tag is used for a specifying list of terms and their definitions?  
+
+A. <td>
+B. <dl>
+C. <article>
+D. <section>
+E. <form>
+
+
+30. Which of the below is true for Web server? 
+
+1. computer program that delivers web pages to clients
+2. computer program that provides database services to other computer programs or computers
+3. communication between client and server is done via HTTP protocol
+4. computer attached to a network that has the primary purpose of providing a location for shared disk access
+5. Every Web server has an IP address and possibly a domain name
+
+
+
+A. 1,2,3
+B. 2,4,5
+C. 1,3,5
+D. 1,2,3,4
+
+
+
+
+
+-------------
+
+
+27. Which of the below is true for Uniform Resource Identifier? 
+
+1. Compact sequence of characters that identifies an abstract or physical resource.
+2. 
+
+
+A.
+B.
+C.
+D. 
+
+
+
+
+
+
+28. From the list below which one is not true for permanent link (permalink)? 
+
+A. URL that points to a specific blog or forum entry after it has passed from the front page to the archives.
+B. often simply rendered so as to be human-readable.
+C. 
+
+
+

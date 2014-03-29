@@ -1,0 +1,63 @@
+Pilot Ivan hired
+Tank Tank manufactured - attack: 100; defense: 100
+Fighter Fighter manufactured - attack: 150; defense: 90; stealth: ON
+Fighter SecondFighter manufactured - attack: 180; defense: 90; stealth: OFF
+Ivan - no machines
+Pilot Ivan engaged machine Tank
+Pilot Ivan engaged machine Fighter
+Ivan - 2 machines
+- Tank
+ *Type: Tank
+ *Health: 100
+ *Attack: 60
+ *Defense: 130
+ *Targets: None
+ *Defense: ON
+- Fighter
+ *Type: Fighter
+ *Health: 200
+ *Attack: 150
+ *Defense: 90
+ *Targets: None
+ *Stealth: ON
+Pilot Gosho hired
+Gosho - no machines
+Machine Tank is already occupied
+Machine Fighter is already occupied
+Pilot Gosho engaged machine SecondFighter
+Tank Tank cannot attack stealth fighter Fighter
+Machine SecondFighter was attacked by machine Tank - current health: 200
+Tank Tank toggled defense mode
+Machine Fighter does not support this operation
+Pilot Toshko could not be found
+Machine SecondFighter does not support this operation
+Tank Tank cannot attack stealth fighter Fighter
+Machine SecondFighter was attacked by machine Tank - current health: 190
+Fighter Fighter toggled stealth mode
+Fighter SecondFighter toggled stealth mode
+Machine Tank does not support this operation
+Machine Tank was attacked by machine Fighter - current health: 50
+Machine Tank was attacked by machine SecondFighter - current health: 0
+Gosho - 1 machine
+- SecondFighter
+ *Type: Fighter
+ *Health: 190
+ *Attack: 180
+ *Defense: 90
+ *Targets: Tank
+ *Stealth: ON
+Ivan - 2 machines
+- Tank
+ *Type: Tank
+ *Health: 0
+ *Attack: 100
+ *Defense: 100
+ *Targets: SecondFighter, SecondFighter
+ *Defense: OFF
+- Fighter
+ *Type: Fighter
+ *Health: 200
+ *Attack: 150
+ *Defense: 90
+ *Targets: Tank
+ *Stealth: OFF

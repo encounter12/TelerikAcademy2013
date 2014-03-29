@@ -1,0 +1,593 @@
+HTML Test
+
+1. Which element has been displayed on the image below? 
+
+A. <input type="text" value="Terms and Conditions...">
+
+B. <textarea rows="10" cols="30">Terms and Conditions...</textarea>
+
+C. <input type="submit" value="Terms and Conditions...">
+
+D. <input type="password" name="Terms and Conditions...">
+
+E. <input type="textarea" value="Terms and Conditions...">
+
+F. None of the above
+
+
+Answer: B. <textarea rows="10" cols="30">Terms and Conditions...</textarea>
+
+
+Displays multi-line text field. The text between the opening and closing tag appears in the text field.
+
+----------------------------------------------------------------------------
+
+2. Which of the following is not a form element?
+
+A. <input type="button">
+
+B. <input type="slider">
+
+C. <input type="image">
+
+D. <input type="text">
+
+E. <input type="email">
+
+
+Answer: B. <input type="slider">. There is no input with type attribute value "slider"
+
+----------------------------------------------------------------------------
+
+3. Radio buttons could be grouped allowing only one to be selected by assigning the same value to which attribute?
+
+A. value
+B. name
+C. required
+D. placeholder
+
+Answer: B. name
+
+----------------------------------------------------------------------------
+
+4. Labels can be associated with text fields by: 
+
+A. setting the same value of label's "for" attribute and input "id" attribute
+
+B. setting the same value of label's "for" attribute and input "name" attribute
+
+C. setting the same value of label's "for" attribute and input "value" attribute
+
+D. label cannot be linked to text field
+
+
+Answer: A. 
+
+----------------------------------------------------------------------------
+
+5. What is wrong with the code? 
+
+
+A. <article> cannot contain <header> element
+B. <!DOCTYPE html5> should be <!DOCTYPE html>
+C. Missing closing tag </meta>
+D. <nav> should be inside the page main <header>
+E. Code is completely fine
+
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home Page</title>
+    </head>
+    <body>
+        <header>
+            Page Header
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <section>    
+            <article>
+                <header>
+                    <h2>Heading</h2>
+                </header>
+                <p>This is a paragraph with some text</p>
+                <p>This is a paragraph with some text</p>
+            </article>
+        </section>
+        <footer>
+            Page Header
+        </footer>
+    </body>
+<html>
+
+
+Answer: B. <!DOCTYPE html5> should be <!DOCTYPE html>
+
+----------------------------------------------------------------------------
+
+6. Which tag displays drop-down list allowing multiple selections: 
+
+A. <input type="drop-down" option="multiple">
+B. <select name="Cities">
+C. <selection multiple="multiple">
+D. <select name="Cities" multiple="multiple">
+E. <select name="Cities" type="multiple">
+F. None of the above
+
+Answer: D. <select name="Cities" multiple="multiple"> 
+
+----------------------------------------------------------------------------
+
+7. Which one is the most used web server in the world? 
+
+A. Internet Information Services (IIS)
+B. Apache 
+C. nginx
+D. lighttpd
+E. Google Web Server (GWS)
+
+Answer: B. Apache  
+
+----------------------------------------------------------------------------
+8. The three dots should be replaced with which of the tags below: 
+
+<table>
+    <thead><tr><...>First Name</...><...>Last Name</...></tr></thead>
+    <tbody>
+        <tr><td>John</td><td>Doe</td></tr>
+        <tr><td>Michael</td><td>Jordan</td></tr>
+        <tr><td>Albert</td><td>Einstein</td></tr>
+    </tbody>
+</table>
+
+A. <tr></tr>,<tr></tr>
+B. <td></td>,<td></td>
+C. <theader>,</theader>
+D. <th></th>,<th></th>
+E. <trow></trow>,<trow></trow>
+F. <tf></tf>,<tf></tf>
+  
+
+Answer: D. <th></th>,<th></th>
+
+----------------------------------------------------------------------------
+
+9. Which of the tags below are semantic HTML5 tags: 
+
+1. <div>
+2. <nav>
+3. <span>
+4. <section>
+5. <meta>
+6. <header>
+7. <audio>
+
+A. 1,2,4
+B. 3,5,6
+C. 2,5,7 
+D. 2,4,6,7
+
+Answer: D
+
+---------------------------------------------------------------------------- 
+
+10. The <colgroup> tag is outdated in HTML5: 
+
+A. Yes
+B. No 
+
+---------------------------------------------------------------------------- 
+
+11. What does an HTML element consist of? 
+
+A. opening tag, attributes, content and closing tag 
+B. opening tag
+C. closing tag
+D. the content between the opening and closing tag
+
+Answer: A. 
+
+---------------------------------------------------------------------------- 
+
+12. Which of the following are Web 3.0 semantic frameworks (technologies): 
+
+1. UML
+2. OWL
+3. RDF
+4. PDF
+5. Microformats
+6. RDFa
+
+
+A. 1,2,3,5
+B. 2,3,5
+C. 1,4,5
+D. 1,2,3,4,5
+E. 2,3,5,6
+
+Answer: E
+
+---------------------------------------------------------------------------- 
+
+13. What is microdata? 
+
+A. Metadata used in UML 
+B. Micro-databases on the web
+C. A way to label content to describe a specific type of information (e.g. reviews, person information, events) 
+D. HTML5 text editor
+E. None of the above
+
+Answer: C
+---------------------------------------------------------------------------- 
+
+
+14. Which of the below is not a new HTML5 attribute?
+
+A. autocomplete
+B. autofocus
+C. selected
+D. required 
+
+
+Answer: C
+
+----------------------------------------------------------------------------
+
+15. Which of the following is semantic HTML5 tag?
+
+A. <div>
+B. <span>
+C. <br>
+D. <hgroup>
+E. <hr>
+F. <b>
+
+Answer: 4
+
+
+---------------------------------------------------------------------------- 
+
+16. Do browsers render invalid HTML code? 
+
+A. Yes
+B. No
+
+
+---------------------------------------------------------------------------- 
+
+17. Which code snippet corresponds to the picture below?
+
+
+
+
+A. 
+
+<table>
+    <thead>
+        <tr><th>J</th><th>A</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>M</td><td rowspan="2">N</td><td>O</td></tr>
+        <tr><td>P</td><td>Q</td></tr>
+        <tr><td>R</td><td colspan="2">S</td></tr>
+    </tbody>
+</table>
+
+
+B. 
+
+<table>
+    <thead>
+        <tr><td colspan="2">J</td><td>A</td></tr>
+    </thead>
+    <tbody>
+        <tr><td>M</td><td rowspan="2">N</td><td>O</td></tr>
+        <tr><td>P</td><td>Q</td></tr>
+        <tr><td>R</td><td colspan="2">S</td></tr>
+    </tbody>
+</table>
+
+
+C. 
+
+<table>
+    <thead>
+        <tr><th colspan="2">J</th><th>A</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>M</td><td rowspan="2">N</td><td>O</td></tr>
+        <tr><td>P</td><td>Q</td></tr>
+        <tr><td>R</td><td colspan="2">S</td></tr>
+    </tbody>
+</table>
+
+
+D. 
+
+<table>
+    <thead>
+        <tr><th>J</th><th colspan="2">A</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>M</td><td rowspan="2">N</td><td>O</td></tr>
+        <tr><td>P</td><td>Q</td></tr>
+        <tr><td>R</td><td colspan="2">S</td></tr>
+    </tbody>
+</table>
+
+----------------------------------------------------------------------------
+
+18. YouTube video can be embedded in a website by using: 
+
+
+A. <frame>
+B. drag and drop
+C. <iframe>
+D. <frameset>
+E. <embed>
+
+----------------------------------------------------------------------------
+
+19. Which of the code snippets below implement HTML5 slider displaying its value above?
+*The value should be dynamically changing when moving the slider. 
+
+
+A. 
+
+<form method="get" action="#">
+    <label for="min-Price">Min Price:</label>
+    <output name="minPrice">500</output> USD
+    <input type="range" id="min-Price" min="250" max="750" step="50">
+<form>
+
+
+B. 
+
+<form method="get" action="#">
+    <label for="min-Price">Min Price:</label>
+    <output name="minPrice">500</output> USD
+<form>
+
+C. 
+
+<form method="get" action="#">
+    <label for="min-Price">Min Price:</label>
+    <output name="minPrice">500</output> USD
+    <input type="range" oninput="minPrice.value = this.value" id="min-Price" min="250" max="750" step="50">
+<form>
+
+D. 
+
+<form method="get" action="#">
+    <output name="minPrice">500</output> USD
+    <input type="range" oninput="minPrice.value = this.value" id="min-Price" min="250" max="750" step="50">
+<form>
+
+Answer: C
+
+----------------------------------------------------------------------------
+
+20. Which of the below is included in the HTML5 standard? 
+
+A. <iframe>
+B. <frameset>
+C. <p-frame>
+D. <frame>
+
+Answer A. <iframe> 
+
+----------------------------------------------------------------------------
+
+21. What is wrong with the code below? 
+
+
+<ol type="1">
+    <li>Item 1
+        <ol type="A"><li>Sub-item</li><li>Sub-item</li>
+    </ol>
+    </li>
+    <li>Item 2</li>
+    <li>Item 3
+        <ul type="circle"><li>Sub-item<li>Sub-item</li><li>Sub-item</li>
+    </ul>
+        </li>
+    <li>
+        Item 4</li>
+</ol>
+
+
+A. missing opening tag
+B. missing closing tag
+C. missing opening and closing tag
+D. ordered list cannot have such type
+E. unordered list cannot have such type
+F. Code is completely fine
+
+Answer: B. missing closing tag
+
+----------------------------------------------------------------------------
+
+22. In what sequence will the focus move across the text fields when pressing tab key? 
+
+*Each text field has a number displayed on the picture
+
+<form name="registration" method="post" action="register.aspx">
+    <label for="fn" name="firstname">First Name:</label>
+    <input type="text" id="fn" tabindex="4">
+    <label for="ln" name="lastname">Last Name:</label>
+    <input type="text" id="ln" tabindex="2"><br/>
+    Password:
+    <input type="password" required="required" tabindex="3"><br/>
+    Confirm Password:
+    <input type="password" required="required" tabindex="5"><br/>
+</form>
+
+A. 1,2,3,4
+B. 2,1,3,4
+C. 3,1,4,2
+D. 2,3,1,4
+E. None of the above
+
+Answer: D
+
+----------------------------------------------------------------------------
+
+23. Which of the HTML attributes are tag specific: 
+
+A. class
+B. id
+C. target
+D. style
+E. title
+F. name
+
+Answer: C. target
+
+----------------------------------------------------------------------------
+
+24. What does the value of target="_blank" do? 
+
+A. opens web page within the same browser tab
+B. opens web page in a new browser tab
+C. opens web page in new browser window
+D. displays blank area in the current window
+
+Answer: B. 
+
+----------------------------------------------------------------------------
+
+25. Which of the below is true for the Middle tier in 3 Tier architecture? 
+
+A. contains the system database 
+B. implements the business logic 
+C. implements the user interface
+D. allows P2P connection between clients 
+E. None of the above
+
+Answer: B. implements the business logic 
+
+----------------------------------------------------------------------------
+
+26. Form labels are: 
+
+A. both usability and accessibility feature
+B. only usability feature
+C. only accessibility feature
+D. used to create buttons in a form
+E. none of the above
+
+Answer: A. both usability and accessibility feature
+
+----------------------------------------------------------------------------
+
+27. Which tag is used to enclose a group of related form fields: 
+
+A. <legend>
+B. <input>
+C. <span>
+D. <fieldset>
+E. <div>
+
+
+Answer: D. <fieldset>
+
+----------------------------------------------------------------------------
+
+
+28. What is wrong with the code below?
+
+*There could be more than one correct answers. 
+
+<form name="registration" method="post" action="register.php">
+    <fieldset>
+        <legend>Personal information</legend>
+        <label for="fn">First name:</label>
+        <input type="text" id="fn" name="firstname"><br>
+        <label for="ln">Last name:</label>
+        <input type="text" id="ln" name="lastname"></input><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd"><br>
+        <label for="cnfpwd">Confirm password:</label>
+        <input type="password" id="cnfpwd"><br>
+    </fieldset>
+    <fieldset>
+        <legend>Study information</legend>
+        <label for="courses">Choose courses:</label><br>
+        <select name="schoolcourses" id="courses" multiple>
+            <option value="csharp" selected="selected">C#</option>
+            <option value="java">Java</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select><br/>
+        Education type:
+        <input type="radio" id="onsite" name="edutype">
+        <label for="onsite">Onsite</label>
+        <input type="radio" id="online" name="edutype">
+        <label for="online">Online</label>
+    </fieldset>
+</form>
+
+
+A. there should be closing tag: </input>
+B. there should not be closing tag: </input>
+C. <select multiple> should be: <select multiple="multiple">
+D. <legend> tag cannot be used in a form 
+E. Nothing is wrong with the code 
+
+
+----------------------------------------------------------------------------
+
+29. Which of the values below can the ul type attribute have? 
+
+*More than one answer
+
+1. circle
+2. ellipse
+3. disc
+4. tick
+5. square
+6. disk
+
+
+A. 1,2,4
+B. 2,3,6
+C. 1,2,5,6
+D. 1,3,5
+E. 1,2,3,4,5
+
+Answer: D. 
+
+----------------------------------------------------------------------------
+
+30. Which of the following is not true for "Infrastructure as a Service" (IaaS)? 
+
+A. IaaS provides a standardized virtual server
+B. Consumer configures the guest Operating System, software, and Database
+C. IaaS offers dynamic scaling of resources
+D. software delivery model in which software and associated data are centrally hosted on the cloud
+
+
+Answer: D. software delivery model in which software and associated data are centrally hosted on the cloud
+
+
+----------------------------------------------------------------------------
+
+
+
+31. Code displayed - missing several tags - which are they?
+
+32. Which of the below is Platform as a Service (could be more than one answer)? 
+
+A. LAMP
+B. Java
+C. XAMP
+D. Eclipse
+E. SVN
+

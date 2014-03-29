@@ -1,0 +1,22 @@
+<a> elements do not inherit color and decoration of parent elements.
+
+we can have two elements with the same classes, but cannot have two elements with the same id.
+
+<div id="mainContent" class="button menu gogo"> 
+</div>
+
+classes: button, menu, gogo
+
+#header + a {color:black;} - takes all the elements #header and "a" that are at the same level and assigns them the color property black
+
+p.post-text.special {font-weight: bold} - selects all the paragraphs that have class post-text and class special 
+
+Ex:
+<p class="post-text special">
+</p>
+
+
+reset margins and paddings 
+
+body, h1, p, ul, li {margin: 0; padding: 0; }
+

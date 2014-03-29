@@ -1,0 +1,38 @@
+﻿namespace TeamKyanite
+{
+    using System;
+    using System.Linq;
+    using System.Windows;
+
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            this.InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            var myForm = new StudentsData();
+            myForm.Show();
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Class created");
+        }   
+     
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("School objects modified");
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("School deleted");
+        }
+    }
+}

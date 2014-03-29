@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <head>
+    <body>
+        <form name="registration" method="post" action="register.php">
+            <fieldset>
+                <legend>Personal information</legend>
+                <label for="fn">First name:</label>
+                <input type="text" id="fn" name="firstname"><br>
+                <label for="ln">Last name:</label>
+                <input type="text" id="ln" name="lastname"></input><br>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd"><br>
+                <label for="cnfpwd">Confirm password:</label>
+                <input type="password" id="cnfpwd"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Study information</legend>
+                Choose courses:<br/>
+                <label for="courses">
+                <select name="schoolcourses" id="courses" multiple>
+                    <option value="csharp" selected="selected">C#</option>
+                    <option value="java">Java</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select><br/>
+                Education type:
+                <input type="radio" id="onsite" name="edutype">
+                <label for="onsite">Onsite</label>
+                <input type="radio" id="online" name="edutype">
+                <label for="online">Online</label>
+            </fieldset>
+        </form>
+    </body>
+</form>
+</html>

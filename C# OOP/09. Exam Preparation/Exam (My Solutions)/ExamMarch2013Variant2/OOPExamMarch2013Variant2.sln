@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HTMLRenderer", "HTMLRenderer\01.HTMLRenderer.csproj", "{353445C0-D206-4C03-AC09-86D82EFF9C3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.AcademyEcosystem", "AcademyEcosystem\02.AcademyEcosystem.csproj", "{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HTMLRendererBGCoder", "HTMLRendererBGCoder\01.HTMLRendererBGCoder.csproj", "{D7CF2939-1BB2-4910-9B15-988AE28EEF5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{353445C0-D206-4C03-AC09-86D82EFF9C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353445C0-D206-4C03-AC09-86D82EFF9C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353445C0-D206-4C03-AC09-86D82EFF9C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353445C0-D206-4C03-AC09-86D82EFF9C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D04BC7-F11B-43FF-A30B-58B68EBB7007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CF2939-1BB2-4910-9B15-988AE28EEF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CF2939-1BB2-4910-9B15-988AE28EEF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CF2939-1BB2-4910-9B15-988AE28EEF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CF2939-1BB2-4910-9B15-988AE28EEF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

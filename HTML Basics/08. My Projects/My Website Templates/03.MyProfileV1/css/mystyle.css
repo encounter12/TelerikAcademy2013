@@ -1,0 +1,98 @@
+html { margin:0; padding:0; width:100%; height: 100%;}
+body{ background: #ADD8E6;font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; margin:0; padding:0; height:100%; width: 100%; text-align:center;}
+/*body { background: #7FFFD4;font: 12px/18px Arial, Verdana, sans-serif;color: #000;margin: 0;}*/
+
+/*Centers block*/
+#main{
+	width: 700px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+	
+#main-old1{
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+
+#main-old2{
+	width: 700px;
+	height:1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+
+#main-old3{
+	width: 700px;
+	margin-left: 2%;
+	margin-right: auto;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+	
+/*Positions block to the Left*/
+#main-old4{
+	height:600px;
+	width:800px;
+	text-align:left;
+	padding:15px;
+	margin:20px;
+	border:1px dashed #333;
+    }
+
+/*Centering: Auto-width Margins*/
+#main-old5{
+	width:800px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+    }
+
+#main-old6{ 
+	position:absolute;
+    top:0;
+    left:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+    
+#main-old7{ 
+	position:absolute;
+	width:80%;
+	height:90%;
+	margin:0;
+	padding:0;
+	text-align:left;
+	border:1px dashed #333;
+    }
+	
+/*--------------------------------------------*/
+
+.title{
+	position: relative;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding:1%;
+	text-align:left;
+	border:1px dashed #333;
+}
+

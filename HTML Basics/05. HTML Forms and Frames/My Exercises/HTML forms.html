@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<form name="myAuthForm" method="get" action="apply-now.php">
+    <fieldset>
+        <legend>Authentication</legend>
+        <label for="Username">Username:</label>    
+        <input type="text" name="Username" value="enter username here.." />
+        <input type="hidden" name="Account" value="This is a hidden text field" />
+
+   
+        <br />
+        <label for="pass">Password:</label>
+        <input type="password" name="pass"/>
+        <br />
+        <p>Choose title:</p>
+        <label for="Mr">Mr.</label>
+        <input type="radio" name="title" value="Mr" id="Mr"/>
+        <br />
+        <label for="Ms">Ms.</label>
+        <input type="radio" name="title" value="Ms" id="Ms"/>
+             
+        <p>Enter text:</p>
+        <textarea name="Comments">This is a multi-line text field</textarea>
+
+        <fieldset>
+            <legend>Food preferences</legend>
+            <p>Please mark the cuisine that you like:</p>
+            <label for="chin">Chinese</label>
+            <input type="checkbox" name="food" value="Chinese" id="chin"/>
+            <br />
+            <label for="fr">French</label>
+            <input type="checkbox" name="food" value="French" id="fr"/>
+            <br />
+            <label for="it">Italian</label>
+            <input type="checkbox" name="food" value="Italian" id="it"/>                      
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <select name="gender">
+                <option value="Value 1" selected="selected">Male</option>
+                <option value="Value 2">Female</option>
+                <option value="Value 3">Other</option>
+            </select>
+        </fieldset>
+        
+        <br />
+        <p>Please choose hardware:</p>
+        <select name="hardware" multiple="multiple">
+            <option value="myvalue1" selected="selected">mouse</option>
+            <option value="myvalue2">hardware</option>
+        </select>
+        <br />
+        <label for="mail">Email:</label>
+        <input type="email" id="Email1" required="true" pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}"  placeholder="sample@email.com"/>
+         <br />
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" required="true" pattern="\+[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}\-[0-9]{2}"/>
+        <br />
+        
+        <input type="submit" value="Submit" />
+        <input type="reset" name="resetBtn" value="Reset the form" />
+        <br />
+    </fieldset>
+    
+    <fieldset>
+        <legend>Client Details</legend>
+        <label for="hdd">Price Range:</label>
+        <input type="range" min="0" max="100" name="hdd"/>
+        <br />
+        <label for="mem">Memory:</label>    
+        <input type="number" min="0" max="100" name="mem"/>
+        <br />
+
+    </fieldset>
+    
+    
+</form>    
+
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+td
+{ 
+	border-collapse: collapse;
+	border: 1px solid #A4ABB2;
+	padding: 4px 2px;
+	padding-left: 5px;
+}
+table
+{
+	border-collapse: collapse;			
+	font-family:"tahoma", Sans-serif;
+	font-size: 9pt;
+	color: black;
+}
+#topTd
+{
+	border: 1px solid #A4ABB2;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	padding: 4px;
+}
+#footTd
+{
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+#head
+{
+	background-color: #DFE3E8;
+}
+#foot
+{
+	background-color: #DFE3E8;
+}
+#productID
+{
+	width: 60px;
+}
+#productName
+{
+	width: 235px;
+}
+#units
+{
+	width: 140px;
+}
+#unitPrice
+{
+	width: 150px;
+}
+#stock
+{
+	width: 155px;
+}
+#Discontinued
+{
+	width: 75px;
+}
+#IDText
+{
+	width: 30px;
+}
+#nameText
+{
+	width: 150px;
+}
+#priceText
+{
+	width: 80px;
+	position: relative;
+	top: -2px;
+}
+#button
+{
+	border: 1px solid #9AA0A6;
+	width: 20px;
+	position: relative;
+	top: 3px;
+	left: 2px;
+	border-radius: 2px;
+}
+#footButton
+{
+	border: 1px solid #9AA0A6;
+	width: 20px;
+	border-radius: 2px;
+	margin: 2px;
+}
+.footNumbers
+{
+	position: relative;
+	top: -8px;
+	left: 5px;
+}
+#footSelect
+{
+	width: 45px;
+}
+#footRight
+{	
+	position: relative;
+	top: -8px;
+	left: 270px;
+}
+#footNumber1
+{
+	border: 1px solid #C95C05;
+	border-radius: 4px;
+	position: relative;
+	top: -8px;
+	padding: 4px;
+}
+#unitText
+{
+	width: 95px;
+}
+#discountCheck
+{
+	box-shadow: 0 0 1px 1px 9AA0A6;
+}

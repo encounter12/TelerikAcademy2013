@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Laptop store</title>
+    <link rel="stylesheet" type="text/css" href="styles/laptopstore-styles.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+    <header></header>
+    <div id="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Apple</a></li>
+                <li><a href="#">Toshiba</a></li>
+                <li><a href="#">Lenovo</a></li>
+                <li><a href="#">Dell</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Acer</a></li>
+                <li><a href="#">HP</a></li>
+            </ul>
+        </nav>
+        <aside id="parameters">
+            <form method="get" action="#">
+                <label for="min-Price">Min Price:</label>
+                <output name="minPrice">500</output> USD
+                <input type="range" oninput="minPrice.value = this.value" id="min-Price" min="250" max="750" step="50">
+                <label for="max-Price">Max Price:</label>
+                <output name="maxPrice">1500</output> USD
+                <input type="range" oninput="maxPrice.value = this.value" id="max-Price" min="1000" max="2000" step="50">
+                <label for="min-RAM">Min RAM:</label>
+                <output name="minRAM">4</output> GB
+                <input type="range" oninput="minRAM.value = this.value" id="min-RAM" min="2" max="6" step="1">
+                <label for="max-RAM">Max Price:</label>
+                <output name="maxRAM">16</output> GB
+                <input type="range" oninput="maxRAM.value = this.value" id="max-RAM" min="10" max="20" step="1">
+            </form>
+        </aside>
+        <section id="laptops-container">
+            <article>
+                <h3>Apple MacBook Air</h3>
+                <img src="images/laptop.png">
+            </article>
+            <article>
+                <img src="images/laptop.png">
+            </article>
+            <article>
+                <img src="images/laptop.png">
+            </article>
+            <article>
+                <img src="images/laptop.png">
+            </article>
+            <article>
+                <img src="images/laptop.png">
+            </article>
+            <article>
+                <img src="images/laptop.png">
+            </article>
+        </section>
+    </div>
+    <footer></footer>
+</body>
+</html>

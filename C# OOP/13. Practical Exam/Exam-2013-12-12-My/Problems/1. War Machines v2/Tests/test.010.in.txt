@@ -1,0 +1,28 @@
+HirePilot Ivan
+ManufactureTank Tank 100 100
+ManufactureFighter Fighter 150 90 StealthON
+ManufactureFighter SecondFighter 180 90 StealthOFF
+Report Ivan
+Engage Ivan Tank
+Engage Ivan Fighter
+Report Ivan
+HirePilot Gosho
+Report Gosho
+Engage Gosho Tank
+Engage Gosho Fighter
+Engage Gosho SecondFighter
+Attack Tank Fighter
+Attack Tank SecondFighter
+DefenseMode Tank
+DefenseMode Fighter
+Report Toshko
+DefenseMode SecondFighter
+Attack Tank Fighter
+Attack Tank SecondFighter
+StealthMode Fighter
+StealthMode SecondFighter
+StealthMode Tank
+Attack Fighter Tank
+Attack SecondFighter Tank
+Report Gosho
+Report Ivan

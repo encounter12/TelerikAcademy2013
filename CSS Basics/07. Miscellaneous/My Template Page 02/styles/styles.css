@@ -1,0 +1,36 @@
+body
+{
+	font-family: Calibri;	
+}
+
+nav ul
+{
+	padding: 0;
+}
+
+nav ul li 
+{
+	list-style-type: none; 
+	float: left;
+}
+
+nav ul li a
+{
+	text-decoration: none;
+	color: black;
+	margin: 5px;
+}
+
+nav ul:after 
+{
+	content: ""; 
+	clear: both;
+	display: block;
+}
+
+section
+{
+	margin: 0 auto;
+	width: 70%;
+}
+

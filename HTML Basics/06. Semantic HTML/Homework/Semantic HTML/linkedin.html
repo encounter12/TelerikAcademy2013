@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Simpe HTML Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/linkedinstyle.css" />
+    <script src="js/modernizr.custom.45720.js"></script>    
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h2><a href="http://www.linkedin.com/" title="Home">LinkedIn</a></h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What is LinkedIn?</a></li>
+                <li><a href="https://www.linkedin.com/reg/join?trk=hb_join" rel="nofollow">Join Today</a></li>
+                <li>
+                    <form method="get" action="#">
+                        <fieldset>
+                            <legend>Sign In</legend>
+                            <ul id="login">                
+                                <li>
+                                    <label for="email"></label>
+                                    <input type="text" id="email" />
+                                </li>
+                                <li>
+                                    <label for="pass"></label>
+                                    <input type="password" id="pass"/>
+                                </li>
+                                <li>
+                                    <input type="submit" value="Sign In" disabled="disabled"/>
+                                </li>                                   
+                            </ul>
+                        </fieldset>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <hr />
+        <section>
+            <h1>Over 175 million professionals use LinkedIn to exchange information, ideas and opportunities</h1>
+            <ul>
+                <li>Stay informed about your contacts and industry</li>
+                <li>Find the people & knowledge you need to achieve your goals</li>
+                <li>Control your professional identity online</li>
+            </ul>
+        </section>
+        <h2>Join LinkedIn Today</h2>
+        <form method="get" action="#" name="joinform">
+            <fieldset>
+                <legend>Signup</legend> 
+                <ul>
+                    <li>
+                        <label for="firstname">First Name:</label>
+                        <div>
+                            <input type="text" id="firstname" />     
+                        </div>                                        
+                    </li>
+                    <li>
+                        <label for="lastname">Last Name:</label>
+                        <div>
+                            <input type="text" id="lastname" />     
+                        </div>  
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <div>
+                            <input type="mail" id="email" />     
+                        </div>
+                    </li>
+                    <li>
+                        <label for="pass">Password:</label>
+                        <div>
+                            <input type="password" id="pass" />     
+                        </div>
+                        <span>6 or more characters</span>                    
+                    </li>                
+                </ul>
+                <p class="action">
+                    <input type="submit" value="Join Now" />
+                    <a href="#agreement">*</a> 
+                </p>
+                <p>
+                    Already on LinkedIn?
+                    <a href="https://www.linkedin.com/uas/login" rel="nofollow">Sign in.</a>
+                </p>                                                                                           
+            </fieldset>        
+        </form>
+        <form method="get" action="#" name="searchForm">
+            <h3>Search for someone by name:</h3>
+            <ul>
+                <li>
+                    <label for="searchfirstname">First Name</label>
+                    <input type="text" id="searchfirstname" name="firstName" placeholder="First Name"/>
+                </li>
+                <li>
+                    <label for="searchlastname">Last Name</label>
+                    <input type="text" id="searchlastname" name="lastName" placeholder="Last Name"/>
+                </li>
+            </ul>
+            <input type="submit" value="Go" name="search" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+How to Delete Project in Team Foundation Service
+
+
+http://stackoverflow.com/questions/13635889/delete-team-project-from-team-foundation-service
+http://social.msdn.microsoft.com/Forums/vstudio/en-US/81997146-a64f-43fb-9952-57d71542cd11/how-to-delete-a-team-project-from-your-team-foundation-service-collection
+http://geekswithblogs.net/enriquelima/archive/2013/05/04/deleting-projects-from-team-foundation-service.aspx
+http://stackoverflow.com/questions/16569186/unable-to-delete-team-foundation-service-project
+
+-----------
+Command:
+1. Open command prompt in: C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE
+2. Run one of the commands below: 
+
+tfsdeleteproject.exe /force /collection:https://academytelerik.VisualStudio.com/DefaultCollection TeamSnoopy
+TfsDeleteProject /collection:https://academytelerik.visualstudio.com/DefaultCollection TeamSnoopy
+tfsdeleteproject.exe /force /collection:https://academytelerik.visualstudio.com/DefaultCollection TeamSnoopy
+
+tfsdeleteproject.exe /q /force /collection:https://academytelerik.visualstudio.com/DefaultCollection TeamSnoopy

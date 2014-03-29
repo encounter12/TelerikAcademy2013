@@ -1,0 +1,36 @@
+﻿namespace TeamKyanite
+{
+    using System;
+    using System.Linq;
+    using System.Windows.Forms;
+
+    public partial class StudentsData : Form
+    {
+        public StudentsData()
+        {
+            this.InitializeComponent();
+        }
+
+        private void OpenStudentsDatabaseButton(object sender, EventArgs e)
+        {
+            DataClasses1DataContext obj = new DataClasses1DataContext(); 
+            var sortedStudents =
+                                from student in obj.Students
+                                orderby student.Name ascending
+                                select student;
+
+            dataGridView1.DataSource = sortedStudents.ToList();
+        }
+
+        private void OpenTeachersDatabaseButton(object sender, EventArgs e)
+        {
+            DataClasses1DataContext obj = new DataClasses1DataContext();
+            var sortedTeachers =
+                                from teachers in obj.Teachers
+                                orderby teachers.Name ascending
+                                select teachers;
+
+            dataGridView2.DataSource = sortedTeachers.ToList();
+        }
+    }
+}

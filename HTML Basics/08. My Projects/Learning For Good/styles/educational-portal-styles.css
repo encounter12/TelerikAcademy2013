@@ -1,0 +1,366 @@
+﻿body 
+{
+    background-color: #7F674F;
+    font-family: Calibri, Arial, "Lucida Sans Unicode", Verdana, 'Times New Roman';
+    color: white;
+    margin: 0;
+    
+    /*background-image: url(data:image/png;base64,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);*/
+}
+
+
+header 
+{
+    display: table;
+    width: 100%;
+    height: 120px;
+    background-color: #CC9957;
+}
+
+#header-container
+{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px; 
+}
+
+.button1
+{
+    display: inline-block;
+    width: 90px;
+    line-height: 45px;
+    margin: 10px 15px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #7F674F;
+    text-decoration: none;
+}
+
+#sign-in-sign-up
+{
+    float: left;
+    width: 270px;
+    margin-left: 80px;
+}
+
+#sign-in-sign-up a
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #393939;
+}
+
+#bookphoto 
+{
+    background: url(../images/book.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    width: 80px;
+    height: 80px;    
+    border: none;
+}
+
+#globe-localization
+{
+    float: right;
+    background: url(../images/globe.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+
+#submitSearch
+{
+    background: url(../images/magnifying-glass-2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+#searchForm
+{
+    width: 320px;
+    float: right;
+}
+
+#searchBox
+{
+    width: 250px;
+    height: 22px;
+    border-radius: 6px;
+    border: solid;
+    border-width: 1px;
+    border-color: #F0F0F0;
+    background-color: #E5BA90;
+    color: white;
+    padding-left: 2px;
+}
+
+nav
+{
+    margin:10px;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+
+nav ul li
+{
+    float: left;
+    width: 120px;
+}
+
+nav ul a:link, a:visited
+{
+    display: block;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul a:hover, nav ul a:active
+{
+    background-color: #B2B143;
+}
+
+nav ul:after 
+{
+    clear: both;
+    display: block;
+    content:"";
+}
+
+/*center horizontally and vertically*/
+#slider 
+{    
+    background-image: url(../images/starry-sky-over-the-sea-beach-3.png);
+    background-repeat: no-repeat;
+    height: 453px;
+    text-align: center;
+}
+
+#slider:before 
+{
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.centered
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 430px;
+}
+
+.centered h1
+{      
+    font-size: 3em;
+    text-align: left;
+    opacity: 0.8;
+}
+
+#slider a
+{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 55px;
+    width: 180px;
+    color: white;    
+    background-color: #CC9957;    
+    font-size: 1.3em;
+    border-radius: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+#content
+{
+    padding: 10px;
+    background-color: #B2B143;
+}
+
+footer
+{
+    height: 200px;
+    color: #393939;
+    background-color: #FFCE8D;    
+}
+
+footer div
+{
+    float: left;
+    margin: 15px;
+}
+
+footer ul
+{
+    padding: 0;
+}
+
+footer li
+{
+    list-style-type: none;
+}
+
+
+footer h3
+{
+    text-align: center;
+}
+
+footer .contactDetails
+{
+    font-family: 'Dancing Script', cursive;
+    float: right;
+    font-size: 1.4em;
+    margin-right: 40px;
+}
+
+
+/*Registration Form*/
+
+#registration-form
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+#registration-form   div
+{
+    margin: 20px 10px;
+}
+
+#registration-form label, #registration-form span
+{
+    display: inline-block;
+    margin: 0;
+    color: #D3D3D3;
+    font-size: 18px;
+}
+
+#courses 
+{
+    padding: 0;
+    margin: 15px 0;
+}
+
+#registration-form label
+{
+    width: 240px;
+}
+
+#registration-form span
+{
+    display: inline-block;
+    height: 40px;
+}
+
+#registration-form fieldset
+{
+    border-radius: 4px;
+    border: 2px solid gray;
+    margin: 20px 5px;
+}
+
+#registration-form legend
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7em;
+    color: white;
+}
+
+#registration-form input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"]
+{   
+    border-width: 1px;
+    border-radius: 2px;
+    width: 160px;
+    height: 22px;
+    font-size: 0.9em;
+    padding: 2px;
+}
+
+#courseDates
+{
+    height: 25px;
+    border: 1px solid gray;
+    font-size: 0.9em;
+    border-radius: 2px;
+}
+
+.optional
+{
+    font-style: italic;    
+}
+
+textarea
+{
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+#registration-form textarea, #registration-form input[type="text"], #registration-form input[type="password"], #registration-form input[type="email"], 
+#registration-form input[type="date"], #applicationType, select, #registration-form input[type="tel"]
+{
+    color: #393939;
+    background-color: #F8F0F0;
+    
+}
+
+
+#registration-form textarea, #registration-form input[type="text"], #registration-form input[type="password"], #registration-form input[type="email"], 
+#registration-form input[type="date"], #registration-form input[type="tel"]
+{
+    font-size: 15px;
+}
+
+#formButtons
+{
+    width: 98%;
+    height: 80px;
+}
+
+.button2
+{
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    margin: 10px 25px;
+    border: 0;
+    border-radius: 4px;
+    text-align: center; 
+    background-color: #CC9957;
+    font-size: 1.6em;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+.button2
+{
+    line-height: 45px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+}
+

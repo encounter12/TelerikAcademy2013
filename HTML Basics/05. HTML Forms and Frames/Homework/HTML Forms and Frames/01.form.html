@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form</title>
+        <link rel="stylesheet" type="text/css" href="styles/form-styles.css">
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <section>
+            <article>
+                <form name="registration" method="post" action="#">
+                    <table>
+                        <thead><tr><th id="firstcol"></th><th></th></tr></thead>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">
+                                    <div>
+                                        <input type="submit" value="Submit" alt="submit" >
+                                        <input type="reset" value="Clear This Form" alt="clear this form">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td><label name="lastname" for="ln">Last Name</label></td>
+                                <td><input type="text" name="lastname" id="ln" alt="last name" value="Nakov"></td>
+                            </tr>
+                            <tr>
+                                <td><label name="firstname" for="fn">First Name</label></td>
+                                <td><input type="text" name="firstname" id="fn" alt="first name" value="Svetlin"></td>
+                            </tr>
+                            <tr>
+                                <td><label name="address" for="addr">Address</label></td>
+                                <td><textarea id="addr" alt="address">17 Hristo Botev Str. floor 3, apt. 12</textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label name="city" for="city">City</label></td>
+                                <td>
+                                    <input type="text" name="city" id="city" alt="city" value="Kaspichan">
+                                    <label name="state" for="state" id="labelstate">State</label>
+                                    <input type="text" name="state" id="state" alt="state">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label name="zipcode" for="zip">Zip/Postal Code</label></td>
+                                <td><input type="text" name="zipcode" id="zip" alt="zip code" value="9325"></td>
+                            </tr>
+                            <tr>
+                                <td><label name="country" for="country">Country</label></td>
+                                <td>
+                                    <select name="country">
+                                        <option value="bg" selected="selected">Bulgaria</option>
+                                        <option value="ag">Argentina</option>
+                                        <option value="uk">United Kingdom</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label name="phone" for="countrycode">Phone (country code, area code, number)</label></td>
+                                <td>
+                                    <span>(</span>
+                                    <input type="text" name="countrycode" id="countrycode" alt="country code" value="359">
+                                    <span>)</span>
+                                    <input type="text" name="areacode" id="areacode" alt="area code" value="88">
+                                    <span>-</span>
+                                    <input type="text" name="number" id="pn" alt="number" value="8334343">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label name="email" for="email">Email</label></td>
+                                <td><input type="email" id="email" alt="email" value="nakov@kaspichan.org"></td>
+                            </tr>
+                            <tr>
+                                <td><label name="birthdate" for="bd">Birth date</label></td>
+                                <td>
+                                    <span>Month</span>
+                                    <input type="text" name="month" id="bd" class="dates" alt="month" value="06">
+                                    <span>Day</span>
+                                    <input type="text" name="date" class="dates" alt="date" value="14">
+                                    <span>Year(4 digit)</span>
+                                    <input type="text" name="year" alt="year" value="1980">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label name="gender" for="sex">Gender</label></td>
+                                <td>
+                                    <select id="sex">
+                                        <option name="male" value="m">Male</option>
+                                        <option name="male" value="f">Female</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label name="startdate" for="sd">Starting date</label></td>
+                                <td>
+                                    <input type="radio" name="startdate" id="spring" checked>
+                                    <label for="spring" class="startdate">Spring 2006</label>
+                                    <input type="radio" name="startdate" id="summer">
+                                    <label for="summer" class="startdate">Summer 2006</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="comments">Comments/Questions</label></td>
+                                <td><textarea id="comments" alt="comments">Please send me more information about the lodging</textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </article>
+        </section>
+        <footer></footer>
+    </body>
+</html>

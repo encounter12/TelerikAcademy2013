@@ -1,0 +1,46 @@
+Web Design (CSS) Color Schemes Palettes 
+
+http://en.wikipedia.org/wiki/Color_theory
+http://en.wikipedia.org/wiki/List_of_color_palettes
+http://en.wikipedia.org/wiki/Color_scheme
+http://en.wikipedia.org/wiki/Light-on-dark_color_scheme
+
+
+http://colorschemedesigner.com/
+https://kuler.adobe.com/create/color-wheel/
+
+Green: 207B59
+R: 32, G: 123, B: 89
+-------------------
+Green: B6C492
+R: 182, G: 196, B: 146
+-------------------
+Green: A5AD6C
+R: 165, G: 173, B: 108
+-------------------
+Pink: F8A09A
+R: 248, G: 160, B: 154
+-------------------
+Beige: F2D797  
+R: 242, G: 215, B: 151
+-------------------
+Dark purple: A5656C
+R: 165, G: 101, B: 108
+-------------------
+Purple: A02975
+R: 160, G: 41, B: 117
+-------------------
+Brown: B4695C
+R: 180, G: 105, B: 92
+-------------------
+Brown: A54B2B
+R: 165, G: 75, B: 43
+-----------------
+
+Samsung Galaxy S4 - Android 
+
+#080808 - lighter black
+#324B61 - blue nuance
+
+
+

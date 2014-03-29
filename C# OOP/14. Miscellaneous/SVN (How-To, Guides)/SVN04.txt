@@ -1,0 +1,19 @@
+http://code.google.com/p/support/wiki/SubversionFAQ#Where_do_I_get_a_password_for_committing_to_Subversion?
+
+Where do I get a password for committing to Subversion?
+
+If you're a project owner or committer, just look at your "Settings" tab of your profile page. It will display your googlecode.com password. This password is used for access to your project's Subversion repository and for command-line file uploads to your project's Downloads area. This password is not the same as the password that you use to access your project on the web. 
+=============================================
+
+Колеги създадох хранилище за проекта в Google Code: https://code.google.com/p/team-kyanite/ , което за момента е съвсем празно, но се надявам в близките 10 дни да го напълним :) Ще се радвам да дадете gmail адреси (Google акаунти) за да ви добавя към проекта. След като ви добавя се логнете в проекта: https://code.google.com/p/team-kyanite/ и горе вдясно на Profile - Setings си вземете SVN паролата за хранилището: 
+
+http://code.google.com/p/support/wiki/SubversionFAQ#Where_do_I_get_a_password_for_committing_to_Subversion?
+Where do I get a password for committing to Subversion?
+
+If you're a project owner or committer, just look at your "Settings" tab of your profile page. It will display your googlecode.com password. This password is used for access to your project's Subversion repository and for command-line file uploads to your project's Downloads area. This password is not the same as the password that you use to access your project on the web. 
+
+
+
+
+http://tortoisesvn.net/docs/release/TortoiseSVN_en/index.html
+http://tortoisesvn.net/docs/release/TortoiseSVN_en/tsvn-dug.html

@@ -1,0 +1,98 @@
+svnadmin create "C:\Users\IvayloBotusharov\MyRepository"
+Creates repository as specified by local path on computer
+
+or 
+
+Navigate to the folder where you would like to create the repository and execute the command: "svnadmin create MyRepository" (Creates repository with specific name in the current folder)
+
+You can directly skip to step 2:
+
+
+svn import /tmp/myproject file:///var/svn/repos/myproject \ -m "initial import"
+
+svn import /path/to/mytree \ http://svn.example.com/svn/repo/some/project \ -m "Initial import" 
+
+
+
+=============================
+2. 
+svn checkout "server repository path" "client repository path"
+
+
+This automatically creates a copy of the server side repository. 
+
+svn checkout file:///C:\Users\IvayloBotusharov\MyRepository
+
+
+C:\Users\IvayloBotusharov\MyRepository>mkdir MyProject\trunk
+C:\Users\IvayloBotusharov\MyRepository>mkdir MyProject\branches
+C:\Users\IvayloBotusharov\MyRepository>mkdir MyProject\tags
+
+
+
+----------------------------
+Not mandatory: 
+This adds the folder MyProject to the working copy:
+
+C:\Users\IvayloBotusharov\MyRepository>svn add MyProject
+A         MyProject
+A         MyProject\trunk
+A         MyProject\branches
+A         MyProject\tags
+
+----------------------------
+svn status or svn diff
+Run svn diff to see unified diff output of your changes.
+• Run svn commit to commit the new version of your file to the repository.
+
+
+----------------------------------
+
+C:\Users\IvayloBotusharov\help>svn commit -m "comment" MyProject
+Adding         MyProject
+Adding         MyProject\branches
+Adding         MyProject\tags
+Adding         MyProject\trunk
+
+Committed revision 1.
+
+----------------------------------
+
+• Run svn update to bring your working copy “up to date” with the repository.
+------------------------------------------------------
+
+C:\Users\IvayloBotusharov>svn delete "MyRepository\MyProject"
+D         help\MyProject
+D         help\MyProject\branches
+D         help\MyProject\tags
+D         help\MyProject\trunk
+
+
+------------------------------------------------------
+
+C:\Users\IvayloBotusharov\MyRepository>svnversion
+0
+
+------------------------------------------------------
+C:\Users\IvayloBotusharov>svnlook info MyRepository
+
+2013-11-16 15:27:18 +0200 (Sat, 16 Nov 2013)
+0
+
+C:\Users\IvayloBotusharov>svnlook author "myRepositoryPath"
+
+------------------------------------------------------
+
+C:\Users\IvayloBotusharov>svnlook history MyRepository
+REVISION   PATH
+--------   ----
+       1   /
+       0   /
+
+=====================
+
+
+svn --version	
+
+I think the problem is that you are committing changes to the actual SVN repository itself instead of doing an import, checking out a copy for yourself, making changes, and then doing a commit from your checked-out working copy after adding any subdirectories. So: import, checkout, make changes, and then finally do an add for each new file or directory and commit -m "message" form the top level.
+

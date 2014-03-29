@@ -1,0 +1,86 @@
+body
+{
+    font-family: Calibri;
+}
+
+
+table
+{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    
+}
+
+table td
+{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+
+tfoot td
+{
+    text-align: center;
+    background-color: #D1EDE1;
+}
+
+label:not(.startdate)
+{
+    font-weight: bold;
+}
+
+tr > td:not(:last-of-type)
+{
+    text-align: right;   
+}
+
+tr > th:first-child
+{
+    width: 80px;
+}
+    
+.dates
+{
+    width: 30px;
+    margin-right: 10px;
+}
+
+#ln, #fn, #email
+{
+    width: 400px;
+}
+
+textarea 
+{
+    width: 370px;
+}
+
+#addr
+{
+    height: 80px;
+}
+
+#countrycode, #areacode
+{    
+    width: 40px;
+}
+
+#city
+{
+    width: 280px;
+}
+
+#state
+{
+    width: 60px;
+}
+
+#labelstate
+{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 6px;
+}

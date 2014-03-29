@@ -1,0 +1,52 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.headerLink{
+	font: 25px Tahoma;
+	font-weight: 600;
+	color: #00ACEF;
+	text-decoration: none;
+	border-bottom: 2px solid #00ACEF;
+	
+}
+header, section, footer, aside, nav, article, hgroup{
+	display: block;
+}
+header{
+	border-bottom: 2px solid black;
+	padding: 10px;
+}
+body{
+	text-align: center;
+}
+#mainWraper{
+
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 750px;
+	height: 500px;
+	margin: 20px auto;
+}
+#mainSection{
+	font: 16px Georgia;
+	float: left;
+	width: 488px;
+	margin: 10px;
+	border: 1px solid  black;
+}
+#mainTable{
+	border: 2px solid black;
+}
+#sideSection{
+	font: 20px Georgia;
+	float: left;
+	width: 200;
+	margin: 30px 0px;
+	padding: 10px;
+}
+.apple{
+	border: 2px solid black;
+	margin: 3px;
+	padding: 5px;
+}

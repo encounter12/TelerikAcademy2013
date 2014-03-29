@@ -1,0 +1,30 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:SchoolObjects="clr-namespace:TeamKyanite.SchoolObjects" mc:Ignorable="d" x:Class="TeamKyanite.AllStudentsWindow"
+        Title="All School Students" Height="800" Width="900" Loaded="Window_Loaded" Style="{StaticResource MyWindowBackground}">
+    <Window.Resources>
+        <CollectionViewSource x:Key="studentViewSource" d:DesignSource="{d:DesignInstance {x:Type SchoolObjects:Student}, CreateList=True}"/>
+        <Style TargetType="Button" BasedOn="{StaticResource NavigationButtonStyle}" />
+    </Window.Resources>
+    
+    <DockPanel DataContext="{StaticResource studentViewSource}">
+        <Label DockPanel.Dock="Top" FontSize="18" FontWeight="Bold" Margin="10">All School students list:</Label>
+        <DataGrid x:Name="studentDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10" Height="500" ColumnWidth="*" 
+                  DockPanel.Dock="Top" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False" AlternatingRowBackground="LightBlue" AlternationCount="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="classNumberColumn" Width="30" Header="No." Binding="{Binding ClassNumber}"/>
+                <DataGridTextColumn x:Name="nameColumn" Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn x:Name="ageColumn" Header="Age" Binding="{Binding Age}"/>
+                <DataGridTextColumn x:Name="genderColumn" Width="60" Header="Gender" Binding="{Binding Gender}"/>
+                <DataGridTextColumn x:Name="commentColumn" Header="Comment" Binding="{Binding Comment}"/>
+                <DataGridTextColumn x:Name="studentIdColumn" Header="Student Id" Width="70" Binding="{Binding StudentId}"/>
+                <DataGridCheckBoxColumn x:Name="deleteStudent" Header="Delete" Width="70" Binding="{Binding QueuedForDeletion}"/>
+            </DataGrid.Columns>           
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Width="250" DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
+            <Button Name="buttonSave" Content="Save" Margin="20" Height="30" Width="75" Click="ButtonSave_Click" IsDefault="True"/>
+            <Button Name="buttonCancel" Content="Cancel" Margin="20" Height="30" Width="75" Click="ButtonCancel_Click" IsCancel="True"/>
+        </StackPanel>
+    </DockPanel>    
+</Window>

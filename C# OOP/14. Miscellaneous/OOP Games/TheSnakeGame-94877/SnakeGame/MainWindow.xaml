@@ -1,0 +1,10 @@
+﻿<Window xmlns:my="clr-namespace:SnakeGame.Views"  x:Class="SnakeGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="1020"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <my:SnakeGameControlxaml />
+    </Grid>
+</Window>

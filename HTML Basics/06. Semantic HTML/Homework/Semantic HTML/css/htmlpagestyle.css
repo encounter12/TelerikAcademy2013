@@ -1,0 +1,33 @@
+﻿body {
+    background-color: white;    
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    width: 98%;
+    font-size:18px;
+}
+
+#logo {
+    margin-left:20px;
+    display:inline;
+}
+
+#welcome {
+    display:inline;
+    margin-left:250px;
+}
+
+
+
+table {
+    border-collapse:collapse; 
+    text-align:center;  
+}
+
+table td, table th {
+    border:2px solid black;
+    padding:6px;
+}
+
+#container {
+    margin:15px;
+}
+

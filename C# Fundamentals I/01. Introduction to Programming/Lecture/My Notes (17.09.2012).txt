@@ -1,0 +1,64 @@
+Lecture 01 (17.09.2012) - Chapter 1 - Vuvedenie v programiraneto 
+
+Visual Studio How To: 
+
+1. In order to be able to debug / run projects within the same Solution by highlighting them in Solution Explorer and pressing Ctrl + F5 (F5) go to: 
+Solution - (Right click) Properties - Common Properties - Startup Project - Current Selection
+
+2. Create a new project within the same Solution 
+Right click Solution - Add - New Project
+or
+File - Add - New Project
+
+Visual Studio Shortcut Keys 
+
+Indent block of code to the right: Highlight the block of code and press Tab
+Indent block of code to the left: Highlight the block of code and press Shift + Tab
+
+
+Code Snippets
+
+Insert parameterless public constructor: ctor - tab - tab
+Insert new class: class - tab - tab
+Insert namespace: namespace - tab - tab
+Insert struct: struct - tab - tab
+Insert enumeration: enum - tab - tab
+Insert constructor: ctor - tab - tab
+Insert Console.WriteLine(): cw - tab - tab
+Insert for loop: for - tab - tab
+Insert reverse for loop: forr - tab - tab
+Insert foreach loop: foreach - tab - tab
+Insert do - while loop: do - tab - tab
+Insert if statement: if - tab - tab
+Insert else statement: else - tab - tab
+Insert switch statement: switch - tab - tab
+Insert try-catch: try - tab - tab
+Insert try-finally: tryf - tab - tab
+
+Debug Scenario: 
+
+Toggle Breakpoint - F9
+Start Debugging - F5
+Step over - F10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

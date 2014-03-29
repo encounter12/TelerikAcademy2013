@@ -1,0 +1,381 @@
+LinearGradientBrush
+
+Rectangle RadiusX, RadiusY
+
+
+<Setter Property="Foreground">
+<Setter.Value>
+<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+<LinearGradientBrush.GradientStops>
+<GradientStop Offset="0.0" Color="Purple" />
+<GradientStop Offset="0.5" Color="Azure" />
+<GradientStop Offset="1.0" Color="Purple" />
+</LinearGradientBrush.GradientStops>
+</LinearGradientBrush>
+</Setter.Value>
+
+<Rectangle RadiusX="10" RadiusY="10">
+<Rectangle.Fill>
+<RadialGradientBrush>
+<RadialGradientBrush.GradientStops>
+<GradientStop Offset="0.0" Color="Yellow" />
+<GradientStop Offset="1.0" Color="Red" />
+</RadialGradientBrush.GradientStops>
+</RadialGradientBrush>
+</Rectangle.Fill>
+</Rectangle>
+
+Stroke="Black"
+
+BeginStoryboard 
+ControllableStoryboardAction
+SoundPlayerAction
+
+Trigger
+EventTrigger
+Trigger.Property
+
+For example, the following trigger would examine the value of a property called MyBooleanValue, and
+when that property is true it would set the value of the Opacity property to 0.5:
+<Trigger Property="MyBooleanValue" Value="true">
+<Setter Property="Opacity" Value="0.5" />
+</Trigger>
+
+
+<Style TargetType="Button">
+<Style.Triggers>
+<Trigger Property="IsMouseOver" Value="true">
+<Setter Property="Foreground" Value="Yellow" />
+</Trigger>
+</Style.Triggers>
+</Style>
+
+
+
+IsMouseOver
+IsPressed
+IsFocused
+
+Storyboard
+double,
+Point,
+Color.
+
+
+DoubleAnimation,
+DoubleAnimationUsingKeyFrames,
+PointAnimation,
+PointAnimationUsingKeyFrames,
+ColorAnimation,
+ColorAnimationUsingKeyFrames
+Storyboard.TargetName and Storyboard.TargetProperty
+IElement.RenderTransform
+TransformGroup.Children
+RotateTransform.Angle
+
+
+
+<Storyboard x:Key="RectangleExpander">
+<DoubleAnimation Storyboard.TargetName="MyRectangle"
+Storyboard.TargetProperty="Width" Duration="00:00:05"
+From="100" To="200" />
+</Storyboard>
+
+
+
+if you had a style defined for Button controls with an x:Key attribute of MyStyle
+
+{StaticResource resourceName}
+
+<Button Style="{StaticResource MyStyle}" ...>...</Button>
+
+
+{DynamicResource resourceName}
+
+if you have a style defined for Button controls with a x:Key attribute of MyDynamicStyle, you could reference it from a control as follows:
+<Button Style="{DynamicResource MyDynamicStyle}" ...>...</Button>
+
+
+Referencing Style Resources
+
+The Style resource used here might be in the Resources property of the local Window control, for example:
+
+<Window ...>
+<Window.Resources>
+<Style x:Key="MyStyle" TargetType="Button">
+...
+</Style>
+</Window.Resources>
+...
+</Window>
+
+Every Button control that you want to use this control must then refer to it in its Style property (statically
+or dynamically). Alternatively, you could define a style resource that is global to a given control
+type. That is, the Style object will be applied to every control of a given type in your application. To
+do this, merely omit the x:Key attribute:
+
+
+<Window ...>
+<Window.Resources>
+<Style TargetType="Button">
+...
+</Style>
+</Window.Resources>
+...
+</Window>
+
+
+----------------------------------------------
+
+<Window ...>
+<Window.Resources>
+<Style TargetType="Button">
+...
+</Style>
+<Style TargetType="Button">
+<Style.Triggers>
+<Trigger Property="IsMouseOver" Value="true">
+<Setter Property="Foreground" Value="Yellow" />
+</Trigger>
+</Style.Triggers>
+</Style>
+</Window.Resources>
+...
+</Window>
+
+
+------------------------------------------
+UIElement.MouseEnter
+UIElement.MouseLeave
+
+PulseButton
+Storyboard="{StaticResource PulseButton}"
+
+------------------------------------------
+
+The timeline for the animation consisted of three key frames to animate the color from Red to Orange and
+then back again over two seconds:
+
+<ColorAnimationUsingKeyFrames BeginTime="00:00:00"
+RepeatBehavior="Forever"
+Storyboard.TargetName="BackgroundRectangle"
+Storyboard.TargetProperty=
+"(Shape.Fill).(RadialGradientBrush.GradientStops)[1].(GradientStop.Color)">
+<LinearColorKeyFrame Value="Red" KeyTime="00:00:00" />
+<LinearColorKeyFrame Value="Orange" KeyTime="00:00:01" />
+<LinearColorKeyFrame Value="Red" KeyTime="00:00:02" />
+</ColorAnimationUsingKeyFrames>
+</Storyboard>
+</ControlTemplate.Resources>
+
+
+
+Adding the animation as a resource does not cause it to be performed. To do that you added two
+EventTrigger triggers:
+
+<EventTrigger RoutedEvent="UIElement.MouseEnter">
+<BeginStoryboard Storyboard="{StaticResource PulseButton}"
+x:Name="PulseButton_BeginStoryboard" />
+</EventTrigger>
+<EventTrigger RoutedEvent="UIElement.MouseLeave">
+<StopStoryboard
+BeginStoryboardName="PulseButton_BeginStoryboard" />
+</EventTrigger>
+
+You also defined two other triggers to provide a rollover and click glow by using the DropShadowEffect
+effect. You made use of the IsMouseOver and IsPressed properties shown earlier in the chapter to
+achieve this:
+
+<Trigger Property="IsMouseOver" Value="True">
+    <Setter TargetName="LayoutGrid" Property="Effect">
+        <Setter.Value>
+            <DropShadowEffect ShadowDepth="0" Color="Red" BlurRadius="40" />
+        </Setter.Value>
+    </Setter>
+</Trigger>
+<Trigger Property="IsPressed" Value="True">
+    <Setter TargetName="LayoutGrid" Property="Effect">
+        <Setter.Value>
+            <DropShadowEffect ShadowDepth="0" Color="Yellow" BlurRadius="80" />
+        </Setter.Value>
+    </Setter>
+</Trigger>
+
+
+---------------------
+
+
+One of the most useful controls you can derive from is UserControl.
+the class in the code-behind derives from the
+System.Windows.Controls.UserControl class.
+
+
+----------------------------
+UpdateSourceTrigger
+defaultUpdateSourceTrigger
+
+
+
+---------------
+
+
+<Rectangle Stroke="{x:Null}" RadiusX="12.5" RadiusY="12.5">
+<Rectangle.Fill>
+<LinearGradientBrush EndPoint="0.47,-0.167" StartPoint="0.86,0.92">
+<GradientStop Color="#FFD1C78F" Offset="0"/>
+<GradientStop Color="#FFFFFFFF" Offset="1"/>
+</LinearGradientBrush>
+</Rectangle.Fill>
+<Rectangle.Effect>
+<DropShadowEffect/>
+</Rectangle.Effect>
+
+
+--------
+
+
+<Label.RenderTransform>
+<RotateTransform Angle="180"/>
+</Label.RenderTransform>
+
+
+<Path.OpacityMask>
+<LinearGradientBrush EndPoint="0.957,1.127" StartPoint="0,-0.06">
+<GradientStop Color="#FF000000" Offset="0"/>
+<GradientStop Color="#00FFFFFF" Offset="1"/>
+</LinearGradientBrush>
+</Path.OpacityMask>
+
+
+------------------------
+
+RankLabel.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+
+
+------------------------
+
+<Grid.Background>
+    <LinearGradientBrush EndPoint="0.364,0.128" StartPoint="0.598,1.042">
+        <GradientStop Color="#FF0D4F1A" Offset="0"/>
+        <GradientStop Color="#FF448251" Offset="1"/>
+    </LinearGradientBrush>
+</Grid.Background>
+
+------------------------
+
+MouseLeftButtonUp
+MouseLeftButtonDown
+MouseMove
+
+------------------------------
+
+
+To bind a value to a property you use binding syntax, which is a markup extension. This syntax means
+that you specify the value of a property as {Binding ...}. There are various ways to configure binding in
+this way. In the example, the binding for the SuitLabel label is configured as follows:
+
+<Label x:Name="SuitLabel"
+Content="{Binding Path=Suit, ElementName=UserControl, Mode=Default}"
+ContentTemplate="{DynamicResource SuitTemplate}" HorizontalAlignment="Center"
+VerticalAlignment="Center" Margin="8,51,8,60" />
+
+Here, three properties are specified for the binding: Path (the name of the property), ElementName (the
+element with the property), and Mode (how to perform the binding). Path and Element are quite straightforward;
+for now you can ignore Mode. The important point is that this specification binds the Label.Content
+property to the Card.Suit property.
+
+
+-------------------------------------------
+
+When you bind property values, you must also specify how to render the bound content, by using a data
+template. In this example, the data template is SuitTemplate, referenced as a dynamic resource (although
+in this case a static resource binding would also work fine). This template is defined in the user control
+resources section as follows:
+<UserControl.Resources>
+<DataTemplate x:Key="SuitTemplate">
+<TextBlock Text="{Binding}"/>
+</DataTemplate>
+</UserControl.Resources>
+The string value of Suit is therefore used as the Text property of a TextBlock control. This same
+DataTemplate definition is reused for the two rank labels — it doesn’t matter that Rank is an int; it is
+transformed into a string when bound to the TextBlock.Text property.
+
+
+----------------------------------------------
+
+
+Both dependency properties use a callback method to validate values, and the Suit property also has a
+callback method for when its value changes. Validation callback methods have a return type of bool and
+a single parameter of type object, which is the value to which the client code is attempting to set the
+property. If the value is OK, then you should return true; otherwise, return false. In the example code,
+the Suit property is restricted to one of four strings:
+public static bool ValidateSuit(object suitValue)
+{
+string suitValueString = (string)suitValue;
+if (suitValueString != "Club" && suitValueString != "Diamond"
+&& suitValueString != "Heart" && suitValueString != "Spade")
+{
+return false;
+}
+return true;
+}
+This is quite brutal, and obviously an enumeration would be better here, but it has been avoided for reasons
+outlined earlier. Similarly, the Rank property is restricted to a value between 1 (ace) and 12 (king):
+public static bool ValidateRank(object rankValue)
+{
+int rankValueInt = (int)rankValue;
+if (rankValueInt < 1 || rankValueInt > 12)
+{
+return false;
+}
+return true;
+}
+
+
+
+<Border Background="Black" BorderBrush="Yellow" BorderThickness="2" 
+      CornerRadius="2" Margin="5">
+      
+      
+<Style TargetType="{x:Type Button}">
+  <Setter Property="Background" Value="Orange" />
+  <Setter Property="BorderBrush" Value="Crimson" />
+  <Setter Property="FontSize" Value="20" />
+  <Setter Property="FontWeight" Value="Bold" />
+  <Setter Property="Margin" Value="5" />
+</Style>
+
+
+
+<Window.Resources>
+    <SolidColorBrush x:Key="defaultBackground" Color="Red" />
+  </Window.Resources>
+
+
+...
+
+
+<!-- Button background is defined by window-scoped resource -->
+<Button Background="{StaticResource defaultBackground}">One Button</Button>
+
+<!-- Label background is defined by window-scoped resource -->
+<Label Background="{StaticResource defaultBackground}">One Label</Label>
+
+
+
+
+<!-- Blue Skin -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:SDKSample">
+  <Style TargetType="{x:Type Button}">
+    <Setter Property="Background" Value="Blue" />
+  </Style>
+
+
+...
+
+
+</ResourceDictionary>
+

@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:SchoolObjects="clr-namespace:TeamKyanite.SchoolObjects" mc:Ignorable="d" x:Class="TeamKyanite.AllStudentsWindow"
+        Title="AllStudentsWindow" Height="330" Width="516.892" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="studentViewSource" d:DesignSource="{d:DesignInstance {x:Type SchoolObjects:Student}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource studentViewSource}" Margin="0,0,2,0" Background="Sienna">
+
+        <DataGrid x:Name="studentDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="29,10,0,0" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Width="451" Height="232" VerticalAlignment="Top" Background="Sienna">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="classNumberColumn" Width="Auto" Header="Class Number" Binding="{Binding ClassNumber}"/>
+                <DataGridTextColumn x:Name="nameColumn" Width="Auto" Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn x:Name="ageColumn" Width="Auto" Header="Age" Binding="{Binding Age}"/>
+                <DataGridTextColumn x:Name="genderColumn" Width="SizeToHeader" Header="Gender" Binding="{Binding Gender}"/>
+                <DataGridTextColumn x:Name="commentColumn" Width="SizeToHeader" Header="Comment" Binding="{Binding Comment}"/>                                
+                <DataGridTextColumn x:Name="studentIdColumn" Width="SizeToHeader" Header="Student Id" Binding="{Binding StudentId}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="buttonSave" Content="Save" HorizontalAlignment="Left" Margin="146,269,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSave_Click"/>
+        <Button Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="302,269,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCancel_Click"/>
+
+    </Grid>
+</Window>

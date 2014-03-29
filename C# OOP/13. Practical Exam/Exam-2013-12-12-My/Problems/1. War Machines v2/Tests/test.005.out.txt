@@ -1,0 +1,1 @@
+Fighter Fighter manufactured - attack: 120; defense: 140; stealth: ON

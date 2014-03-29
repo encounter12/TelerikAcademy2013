@@ -1,0 +1,22 @@
+Open cmd in: C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE>
+
+
+Run the commands: 
+
+
+tf destroy $/TeamSnoopy/ConsoleGame/ApacheCombat/test
+MS Visual Studio - Right click on the Solution - Get Latest version (recursive) - Delete the folder/file locally
+
+-----------------------------
+
+tf.exe delete /lock:none /recursive $/TeamSnoopy/ConsoleGame/ApacheCombat/test
+tf.exe checkin /recursive $/TeamSnoopy/ConsoleGame/ApacheCombat/test
+
+Click on Check-In (see snapshot)
+
+-----------------------------
+
+Open Solution Explorer - Right - Click and click on Remove / Delete file permanently 
+
+Check In
+

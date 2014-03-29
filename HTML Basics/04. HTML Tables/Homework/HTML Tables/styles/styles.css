@@ -1,0 +1,170 @@
+﻿body 
+{
+    font-family: Calibri;
+}
+
+/*-------01.Fresh Fruits--------*/
+#freshFruits
+{
+    width: 500px;
+    height: 165px;
+}
+
+#freshFruits th
+{
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+.textCell 
+{
+    width: 57%;
+    font-size: 1.2em;
+}
+
+#freshFruits img 
+{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/*-------01.Merged Cells Table--------*/
+
+#mergedCellsTable
+{
+    width: 295px;
+    height: 210px;
+    border-collapse: separate;
+    text-align: center;
+}
+
+#mergedCellsTable th
+{
+    font-weight: normal;
+}
+
+#mergedCellsTable td, #mergedCellsTable th
+{
+    width: 48px;
+    height: 48px;
+}
+
+#mergedCellsTable th, #mergedCellsTable td
+{
+    border: 1px solid gray;
+    padding: 1px 5px 1px 5px;
+}
+
+.leftAlign
+{
+    text-align: left;
+}
+
+.rightAlign
+{
+    text-align: right;
+}
+
+.bottomRight
+{
+    text-align:right;
+    vertical-align: bottom;
+}
+
+.centeredText
+{
+    text-align: center;
+}
+
+
+/*-------02.Form--------*/
+
+
+form ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+form ul li
+{
+    width: 300px;
+    margin: 5px 0;
+}
+
+input
+{
+    margin-right: 4px;
+}
+
+.postfix
+{
+    font-weight: bold;
+}
+
+input[type=submit]
+{
+    background: url(../images/submit.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+	border: none;
+    display: block;
+}
+
+/*-------03.Calculator--------*/
+
+form
+{
+    width: 500px;
+    height: 500px; 
+}
+
+form table
+{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px;
+}
+
+form table, form table td
+{
+    background-color: #FFDB87;  
+}
+
+form table td, form table th
+{
+    padding: 0;
+    height: 20%;
+}
+
+form table input[type=text]
+{
+    width: 99.5%;
+    height: 100%;
+    border: 1px solid #BF7A30;
+    border-radius: 12px 12px 0 0;
+    background-color: #FFDB87;
+    font-size: 2.2em;
+    text-align: right;
+
+}
+
+form table input[type=button]
+{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #BF7A30;
+    font-size: 2.2em;
+    background-color: #FFDB87;
+}
+
+form table input[type=text], form table input[type=button]
+{
+    color: #E8670C; 
+}

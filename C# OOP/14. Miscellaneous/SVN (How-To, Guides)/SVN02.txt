@@ -1,0 +1,100 @@
+When creating a new repository on a server: 
+1. svn import : 
+
+Google Code: https://team-kyanite.googlecode.com/svn/
+
+For Unix: 
+svn import "C:\Users\IvayloBotusharov\Dropbox\Ivo\IT\IT (Telerik Academy)\Courses\C# Part 03 (OOP, 10.2013)\Homeworks\TeamKyanite" \ "https://team-kyanite.googlecode.com/svn/trunk" \ -m "Initial import" 
+
+For Windows: 
+svn import "C:\Users\IvayloBotusharov\Dropbox\Ivo\IT\IT (Telerik Academy)\Courses\C# Part 03 (OOP, 10.2013)\Homeworks\TeamKyanite" "https://team-kyanite.googlecode.com/svn/trunk" -m "Initial import"
+
+username: encounter12@gmail.com
+Password: tN8VP5wN2xb4
+
+
+2. svn checkout - SVN checkout is the way to pull files and folders from the SVN repository to create a working copy locally.  You typically only do this once and when you want later revisions you run svn update.  
+- equivalent to right clicking on a Project or file in Visual Studio - "Get Latest version (recursive)" 
+
+
+svn checkout "server repository path" "client repository path"
+
+svn checkout "https://team-kyanite.googlecode.com/svn/trunk/TeamKyanite" "C:\Users\IvayloBotusharov\Dropbox\Ivo\IT\IT (Telerik Academy)\Courses\C# Part 03 (OOP, 10.2013)\Homeworks\TeamKyanite" 
+
+
+3. Make changes to files and folders 
+*remark - when creating, copying or deleting files / folders the following commands should be used: svn copy, svn move, svn add, svn delete
+ 
+4. svn status or svn diff (TortoiseSVN → Check for Modifications) - could be skipped, instead of it just run svn update
+5. svn update (TortoiseSVN → Update) - equivalent to right clicking on a Project or file in Visual Studio - "Get Latest version" 
+6. svn commit  (checking in) (TortoiseSVN → Commit)
+
+------------------------------------
+When downloading a working copy of the repository from the server for a first time: 
+
+1. svn checkout (specify source URL and destination local path)
+
+2. Make changes to files and folders 
+*remark - when creating, copying or deleting files / folders the following commands should be used: svn copy, svn move, svn add, svn delete 
+
+
+svn status or svn diff (TortoiseSVN → Check for Modifications) - could be skipped, instead of it just run svn update
+
+svn update (TortoiseSVN → Update)
+
+svn commit (insert also comment) (TortoiseSVN → Commit)
+
+------------------------------------    
+
+When working with already downloaded working copy: 
+
+Navigate to the folder: 
+svn update (TortoiseSVN → Update)
+
+Make changes to files and folders 
+*remark - when creating, copying or deleting files / folders the following commands should be used: svn copy, svn move, svn add, svn delete
+
+svn status or svn diff (TortoiseSVN → Check for Modifications) - could be skipped, instead of it just run svn update
+
+svn update (TortoiseSVN → Update)
+
+If there are conflicts then: 
+
+(dc) display-conflict
+Display all conflicting regions of the file, ignoring changes which were successfully merged.
+
+
+(e) edit - Open the file in conflict with your favorite editor, as set in the environment variable EDITOR.
+
+(r) resolved
+After editing a file, tell svn that you've resolved the conflicts in the file and that it should accept the current contents—
+basically that you've “resolved” the conflict.
+
+(mc) mine-conflict
+Discard any newly received changes from the server which conflict with your local changes to the file under review. However, accept and merge all non-conflicting changes received from the server for that file.
+
+(tc) theirs-conflict
+Discard any local changes which conflict with incoming changes from the server for the file under review. However, preserve all non-conflicting local changes to that file.
+
+(mf) mine-full
+Discard all newly received changes from the server for the file under review, but preserve all your local changes for that file.
+
+(tf) theirs-full
+Discard all your local changes to the file under review and use only the newly received changes from the server for that file.
+
+
+svn commit (TortoiseSVN → Commit)
+
+------------------------------------
+
+How to re-create the trunk: 
+
+---------
+
+svn rm -m "Delete trunk" "https://team-kyanite.googlecode.com/svn/trunk"
+svn rm -m "Delete old files" "https://team-kyanite.googlecode.com/svn/branches"
+svn rm -m "Delete old files" "https://team-kyanite.googlecode.com/svn/tags"
+svn mkdir -m "Create trunk folder" "https://team-kyanite.googlecode.com/svn/trunk"
+svn mkdir -m "Create branches" "https://team-kyanite.googlecode.com/svn/branches"
+svn mkdir -m "Create tags folder" "https://team-kyanite.googlecode.com/svn/tags"
+---------

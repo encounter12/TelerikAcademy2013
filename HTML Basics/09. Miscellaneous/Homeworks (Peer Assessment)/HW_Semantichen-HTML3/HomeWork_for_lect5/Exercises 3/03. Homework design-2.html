@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <title>03. Homework design 2</title>
+        <script src="scripts/modernizr.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <h1>LinkedIn</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">What is LinkedIn?</a>
+                    </li>
+                    <li>
+                        <a href="#">Join Today</a>
+                    </li>
+                    <li>
+                        <section>
+                            <fieldset>
+                                <legend>Sign In</legend>
+                                <form action="?" method="post">
+                                    <ul>
+                                        <li>
+                                            <label for="mail">Email:</label>
+                                            <input type="text" id="mail" name="email" pattern="[a-zA-Z0-9\_\.]{3,}@[a-zA-Z0-9]{3,}.[a-zA-Z0-9]{2,4}" />
+                                        </li>
+                                        <li>
+                                            <label for="pass">Password:</label>
+                                            <input type="password" id="pass" name="password" />
+                                        </li>
+                                        <li>                                        
+                                            <input type="submit" value="Sign In" disabled="disabled" />
+                                        </li>
+                                    </ul>
+                                </form>                                
+                            </fieldset>
+                        </section>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <hr />
+        <section>
+            <h1>Over 175 million professionals use <strong>LinkedIn</strong> to exchange information, ideas and opportunities</h1>
+            <ul>
+                <li>
+                    Stay informed about your contacts and industry
+                </li>
+                <li>
+                    Find the people &amp; knowledge you need to achieve your goals
+                </li>
+                <li>
+                    Control your professional identity online
+                </li>
+            </ul>
+            <section>
+                <h2>Join LinkedIn Today</h2>
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <form action="?" method="post">
+                        <ul>
+                            <li>
+                                <label for="firstname">First Name:</label><br />
+                                <input type="text" id="firstname" name="fname" />
+                            </li>
+                            <li>
+                                <label for="lastname">Last Name:</label><br />
+                                <input type="text" id="lastname" name="lname" />
+                            </li>
+                            <li>
+                                <label for="email">Email:</label><br />
+                                <input type="text" id="email" name="email" pattern="[a-zA-Z0-9\_\.]{3,}@[a-zA-Z0-9]{3,}.[a-zA-Z0-9]{2,4}" />
+                            </li>
+                            <li>
+                                <label for="password">Password:</label><br />
+                                <input type="password" id="password" name="password" /><br />
+                                6 or more characters
+                            </li>                            
+                        </ul>
+                        <input type="submit" value="Join Now" /><a href="#">*</a>
+                    </form>
+                    <p>Already on LinkedIn?<a href="#">Sign in</a></p>
+                </fieldset>
+            </section>
+        </section>
+        <footer>
+            <section>
+                <h3>Search for someone by name:</h3>                
+                <form action="?" method="post">
+                    <ul>
+                        <li>
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="First name" />
+                        </li>
+                        <li>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname" placeholder="Last name" />
+                        </li>
+                    </ul>
+                    <input type="submit" value="Go" />                        
+                </form>                
+            </section>            
+        </footer>                
+    </body>
+</html>

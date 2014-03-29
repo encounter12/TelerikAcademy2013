@@ -1,0 +1,264 @@
+Shift + F7 - from C# to XAML file
+
+F7 - from XAML to C# file
+
+double click with the mouse on button subscribes for an event 
+
+Ctrl + Space on a control
+
+Grid vs Canvas 
+
+WPF Window fullscreen mode
+
+WindowStyle = "None" - removing the 
+
+BorderBrush - рамка (на бутон)
+BorderThickness - делбелина на рамката 
+
+
+---------------
+<Grid>
+    <Grid.RowDefinitions>
+        </RowDefinition>
+        </RowDefinition>
+        </RowDefinition>
+    </rid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        </ColumnDefinition>
+        </ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+</Grid>
+
+-------------------
+
+<Window.Resources>
+    style TargetType = "Button"
+    setter - Proprety, Value 
+</Window.Resources>
+
+Styles - Resource Dictionaries 
+
+<Style x:Key = "GreenYellowButton" targetType = "Button">
+
+<Setter 
+<Setter Proprety = "Background" Value = "GreenYellow"/>
+<Setter  
+
+</sstyle>
+
+<Button>
+
+Style = "{StaticResource GreenYellowButton}"
+ 
+</Button>
+
+<>
+
+-------------
+подреждане на свойства: 
+
+Button 
+
+Click 
+Name 
+FontSize
+BorderBrush
+
+
+----------------
+this.TextButton.Text  
+----------------
+
+for a 2nd window create SecondMainWindow.cs (Title ="SecondMainWindow")
+
+call 2nd window on mouse click - new SecondMainWindow();
+
+---------------
+StackPanel 
+---------------
+
+----------------
+Data Binding 
+
+----------------
+
+
+<Window
+Name 
+Height
+Width 
+WindowState = "Maximized"
+WindowStyle = "None"
+Closing = "Window_Closing"
+> 
+
+----------------------
+
+<StackPanel Name ="MainStackPanel"
+...
+>
+
+public partial MainWindow: Window 
+{
+    public MainWindow()
+    {
+    }
+    
+    methods for controls - events 
+    
+    public void OnAddNewItemClick(object sender, RoutedEvent e)
+    {
+        var textBlock = new TextBlock();
+        textBlock.Text = DateTime.Now.ToString();
+        this.MainStackPanel.Children.Add(textBlock);
+    }
+}
+
+----------------------
+Add elements to block 
+
+Call Behind 
+
+
+
+<StackPanel Name ="MainStackPanel"
+...
+>
+
+public partial MainWindow: Window 
+{
+    public MainWindow()
+    {
+    }
+    
+    methods for controls - events 
+    
+    public void OnAddNewItemClick(object sender, RoutedEvent e)
+    {
+        var grid = new Grid();
+        grid.Background = Brushes.Purple;
+        var textBox = new TextBox();
+        textBox.Text = DateTime.Now.ToString();
+        textBox.Width = 50;
+        grid.Children.Add(textBox);
+        this.MainStackPanel.Children.Add(grid);
+    }
+}
+
+----------------------
+
+Add elements to block 
+
+
+----------------------
+<StackPanel Name ="MainStackPanel"
+...
+>
+
+public partial MainWindow: Window 
+{
+    public MainWindow()
+    {
+    }
+    
+    methods for controls - events 
+    
+    public void OnAddNewItemClick(object sender, RoutedEvent e)
+    {
+        var grid = new Grid();
+        grid.RowDefinitions.Add(new RowDefinition()); 
+        grid.RowDefinitions.Add(new RowDefinition()); 
+        grid.RowDefinitions.Add(new RowDefinition()); 
+        
+        grid.ColumnDefinitions.Add(new ColumnDefinition()); 
+        grid.ColumnDefinitions.Add(new ColumnDefinition()); 
+        grid.ColumnDefinitions.Add(new ColumnDefinition()); 
+        
+        grid.Background = Brushes.Purple;
+        var textBox = new TextBox();
+        textBox.Text = DateTime.Now.ToString();
+        textBox.Width = 50;
+        grid.Children.Add(textBox);
+        this.MainStackPanel.Children.Add(grid);
+    }
+}
+
+
+-------------------------------
+
+
+
+----------------------
+<StackPanel Name ="MainStackPanel"
+...
+>
+
+public partial MainWindow: Window 
+{
+    public MainWindow()
+    {
+    }
+    
+    methods for controls - events 
+    
+    public void OnAddNewItemClick(object sender, RoutedEvent e)
+    {
+        var textBox = new TextBox();
+        textBox.Text = DateTime.Now.ToString();
+        textBox.Width = 50; 
+        grid.Children.Add(textBox);
+        
+        var textBoxRow1 = new TextBox();
+        textBoxRow1.Text = DateTime.Now.ToString();
+        textBoxRow1.Width = 50; 
+        grid.Children.Add(textBoxRow1);
+        Grid.SetRow(textBoxRow1, 1);
+        Grid.SetColumn(textBoxRow1, 1);
+        
+        this.MainStackPanel.Children.Add(grid);
+    }
+}
+
+
+---------------------------------------------------------
+<StackPanel Name ="MainStackPanel"
+...
+>
+
+public partial MainWindow: Window 
+{
+    public MainWindow()
+    {
+    }
+    
+    methods for controls - events 
+    
+    public void OnAddNewItemClick(object sender, RoutedEvent e)
+    {
+        var canvas = new Canvas();
+        canvas.Height = 50; (should be specified, otherwise it would overwrite previous canvas)
+        canvas.VerticalAlignment = VerticalAlignment.Bottom;  //VerticalAlignment.Bottom / VerticalAlignment.Center / VerticalAlignment.Top / VerticalAlignment.Stretched
+        canvas.Background = Brushes.Purple; 
+        
+        var textBox = new TextBox();
+        textBox.Text = DateTime.Now.ToSring();
+        textBox.Width = 150; 
+        Canvas.SetLeft(textBox, 50); 
+        
+        canvas.Children.Add(textBox);
+        this.MainStackPanel.Children.Add(canvas);
+    }
+}
+
+---------------------------------------------------------
+UIElement Render(); 
+Serialize();
+Deserialize();
+
+ 
+
+
+
+
+

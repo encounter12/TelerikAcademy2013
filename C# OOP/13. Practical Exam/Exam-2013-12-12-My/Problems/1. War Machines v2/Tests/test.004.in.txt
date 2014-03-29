@@ -1,0 +1,2 @@
+ManufactureTank Tank 150 120
+DefenseMode Tank

@@ -1,0 +1,12 @@
+13. Write a program that exchanges bits 3, 4 and 5 with bits 24, 25 and 26 of given 32-bit unsigned integer.
+
+1. Validation of 32-bit unsigned integer (uint)
+uint.TryParse 
+
+2. Take the values of bits and put them into 2 arrays (using bitmasks)
+2.1. Take the values of 3rd, 4th and 5th bit and record them into array P
+2.2. Take the values of: 24th, 25th and 26th bit and put them into array Q
+
+3. Replace the values 
+3.1. Put the values of array P onto 24th, 25th and 26th bit position using bitmask
+3.2. Put the values of array Q onto 3rd, 4th and 5th bit position using bitmask

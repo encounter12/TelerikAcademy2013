@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGame", "SnakeGame\SnakeGame.csproj", "{F512F535-36F8-43A4-BE28-71D428F41B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeGameJMTestProject", "SnakeGameJMTestProject\SnakeGameJMTestProject.csproj", "{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9CE103C-7E59-4406-A3BF-CDF58617737E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SnakeGame1.vsmdi = SnakeGame1.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs02
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SnakeGameJMTestProject\\SnakeGameJMTestProject.csproj
+		SccProjectName1 = SnakeGameJMTestProject
+		SccLocalPath1 = SnakeGameJMTestProject
+		SccProjectUniqueName2 = SnakeGame\\SnakeGame.csproj
+		SccProjectName2 = SnakeGame
+		SccLocalPath2 = SnakeGame
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SnakeGame1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Debug|x86.ActiveCfg = Debug|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Debug|x86.Build.0 = Debug|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Release|Any CPU.ActiveCfg = Release|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Release|x86.ActiveCfg = Release|x86
+		{F512F535-36F8-43A4-BE28-71D428F41B39}.Release|x86.Build.0 = Release|x86
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{59C3B9B2-5642-4DA0-9250-82BB4433FFDC}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

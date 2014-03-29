@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:SchoolObjects="clr-namespace:TeamKyanite.SchoolObjects" mc:Ignorable="d" x:Class="TeamKyanite.SchoolClassesWindow"
+        Title="SchoolClassesWindow" Height="300" Width="233.271" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="schoolClassViewSource" d:DesignSource="{d:DesignInstance {x:Type SchoolObjects:SchoolClass}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource schoolClassViewSource}" Background="Sienna">
+
+        <DataGrid x:Name="schoolClassDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10" Background="Sienna" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="textIdColumn" Width="SizeToHeader" Header="Text Id" Binding="{Binding TextId}"/>
+                <DataGridTextColumn x:Name="commentColumn" Width="SizeToHeader" Header="Comment" Binding="{Binding Comment}"/>                                
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="buttonSave" Content="Save" HorizontalAlignment="Left" Margin="79,226,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSave_Click"/>
+
+    </Grid>    
+</Window>

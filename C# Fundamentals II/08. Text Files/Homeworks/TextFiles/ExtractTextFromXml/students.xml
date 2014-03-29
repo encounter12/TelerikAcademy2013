@@ -1,0 +1,10 @@
+<?xml version="1.0">
+<student>
+    <name>Misho</name>
+    <age>27</age>
+    <interests count="3">
+        <interest> Games</instrest>
+        <interest>C#</instrest>
+        <interest> Python</instrest>
+    </interests>
+</student>
