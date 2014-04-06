@@ -1,29 +1,29 @@
 body {
   height: 500px;
-  background-image: -webkit-linear-gradient(top, white, black);
-  background-image: -moz-linear-gradient(top, white, black);
-  background-image: -ms-linear-gradient(top, white, black);
-  background-image: -o-linear-gradient(top, white, black);
-  background-image: linear-gradient(to bottom, white, black);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='black',GradientType=0 );
+  background-image: -webkit-linear-gradient(top, #ffffff, #000000);
+  background-image: -moz-linear-gradient(top, #ffffff, #000000);
+  background-image: -ms-linear-gradient(top, #ffffff, #000000);
+  background-image: -o-linear-gradient(top, #ffffff, #000000);
+  background-image: linear-gradient(to bottom, #ffffff, #000000);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
   background-repeat: none; }
   body div {
     height: 200px;
     width: 200px;
-    background-image: -webkit-linear-gradient(top, red, blue);
-    background-image: -moz-linear-gradient(top, red, blue);
-    background-image: -ms-linear-gradient(top, red, blue);
-    background-image: -o-linear-gradient(top, red, blue);
-    background-image: linear-gradient(to bottom, red, blue);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='red', endColorstr='blue',GradientType=0 );
+    background-image: -webkit-linear-gradient(top, #ff0000, #0000ff);
+    background-image: -moz-linear-gradient(top, #ff0000, #0000ff);
+    background-image: -ms-linear-gradient(top, #ff0000, #0000ff);
+    background-image: -o-linear-gradient(top, #ff0000, #0000ff);
+    background-image: linear-gradient(to bottom, #ff0000, #0000ff);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#0000ff',GradientType=0 );
     background-repeat: none; }
     body div.box {
       color: white;
       display: block;
       width: 300px;
       height: 300px;
-      border: 3px solid #333333;
-      background: linear-gradient(#222222, #cccccc);
+      border: 3px solid #333;
+      background: linear-gradient(#222, #ccc);
       padding: 15px;
       border-top-left-radius: 15px;
       -moz-border-radius-topleft: 15px;
@@ -38,3 +38,4 @@ body {
       -moz-border-radius-bottomleft: 15px;
       -webkit-border-bottom-left-radius: 15px; }
 
+/*# sourceMappingURL=C:\Users\IvayloBotusharov\Dropbox\Ivo\IT\Telerik Academy\Telerik Academy 2013\CSS Basics\04. SASS\Lecture\SASS-demos\styles\mixins-arguments.css.map */

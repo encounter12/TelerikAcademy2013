@@ -1,0 +1,181 @@
+﻿body 
+{
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 100%;
+}
+
+form, header, div, nav, section, input
+{
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+
+form 
+{
+    width: 420px;
+    height: 386px;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 0 11px black;
+    border: 1px solid black;
+    background-color: #C2DFFB;
+    padding: 0 6px 7px 6px;
+}
+
+header 
+{
+    font-size: 12px;
+    height: 28px;
+    margin: 0;
+}
+ 
+#calculator-icon 
+{
+    margin-top: 2px;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 20px;
+    float: left;
+    background: url(../images/calculator-small-00.png) no-repeat 2px 2px;
+    -webkit-text-shadow: 0 0 5px white;
+    text-shadow: 0 0 5px white;
+}
+
+#control-buttons input[type="button"]
+{
+    display: inline-block;
+    float: right;
+    width: 60px;
+    height: 18px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #707982;
+    color: white;
+    font-weight: bold;
+    font-size: 9px;
+    text-transform: capitalize;
+}
+
+
+#control-buttons input[type="button"]:last-child
+{
+    border-left: 1px solid #707982;
+    border-bottom-left-radius: 4px;
+}
+
+#control-buttons input[type="button"]:first-child
+{
+    width: 48px;
+    border-bottom-right-radius: 4px;
+    background: linear-gradient(#F5B4AC 0, #E18B7F 40%, #CE5F50 60%, #C47161 100%);
+    text-shadow: 0 0 5px #F8A397;
+}
+
+#control-buttons input[type="button"]:not(:first-child)
+{
+    width: 27px;
+    background: linear-gradient(#E5EEF8 0, #CBD8E5 40%, #9FB3C7 60%, #B3C6DD 100%);
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+
+#calculator-icon:after, #control-buttons:after
+{
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+form > section
+{
+    height: 350px;
+    border: 1px solid black;
+
+}
+
+form > section nav
+{
+    height: 19px;
+    border-bottom: 1px solid #BEC4D5;
+}
+
+
+
+input[type="text"]
+{
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 383px;
+    height: 49px;
+    padding: 10px 0 0 0;
+    text-align: right;
+    font-size: 1.2em;
+    border: 1px solid #9CA8B7;
+    border-radius: 2px;
+    font-family: Consolas, monospace;
+    background: linear-gradient(#E3EDFA, #FFFFFF);
+}
+
+#wrapper
+{
+    width: 383px;
+    height: 307px;
+    margin: 12px 11px;
+}
+
+#binary-output
+{
+    margin: 6px 0;
+    padding: 0 0 0 7px;
+    height: 60px;
+    border: 1px solid #9CA8B7;
+    border-radius: 2px;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    color: #3E4F75;
+}
+
+#binary-output div
+{
+    float: left;
+    width: 46px;
+    height: 30px;
+}
+
+#binary-output div span:nth-child(2)
+{
+    line-height: 8px;
+    display: block;
+}
+
+#input-buttons
+{
+    width: 306px;
+    height: 186px;
+    float: right;
+    border: 1px dotted gray;
+}
+
+#radio-buttons-num-systems, #radio-buttons-word
+{
+    width: 72px;
+    height: 90px;
+    float: left;
+    border-radius: 2px;
+    border: 1px dotted gray;
+}
+
+#radio-buttons-num-systems
+{
+    margin-bottom: 6px;
+}
+
+

@@ -1,0 +1,22 @@
+.uk-flag, .germany-flag, .mexico-flag{
+	background: url(sprites.png) no-repeat;
+}
+
+.uk-flag{
+	background-position: 0 -58px ;
+	width: 38px;
+	height: 25px;
+}
+
+.germany-flag{
+	background-position: 0 -29px ;
+	width: 38px;
+	height: 25px;
+}
+
+.mexico-flag{
+	background-position: 0 0;
+	width: 38px;
+	height: 25px;
+}
+

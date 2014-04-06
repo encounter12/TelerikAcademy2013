@@ -1,0 +1,96 @@
+﻿body 
+{
+    font-family: Calibri, Arial, "Times New Roman", sans-serif;
+    font-size: 100%;
+}
+
+table
+{
+    border-collapse: collapse;
+    border: 1px solid gray;
+    font-size: 1.1em;
+}
+
+td, th
+{
+    border: 1px solid gray;
+    padding: 12px 0 12px 6px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th
+{
+    font-weight: normal;
+    color: white;            
+}
+
+th:nth-child(1)
+{
+    width: 245px;
+}
+
+th:nth-child(2)
+{
+    width: 197px;
+}
+
+th:nth-child(3)
+{
+    width: 224px;
+}
+
+th:nth-child(4)
+{
+    width: 146px;
+    text-align: center;  
+}
+
+thead tr
+{
+    background-image: linear-gradient(#5DC206, #4EB106)
+}
+
+tbody tr:nth-child(2n)
+{
+    background-color: #ECECD8;
+}
+
+tbody tr:nth-child(2n+1)
+{
+    background-color: #FFFFFF;
+}
+
+input[type=checkbox]
+{
+    width: 17px;
+    height: 17px;
+}
+
+/*Flags sprite style*/
+
+.uk-flag, .germany-flag, .mexico-flag
+{
+	background: url(../images/flags-sprite.png) no-repeat;
+    display: inline-block;
+    vertical-align:text-top;
+    border-radius: 1px;
+    margin: 0 7px 0 4px;
+    width: 38px;
+    height: 25px;
+}
+
+.uk-flag
+{
+	background-position: 0 -58px ;
+}
+
+.germany-flag
+{
+	background-position: 0 -29px ;
+}
+
+.mexico-flag
+{
+	background-position: 0 0;
+}
