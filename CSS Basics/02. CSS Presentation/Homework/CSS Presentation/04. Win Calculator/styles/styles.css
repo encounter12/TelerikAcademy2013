@@ -1,26 +1,43 @@
 ﻿body 
 {
-    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 100%;
+    background-color:  #363231;
 }
 
-form, header, div, nav, section, input
+h1
+{
+    font-family: 'Dancing Script', cursive;
+    font-weight: normal;
+    font-size: 42px;
+    text-align: center;
+    color:  #2C9BC8;
+}
+
+form, header, div, nav, section, input, ul
 {
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
 }
 
-
-form 
+#calculator-icon:after, #control-buttons:after, #binary-output:after,
+    #input-buttons:after, #radio-buttons-num-systems:after, #radio-buttons-word:after, nav ul:after, #input-buttons > div
 {
-    width: 420px;
+    content: "";
+    clear: both;
+    display: block;
+}
+
+form
+{
+    width: 423px;
     height: 386px;
     margin: 0 auto;
     border-radius: 6px;
     box-shadow: 0 0 11px black;
     border: 1px solid black;
-    background-color: #C2DFFB;
+    background: linear-gradient( to left bottom, #CFE4FA 0, #CDE3F9 15%, #B2D2F1 25%, #B1D1F0 35%, #CDE3F9 75%, #C2DBF3 100%);  
     padding: 0 6px 7px 6px;
 }
 
@@ -38,7 +55,7 @@ header
     line-height: 22px;
     padding-left: 20px;
     float: left;
-    background: url(../images/calculator-small-00.png) no-repeat 2px 2px;
+    background: url(../images/calculator-small.png) no-repeat 2px 2px;
     -webkit-text-shadow: 0 0 5px white;
     text-shadow: 0 0 5px white;
 }
@@ -70,6 +87,7 @@ header
     width: 48px;
     border-bottom-right-radius: 4px;
     background: linear-gradient(#F5B4AC 0, #E18B7F 40%, #CE5F50 60%, #C47161 100%);
+    -webkit-text-shadow: 0 0 5px #F8A397;
     text-shadow: 0 0 5px #F8A397;
 }
 
@@ -82,100 +100,278 @@ header
 }
 
 
-#calculator-icon:after, #control-buttons:after
-{
-    content: "";
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
-
-form > section
+section
 {
     height: 350px;
-    border: 1px solid black;
-
+    width: 409px;
+    border: 1px solid #5D6C7A;
+    background: linear-gradient(#ECF3FB 0,  #D8E3F0 30%, #D8E3F0 100%);
 }
 
-form > section nav
+nav
 {
     height: 19px;
     border-bottom: 1px solid #BEC4D5;
+    background: linear-gradient(#FDFDFF 0, #F5F7FB 25%, #E4E9F4 45%, #E0E5F5 100%);
 }
 
+nav ul
+{
+    margin: 0 0 0 8px;
+    padding: 0;
+    list-style-type: none;
+}
 
+nav ul li
+{
+    float: left;    
+    margin-right: 15px;
+}
+
+nav ul li a
+{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    border: 1px solid transparent;
+}
+
+nav ul li a::first-letter
+{
+    text-decoration: underline;
+}
+
+nav ul li a:hover
+{
+    border: 1px solid #9398A5;
+    border-radius: 2px;
+    text-decoration: none;
+    -webkit-text-shadow: 0 2px 5px white;
+    text-shadow: 0 2px 5px white;
+}
 
 input[type="text"]
 {
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    width: 383px;
-    height: 49px;
-    padding: 10px 0 0 0;
+    width: 385px;
+    height: 50px;
+    padding: 10px 3px 0 0;
     text-align: right;
-    font-size: 1.2em;
     border: 1px solid #9CA8B7;
     border-radius: 2px;
+    font-size: 1.5em;
     font-family: Consolas, monospace;
+    color: #333333;
     background: linear-gradient(#E3EDFA, #FFFFFF);
+    box-shadow: inset 0 0 0 1px white;
+}
+
+input[type="text"]::-ms-clear 
+{
+    display: none;
 }
 
 #wrapper
 {
     width: 383px;
     height: 307px;
-    margin: 12px 11px;
+    margin: 11px 11px 12px 11px;
 }
 
 #binary-output
 {
-    margin: 6px 0;
+    margin: 5px 0;
     padding: 0 0 0 7px;
+    width: 385px;
     height: 60px;
     border: 1px solid #9CA8B7;
     border-radius: 2px;
     font-family: Consolas, monospace;
     font-size: 13px;
+    background-color: #D8E3F0;
     color: #3E4F75;
+    box-shadow: inset 0 0 0 1px white;
 }
 
 #binary-output div
 {
     float: left;
-    width: 46px;
-    height: 30px;
+    height: 24px;
+    width: 34px;
+    margin-top: 3px;
+}
+
+
+#binary-output div:not(:nth-child(8)):not(:nth-child(16))
+{
+    margin-right: 13px;
+}
+
+#binary-output div:nth-child(8), #binary-output div:nth-child(16)
+{
+    margin-right: 2px;
+    text-align: right;
+}    
+
+#binary-output div span:nth-child(1)
+{
+    display: block;
+    line-height: 10px;
 }
 
 #binary-output div span:nth-child(2)
 {
-    line-height: 8px;
-    display: block;
-}
-
-#input-buttons
-{
-    width: 306px;
-    height: 186px;
-    float: right;
-    border: 1px dotted gray;
+    color: #656565; 
 }
 
 #radio-buttons-num-systems, #radio-buttons-word
 {
-    width: 72px;
-    height: 90px;
+    width: 73px;
+    height: 91px;
     float: left;
     border-radius: 2px;
-    border: 1px dotted gray;
+    border: 1px solid #9CA8B7;
+}
+
+#radio-buttons-num-systems > div, #radio-buttons-word > div
+{
+    height: 21px;
 }
 
 #radio-buttons-num-systems
 {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
+}
+
+#radio-buttons-num-systems label, #radio-buttons-word label
+{
+    font-size: 11px;
+    color: #1E385A;
+}
+
+#input-buttons
+{
+    width: 305px;
+    height: 186px;
+    float: right;
+    position: relative;
+}
+
+#input-buttons-main 
+{
+    position: absolute;
+    width: 268px;
+    height: 186px;
+    top: 0;
+    left: 0;
+}
+
+#input-buttons-main > div
+{
+    height: 25px;
+    width: 268px;
 }
 
 
+#input-buttons-main > div:not(:last-child) 
+{
+    margin-bottom: 7px;
+}
+
+#most-right-column 
+{
+    height: 186px;
+    width: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#input-buttons a
+{
+    display: block;
+    text-decoration: none;
+    width: 32px;
+    height: 25px;
+    line-height: 25px;
+    color: #1E385A;
+    font-size: 11px;
+    border-radius: 2px;
+    border: 1px solid #9CA8B7;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#input-buttons a:hover
+{
+    border: 1px solid #FEDA19;
+    background: linear-gradient(#FFF3E8 0, #FFF3E8 2%, #FDE1C2 49%, #FECE6C 50%, #FEDF90 100%);
+}
+
+#input-buttons-main > div a:not(:last-child) 
+{
+    margin: 0 5px 0 0;
+}
+
+#most-right-column a:not(:last-child)
+{
+    margin-bottom: 5px;
+}
+
+#input-buttons-main > div:nth-child(6) a:nth-child(4)
+{
+    width: 71px;
+}
+
+#most-right-column a:last-child
+{
+    height: 58px;
+    line-height: 58px;
+}
+
+.number
+{
+    font-size: 16px !important;
+    background: linear-gradient(#F6FAFF 0, #ECF2F7 45%, #E6ECF4 50%, #ECF4FA 100%);
+    box-shadow: inset 0 0 0 1px white;
+}
+
+.capital-letter
+{
+    font-size: 16px !important;
+}
+
+
+#equals-sign
+{
+    font-size: 24px !important;
+    font-weight: bold; 
+}
+
+#plus-sign, #minus-sign
+{
+    font-size: 14px !important;
+}
+
+.math-operators
+{
+    background: linear-gradient(#EFF5FA 0, #E1E9F2 48%, #D4DFEC 50%, #D6E1EE 100%);
+    box-shadow: inset 0 0 0 1px white;
+}
+
+.logical-operators
+{
+    background: linear-gradient(#EFF5FA 0, #E9F0F7 25%, #E1E9F2  49%, #D4DFEC  51%, #D6E1EE 100%);
+    box-shadow: inset 0 0 0 1px white;
+}
+
+.memory-functions
+{
+    box-shadow: inset 0 0 0 1px white;
+}
+
+#left-arrow
+{
+    font-size: 18px !important;
+}

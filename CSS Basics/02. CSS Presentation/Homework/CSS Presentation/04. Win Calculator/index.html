@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Windows Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+<body>
+    <h1>Windows Calculator</h1>
+    <form name="win calculator" action="#" method="post">
+        <header>
+            <div id="calculator-icon">
+                <span>Calculator</span>
+            </div>
+            <div id="control-buttons">
+                <input type="button" value="x" />
+                <input type="button" value="&#9645" />
+                <input type="button" value="_" />
+            </div>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+            <div id="wrapper">
+                <input type="text" id="display" />
+                <div id="binary-output">
+                    <div><span>0000</span><span>63</span></div>
+                    <div><span>0000</span></div>
+                    <div><span>0000</span></div>
+                    <div><span>0000</span></div>
+                    <div><span>0000</span><span>47</span></div>
+                    <div><span>0000</span></div>
+                    <div><span>0000</span></div>
+                    <div><span>0000</span><span>32</span></div>
+                    <div><span>0000</span><span>31</span></div>
+                    <div><span>0000</span></div>
+                    <div><span>1000</span></div>
+                    <div><span>0111</span></div>
+                    <div><span>0001</span><span>15</span></div>
+                    <div><span>1011</span></div>
+                    <div><span>1011</span></div>
+                    <div><span>0111</span><span>0</span></div>
+                </div>
+                <div id="input-buttons">
+                    <div id="input-buttons-main">
+                        <div>
+                            <a href="#"></a>
+                            <a href="#" class="logical-operators">Mod</a>
+                            <a href="#" class="capital-letter">A</a>
+                            <a href="#" class="memory-functions">MC</a>
+                            <a href="#" class="memory-functions">MR</a>
+                            <a href="#" class="memory-functions">MS</a>
+                            <a href="#" class="memory-functions">M+</a>
+                        </div>
+                        <div>
+                            <a href="#" class="math-operators">(</a>
+                            <a href="#" class="math-operators">)</a>
+                            <a href="#" class="capital-letter">B</a>
+                            <a href="#" class="math-operators" id="left-arrow">&#8592;</a>
+                            <a href="#" class="math-operators">CE</a>
+                            <a href="#" class="math-operators">C</a>
+                            <a href="#" class="math-operators">&#177;</a>
+                        </div>
+                        <div>
+                            <a href="#" class="logical-operators">RoL</a>
+                            <a href="#" class="logical-operators">RoR</a>
+                            <a href="#" class="capital-letter">C</a>
+                            <a href="#" class="number">7</a>
+                            <a href="#" class="number">8</a>
+                            <a href="#" class="number">9</a>
+                            <a href="#" class="math-operators">/</a>
+                        </div>
+                        <div>
+                            <a href="#" class="logical-operators">Or</a>
+                            <a href="#" class="logical-operators">Xor</a>
+                            <a href="#" class="capital-letter">D</a>
+                            <a href="#" class="number">4</a>
+                            <a href="#" class="number">5</a>
+                            <a href="#" class="number">6</a>
+                            <a href="#" class="math-operators">*</a>
+                        </div>
+                        <div>
+                            <a href="#" class="logical-operators">Lsh</a>
+                            <a href="#" class="logical-operators">Rsh</a>
+                            <a href="#" class="capital-letter">E</a>
+                            <a href="#" class="number">1</a>
+                            <a href="#" class="number">2</a>
+                            <a href="#" class="number">3</a>
+                            <a href="#" id="minus-sign" class="math-operators">-</a>
+                        </div>
+                        <div>
+                            <a href="#" class="logical-operators">Not</a>
+                            <a href="#" class="logical-operators">And</a>
+                            <a href="#" class="capital-letter">F</a>
+                            <a href="#" class="number">0</a>
+                            <a href="#">.</a>
+                            <a href="#" id="plus-sign" class="math-operators">+</a>
+                        </div>
+                    </div>
+                    <div id="most-right-column">
+                        <a href="#" class="memory-functions">M-</a>
+                        <a href="#">&radic;</a>
+                        <a href="#">%</a>
+                        <a href="#">1/&chi;</a>
+                        <a href="#" id="equals-sign">=</a> 
+                    </div>
+                </div>
+                <div id="radio-buttons-num-systems">
+                    <div><input type="radio" id="hex" name="num-system" /><label for="hex">Hex</label></div>
+                    <div><input type="radio" id="dec" name="num-system" /><label for="dec">Dec</label></div>
+                    <div><input type="radio" id="oct" name="num-system" /><label for="oct">Oct</label></div>
+                    <div><input type="radio" id="bin" name="num-system" /><label for="bin">Bin</label></div>
+                </div>
+                <div id="radio-buttons-word">
+                    <div><input type="radio" id="qword" name="words" /><label for="qword">Qword</label></div>
+                    <div><input type="radio" id="dword" name="words" /><label for="dword">Dword</label></div>
+                    <div><input type="radio" id="word" name="words" /><label for="word">Word</label></div>
+                    <div><input type="radio" id="byte" name="words" /><label for="byte">Byte</label></div>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+</html>
