@@ -1,0 +1,24 @@
+Clean up ASP.NET MVC 5 Solution before submitting: 
+
+01. Modify the connection string in Web.config: 
+
+Make sure Data Source is "(LocalDb)\v11.0;
+Remove AttachDbFileName section
+Change Initial Catalog value to: SampleApp;
+
+For me the connection string looks like: 
+<connectionStrings>
+    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=SampleApp;Integrated Security=True" 
+        providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+02. Delete all folders with the names below from the Solution: 
+
+\packages
+\bin
+\obj
+
+
+03. Empty the content of "SampleApp.Web\App_Data"
+
+*You can first drop the database from Visual Studio (not required)

@@ -1,0 +1,11 @@
+﻿{
+  "ignore": [
+    "\\DataTypesAndVariables\\js\\js-console.js"
+  ],
+  "options": {
+    "predef": {}
+  },
+  "runOnSave": false,
+  "runOnBuild": false,
+  "cancelBuild": false
+}

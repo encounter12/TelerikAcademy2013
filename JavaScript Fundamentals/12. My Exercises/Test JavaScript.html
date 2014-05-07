@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Test JavaScript</title>
+		<style type="text/css">
+			body
+			{
+				padding: 0;
+				margin: 0;
+			}
+			nav
+			{
+				border: 1px solid gray;
+			}
+			nav ul
+			{
+				margin: 0;
+				padding: 0;
+			}
+
+			nav ul li 
+			{
+				float: left;
+				margin: 0 20px;
+				padding: 5px 10px;
+				list-style: none;
+				border: 1px solid gray;
+				border-radius: 2px;
+			}
+			nav ul li a
+			{
+				text-decoration: none;
+				color: Sienna;
+			}
+			nav ul:after
+			{
+				clear: both;
+				content: "";
+				display: block;
+			}
+			section
+			{
+				margin: 10px 15px;
+			}
+			button
+			{
+				background-color: sienna;
+				padding: 5px;
+				border: none;
+				border-radius: 2px;
+			}
+		</style>
+		<script type="text/javascript">
+			function dateTime()
+			{
+				document.getElementById("dateField").innerHTML = Date();
+			}
+			function helloJavaScript()
+			{
+				x = document.getElementById("sayHello").innerHTML = "Hello JavaScript!";
+			}
+		</script>
+	</head>
+	<body>
+		<header>This is header</header>
+		<nav>
+			<ul>
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				<li><a href="#">Item 3</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article>
+				<h3>Article Heading</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<button type="button" onclick="dateTime()">Current Date</button>
+			<p id="dateField"></p>
+			<button type="button" onclick="helloJavaScript()">Say hello!</button>
+			<p id="sayHello"></p>
+			<script type="text/javascript">
+				//calculates sum of the first N natural numbers
+				var counter = 0;
+				while (counter < 10){
+					document.write("Number : " + counter + "<br />");
+					counter++;
+				}
+
+				var nStr = 10;
+				var n = parseInt(nStr);
+				var number = 1;
+				var sum = 1;
+				var result = "The sum 1";
+				while (number < n){
+					number++;
+					sum += number ;
+					result += "+" + number;
+				}
+				result += " = " + sum;
+				document.write(result);
+
+				var numberStr = prompt("Enter a number: ", "");
+				var number = parseInt(numberStr);
+				var divider = 2;
+				var maxDivider = Math.sqrt(number);
+				var prime = true;
+				while (prime && (divider <= maxDivider)){
+					if (number % divider == 0){
+					prime = false;        
+					}
+					divider++;
+				}
+				document.write("<br />" + "The number " + number + " is prime: " + prime);
+			</script>
+		</section>
+		<footer></footer>
+	</body>
+</html>

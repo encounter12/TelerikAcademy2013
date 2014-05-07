@@ -1,0 +1,40 @@
+body, nav, ul, li, a, img {
+  margin: 0;
+  padding: 0;
+  background: black; }
+
+#simple-web-gallery nav {
+  margin: 15px; }
+  #simple-web-gallery nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px; }
+    #simple-web-gallery nav ul li img {
+      border: 2px solid black;
+      border-radius: 5px;
+      opacity: 0.6; }
+      #simple-web-gallery nav ul li img:hover {
+        border: 2px solid white;
+        opacity: 1;
+        box-shadow: white 0px 0px 25px, inset white 0px -10px 10px; }
+    #simple-web-gallery nav ul li .thubnail {
+      width: 150px;
+      height: 110px; }
+
+.images-container {
+  postion: relative; }
+  .images-container input[type="radio"] {
+    display: none; }
+    .images-container input[type="radio"]:checked + .image {
+      opacity: 1;
+      -webkit-transition: opacity 0.5s ease-in-out;
+      -moz-transition: opacity 0.5s ease-in-out;
+      -o-transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in-out; }
+  .images-container .image {
+    width: 600px;
+    margin-left: 15px;
+    opacity: 0;
+    display: inline-block;
+    position: absolute; }
+

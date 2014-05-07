@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LESS", "LESS\LESS.csproj", "{A7B53399-CF80-4887-8BE4-EECE1891B075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SASS", "..\SASS\SASS\SASS.csproj", "{AD178CBD-7903-4D90-99A7-476D4974E071}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSSPresentation", "..\CSSPresentation\CSSPresentation\CSSPresentation.csproj", "{9A67B365-DDE2-4934-A8ED-5080C8051034}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7B53399-CF80-4887-8BE4-EECE1891B075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B53399-CF80-4887-8BE4-EECE1891B075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B53399-CF80-4887-8BE4-EECE1891B075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B53399-CF80-4887-8BE4-EECE1891B075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD178CBD-7903-4D90-99A7-476D4974E071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD178CBD-7903-4D90-99A7-476D4974E071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD178CBD-7903-4D90-99A7-476D4974E071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD178CBD-7903-4D90-99A7-476D4974E071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A67B365-DDE2-4934-A8ED-5080C8051034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A67B365-DDE2-4934-A8ED-5080C8051034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A67B365-DDE2-4934-A8ED-5080C8051034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A67B365-DDE2-4934-A8ED-5080C8051034}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

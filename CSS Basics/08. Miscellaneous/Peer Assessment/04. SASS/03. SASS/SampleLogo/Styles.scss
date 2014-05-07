@@ -1,0 +1,256 @@
+/*MIXINS*/
+@mixin gradient-3stops($col1, $pos1, $col2, $pos2, $col3, $pos3)    { 
+
+background: $col1; /* Old browsers */
+background: -moz-linear-gradient(top, $col1 $pos1, $col2 $pos2, $col3 $pos3); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop($pos1, $col1), color-stop($pos2, $col2), color-stop($pos3, $col3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, $col1 $pos1, $col2 $pos2, $col3 $pos3); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, $col1 $pos1, $col2 $pos2, $col3 $pos3); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, $col1 $pos1, $col2 $pos2, $col3 $pos3); /* IE10+ */
+background: linear-gradient(to bottom, $col1 $pos1, $col2 $pos2, $col3 $pos3); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col1', endColorstr='$col2',GradientType=0 ); /* IE6-9 */
+
+}
+
+/*RESET*/
+body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+    border: 0;
+	
+}
+     
+div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
+    display: block;
+}
+     
+/*STYLE*/
+.clearfix {
+    zoom: 1;
+     
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+}
+
+body {
+	font-size : 14px;
+	color: white;
+	background-color: #9215f2;
+	@include gradient-3stops(#d593ff, 0%, #9215f2, 30%, #9215f2, 100%);
+
+	header {
+		padding: 25px 15px 15px 15px;
+
+		div#header-container {
+			@extend .clearfix;
+
+				div#logo-container{
+					float: left;
+					position: relative;
+				}
+
+				div#reg-form-container{
+					float: right;
+					position: relative;
+					right: 5%;
+					top: 25%;
+
+					div {
+						text-align: right;
+
+						label {
+							width: 50px;
+							margin: 5px;
+						}
+						input {
+							width: 150px;
+							border: 1px solid #603382;
+							border-radius: 10px;
+							background: #b35ef3; 
+							padding: 5px 5px;
+							margin: 5px;
+						}
+					}
+
+					button {
+						border: 1px;
+						border-style: outset;
+						border-radius: 10px;
+						padding: 5px 10px;
+						background-color: #b35ef3;
+						font-weight: bold;
+						color: white;
+
+						&:hover {
+                        background-color: #8949b9;
+                        border-style: inset;
+						}
+					}
+				}
+			}
+
+		nav {
+			@extend .clearfix;
+			display: inline-block;
+			width: 70%;
+			margin: 10px;
+			padding: 5px;
+			border: 2px solid black;
+			border-radius: 5px;
+			font-size: 1.2em;
+			
+
+			ul.nav-list {
+                list-style-type: none;
+            }
+
+			ul {
+				@extend .clearfix;
+
+				li {
+					float: left;
+					margin: 0;
+
+					a {
+						text-decoration: none;
+						padding: 0 10px;
+						color: white;
+						font: 1.2em;
+
+					}
+					&:hover > a {
+						text-decoration: underline;
+						color: #dadada;
+					}
+
+					&:hover > a + ul {
+								display: block;
+					}
+
+					ul.sub-nav-list {
+						@extend .clearfix;
+
+						position: absolute;
+						display: none;
+						background-color: #a558de;
+						border-radius: 5px;
+					}
+
+					ul li {
+						float: none;
+						border-bottom: 1px solid black;
+
+						&:last-of-type {
+							border-bottom: none;
+						}
+						& > a {
+								color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	section {
+		@extend .clearfix;
+
+		width: 70%;
+		float: left;
+		
+		article {
+			margin: 15px;
+			padding: 0 15px 15px 15px;
+			border: 1px solid black;
+			border-radius: 5px;
+
+			header {
+                background: none;
+                padding: 15px 0 15px 0;
+ 
+                h1 {
+                    font-size: 1.4em;
+                    padding: 0;
+                }
+			}
+			footer {
+					
+				p {
+					text-align: right;
+						padding: 5px;
+
+					a {
+						color: #d4a3f8;
+						text-decoration: none;
+
+					}
+				}
+			}
+		}
+	}
+
+	aside {
+		@extend .clearfix;
+
+		float: left;
+        width: 28%;
+        margin: 10px;
+		
+		& > ul {
+			list-style-type: none;
+		
+			& > li {
+				margin: 15px;
+				padding: 15px;
+				border: 1px solid black;
+				border-radius: 5px;
+
+				h2 {
+					font-size: 1.2em;
+					font-weight: bold;
+					padding-bottom: 10px;
+				}
+				p {
+					
+					a {
+                        color: #aaaaaa;
+                        text-decoration: none;
+					}
+					strong {
+						color: #ccccd1;
+					}
+					em {
+						color: #ccccd1;
+					}
+				}
+
+				ul {
+                    list-style-type: none;
+                    margin: 10px 0;
+ 
+                    li {
+                        margin: 5px 0 0 10px;
+                        background: url(../images/li-dot.png) no-repeat;
+                        background-position: 0 50%;
+                        padding-left: 25px;
+                    }
+                }
+			}
+		}
+	}
+
+	footer{
+		clear: both;
+        padding: 15px 0 25px 0;
+ 
+        p {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+	}
+}

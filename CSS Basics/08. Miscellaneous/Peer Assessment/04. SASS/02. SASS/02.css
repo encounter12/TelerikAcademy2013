@@ -1,0 +1,64 @@
+body {
+  background-color: #eee;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 100%;
+  margin-top: 1rem auto; }
+  body article {
+    width: 800px;
+    text-align: left; }
+    body article header h1 {
+      padding-left: 2.5rem;
+      font-size: 2rem;
+      margin: 0; }
+    body article ul li {
+      list-style: none;
+      background-color: #000;
+      text-align: center;
+      margin-bottom: 0.4rem;
+      display: inline-block; }
+      body article ul li label {
+        background-color: inherit;
+        color: white; }
+    body article section {
+      text-align: center;
+      background-color: #999;
+      height: 420px;
+      width: 610px;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      padding-left: 2rem auto; }
+
+#sun:hover ~ section {
+  background-image: url('imgs/sun.jpg'); }
+
+#mercury:hover ~ section {
+  background-image: url('imgs/mercury.jpg'); }
+
+#venus:hover ~ section {
+  background-image: url('imgs/venus.jpg'); }
+
+#earth:hover ~ section {
+  background-image: url('imgs/earth.jpg'); }
+
+#moon:hover ~ section {
+  background-image: url('imgs/moon.jpg'); }
+
+#mars:hover ~ section {
+  background-image: url('../HW-CSS-SASS/imgs/mars.jpg'); }
+
+#jupiter:hover ~ section {
+  background-image: url('../HW-CSS-SASS/imgs/jupiter.jpg'); }
+
+#saturn:hover ~ section {
+  background-image: url('../HW-CSS-SASS/imgs/saturn.jpg'); }
+
+#uranus:hover ~ section {
+  background-image: url('../HW-CSS-SASS/imgs/uranus.jpg'); }
+
+#neptune:hover ~ section {
+  background-image: url('../HW-CSS-SASS/imgs/neptune.jpg'); }
+
+#pluto:hover ~ section {
+  background-image: url('../HW-CSS-SASS/imgs/pluto.jpg'); }
+
+/*# sourceMappingURL=02.css.map */

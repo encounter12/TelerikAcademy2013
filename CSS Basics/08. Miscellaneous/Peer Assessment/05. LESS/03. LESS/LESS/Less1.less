@@ -1,0 +1,104 @@
+@page-text: 14px normal Arial;
+@page-text-color:white;
+@button-background:#D191FC;
+@button-background-hover:#8949b9;
+@nav-list-background:rgba(179, 94, 243, 0.9);
+@article-link-color:#cccccc;
+@widget-link-color:#aaaaaa;
+@widget-embeded-font:normal italic;
+@widget-strong-font:bold normal;
+@widget-embeded-strong-color:#cccccc;
+@widget-header-font:1.1em bold;
+@widget-text:14px;
+@article-header-size:1.4em;
+@article-font:16px right normal white;
+@footer-text:1.2em bold;
+
+.clearfix{
+zoom: 1;
+  &:after {
+    display: block; height: 0;
+    content: ""; clear: both;
+  }
+}
+
+.background-gradient(@color1:#CC8FF7, @color2:#8F1AEF){
+background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, @color1), color-stop(0.25, @color2) );
+    background-image: -o-linear-gradient(bottom, @color1 0%, @color2 25%);
+    background-image: -moz-linear-gradient(bottom, @color1 0%, @color2 25%);
+    background-image: -webkit-linear-gradient(bottom, @color1 0%, @color2 25%);
+    background-image: -ms-linear-gradient(bottom, @color1 0%, @color2 25%);
+    background-image: linear-gradient(to bottom, @color1 0%, @color2 25%);
+	}
+
+body {
+    header {
+        div#headercontainer {
+            .clearfix
+        }
+    }
+}
+
+body {
+    header {
+        nav {
+            .clearfix
+        }
+    }
+}
+
+body {
+    .background-gradient;
+    font: @page-text;
+    color:@page-text-color;
+
+    h1 {
+        font-size: @article-header-size;
+    }
+
+    section {
+        article {
+            font: @article-font;
+        }
+    }
+
+    aside {
+
+        h2 {
+            font: @widget-header-font;
+        }
+
+        p {
+            font-size: @widget-text;
+
+            a {
+                color: @widget-link-color;
+            }
+
+            strong {
+                font: @widget-strong-font;
+                color: @widget-embeded-strong-color;
+            }
+
+            embeded {
+                font: @widget-embeded-font;
+                color: @widget-embeded-strong-color;
+            }
+        }
+    }
+
+    footer {
+        p {
+            font: @footer-text;
+        }
+    }
+
+
+    button {
+        background-color: @button-background;
+
+        &:hover {
+            background-color: @button-background-hover;
+        }
+    }
+}

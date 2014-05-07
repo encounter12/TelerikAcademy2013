@@ -12,6 +12,11 @@ h1
     font-size: 42px;
     text-align: center;
     color:  #2C9BC8;
+    height: 65px;
+	-ms-transform:skew(30deg,-6deg);
+	-webkit-transform:skew(30deg, -6deg); 
+	transform:skew(30deg,-6deg);
+	/*text-shadow: 1px 1px 8px white;*/
 }
 
 form, header, div, nav, section, input, ul

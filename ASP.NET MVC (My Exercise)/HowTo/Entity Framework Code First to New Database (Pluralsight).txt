@@ -1,0 +1,139 @@
+Entity Framework Code First to New Database (Taken from: Pluralsight - Getting Started with Entity Framework 5)
+
+1. Set up an account and use Version Control System for your MVC Application (e.g. Team Foundation Service, Git, SVN)
+
+2. Create VS Blank Solution and in it create your first 2 projects: SalesModel.LogicLayer (Class Library), SalesModel.Web (ASP.NET Web Application - MVC - Authentication: Individual User Accounts)
+
+3. Specify all the classes, properties and methods in these 2 projects 
+
+4. Create Class Library Project (e.g. SalesModel.DataLayer) 
+
+5. In this project create a file which name should end with "Context" e.g. "SalesModelContext.cs" 
+
+6. Install Entity Framework for the DataLayer project. 
+
+7. Make sure that your Default Startup Project has a reference to the Entity Framework in the References folder, if it is missing add it. 
+
+8. Install "Entity Framework Power Tools Beta 4" extension
+
+9. In the file: SalesModelContext.cs create a class SalesModelContext which should inherit from DbContext
+
+10. In this class specify DBSets of all the entities (classes) that are part of the business model (SalesModel.DomainClasses Project): 
+
+public DBSet<Customer> Customers { get; set; }
+public DBSet<Order> Orders { get; set; }
+public DBSet<LineItem> LineItems { get; set; }
+public DBSet<Address> Addresses { get; set; }
+public DBSet<Address> Categories { get; set; }
+public DBSet<Address> Products { get; set; }
+
+ 
+11. Using Entity Framework Power Tools to view Entity data model (read-only)
+
+Right click on a file containing a derived DbContext class - click on: View Entity Data Model (Read-only) which displays a read-only view of the Code-First model in the Entity Model Designer. 
+
+If the Entity Data Model still does not appear and at the bottom of VS there is a message: An error occurred while trying to build the model for SalesModelContext. See the output window for details. 
+
+If in the Output Window there is a message: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using incorrect connection string..."
+
+Then make sure that you have the Web.config / App.config file in your Visual Studio default startup project. If something is wrong then fix it, after that this error should disappear.
+
+Try to run again the Entity data model, if in the Output Window there is an error:  
+
+System.Data.Entity.Edm.EdmEntitySet: Entity Type: 'ContactDetail' has no key defined. Define the key for this EntityType. 
+System.Data.Entity.Edm.EdmEntitySet: Entity Type: 'ContactDetails' is based on type 'ContactDetail' that has no keys defined.
+
+then add the key attribute [Key] for a property in the ContactDetail class, for example: 
+
+public class ContactDetail
+{
+    [Key]
+    public int CustomerId { get; set; }
+    public string MobilePhone { get; set; }
+    public string HomePhone { get; set; }
+    public string OfficePhone { get; set; }
+    public string TwitterAlias { get; set; }
+    public string Facebook { get; set; }
+    public string LinkedIn { get; set; }
+    public string Skype { get; set; }
+    public string Messenger { get; set; }
+    
+    public virtual Customer Customer { get; set; }
+}
+
+
+Start again the project. If there is again the following error in Visual Studio bottom: "An error occurred while trying to build the model for SalesModelContext. See the output window for details.", open the Output Window and check the error. If it is: 
+
+InvalidOperationException: Unable to determine the principal end of an association between the types 'SalesModel.DomainClasses.ContactDetail' ... then primary and foreign keys should be specified explicitly: 
+
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+public class ContactDetail
+{
+    [Key, ForeignKey("Customer")]
+    public int CustomerId { get; set; }
+    public string MobilePhone { get; set; }
+    public string HomePhone { get; set; }
+    public string OfficePhone { get; set; }
+    public string TwitterAlias { get; set; }
+    public string Facebook { get; set; }
+    public string LinkedIn { get; set; }
+    public string Skype { get; set; }
+    public string Messenger { get; set; }
+    
+    public virtual Customer Customer { get; set; }
+}
+
+
+* navigation properties should be "virtual"
+
+Relationships and Navigation Properties: http://msdn.microsoft.com/en-us/data/jj713564.aspx
+Entity Framework Code First Data Annotations: http://msdn.microsoft.com/en-us/data/jj591583
+
+
+12. Enable Automatic Database Migration 
+* In case we change the model by adding / removing properties and do not want to drop and then again create the database. 
+
+A.
+VS - Tools - NuGet Package Manager - Package Manager Console: enable -migrations -EnableAutomaticMigrations
+
+Go to your Data Project in Visual Studio (e.g. SalesModel.DataLayer) - go to folder "Migrations" - Configuration.cs 
+
+Change the Configuration class access modifier from: "internal sealed" to "public sealed"
+
+If properties (columns) that might contain data are removed and the application is re-started the following error will appear: "Automatic migration was not applied because it would result in data loss." 
+
+If you do not want to see this error after you remove a property then go to Migrations folder - Configuration.cs, and add the following line in the constructor: 
+
+this.AutomaticMigrationDataLossAllowed = true;
+
+
+B. Initialize the database
+
+IDatabaseInitializer: 
+
+CreateDatabaseIfNotExists (default)
+DropCreateDatabaseIfModelChanges
+DropCreateDatabaseAlways - for automated testing 
+MigrateDatabaseToLatestVersion - we should use this one for migrations 
+
+
+In the Global.asax add the following code at the bottom: 
+
+
+Database.SetInitializer(
+    new MigrateDatabaseToLatestVersion<SalesModelContext, Configuration>()); 
+)
+
+
+-------------------------------
+References: 
+
+Pluralsight - Getting Started with Entity Framework 5
+Pluralsight - Entity Framework 4.1 - Code First
+Pluralsight - Entity Framework 4.1 - DBContext Data Access - Code First Database Initialization
+Pluralsight - Entity Framework Code First Migrations
+
+-------------------------------
+EF6 specify initializers - code-based configuration

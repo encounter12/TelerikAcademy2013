@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikMvcApp1", "TelerikMvcApp1\TelerikMvcApp1.csproj", "{BB9B2702-E6FE-4B69-91AE-961308B9890E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikMvcApp1Tests", "TelerikMvcApp1Tests\TelerikMvcApp1Tests.csproj", "{EDE01DC3-B33F-49BA-9762-61251813CF50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB9B2702-E6FE-4B69-91AE-961308B9890E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9B2702-E6FE-4B69-91AE-961308B9890E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9B2702-E6FE-4B69-91AE-961308B9890E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9B2702-E6FE-4B69-91AE-961308B9890E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE01DC3-B33F-49BA-9762-61251813CF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE01DC3-B33F-49BA-9762-61251813CF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE01DC3-B33F-49BA-9762-61251813CF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE01DC3-B33F-49BA-9762-61251813CF50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

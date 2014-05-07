@@ -1,0 +1,154 @@
+/*---------CSS Reset-------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------CSS Reset---------------*/
+
+
+
+html, body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+    color: #565D5A;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/*#wrapper h1, #wrapper header, #wrapper nav, #wrapper nav ul, #wrapper nav ul li, #searchBar
+{
+    border: 1px solid gray;
+}*/
+
+#wrapper header
+{
+    height: 50px;
+    background-image: url('images/header-bg.png');
+}
+
+#wrapper header > h1 
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    float: left;
+    margin: 15px 15px;
+
+}
+
+#wrapper nav
+{
+    float: right;
+    height: 30px;
+    margin: 10px 10px;
+}
+
+#wrapper nav ul
+{
+    height: 30px;
+}
+
+#wrapper nav ul li 
+{
+    float: left;
+    list-style-type: none;
+    margin: 5px 15px;
+    font-size: 14px;
+}
+
+nav ul:after
+{
+    clear:both;
+    content:"";
+    display: block;
+}
+
+
+#searchBar
+{
+    height: 35px;
+    font-size: 14px;
+    background-color: #000000;
+}
+
+#searchBar a
+{
+    color:#C5C5C5;
+    text-decoration: none;
+}
+
+
+#archives
+{
+    float: left;
+    margin: 10px;
+}
+
+#search
+{
+    float: right;
+    margin: 10px;
+}
+
+#content article
+{
+    font-size: 14px;
+}
+
+#content h1
+{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 5px 0 5px;
+}
+
+#content article p
+{
+    margin: 25px 0;
+}

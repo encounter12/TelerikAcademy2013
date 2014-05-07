@@ -1,0 +1,70 @@
+﻿.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+body header div#headercontainer {
+  zoom: 1;
+}
+body header div#headercontainer:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+body header nav {
+  zoom: 1;
+}
+body header nav:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cc8ff7), color-stop(0.25, #8f1aef));
+  background-image: -o-linear-gradient(bottom, #cc8ff7 0%, #8f1aef 25%);
+  background-image: -moz-linear-gradient(bottom, #cc8ff7 0%, #8f1aef 25%);
+  background-image: -webkit-linear-gradient(bottom, #cc8ff7 0%, #8f1aef 25%);
+  background-image: -ms-linear-gradient(bottom, #cc8ff7 0%, #8f1aef 25%);
+  background-image: linear-gradient(to bottom, #cc8ff7 0%, #8f1aef 25%);
+  font: 14px normal Arial;
+  color: #ffffff;
+}
+body h1 {
+  font-size: 1.4em;
+}
+body section article {
+  font: 16px right normal #ffffff;
+}
+body aside h2 {
+  font: 1.1em bold;
+}
+body aside p {
+  font-size: 14px;
+}
+body aside p a {
+  color: #aaaaaa;
+}
+body aside p strong {
+  font: bold normal;
+  color: #cccccc;
+}
+body aside p embeded {
+  font: normal italic;
+  color: #cccccc;
+}
+body footer p {
+  font: 1.2em bold;
+}
+body button {
+  background-color: #d191fc;
+}
+body button:hover {
+  background-color: #8949b9;
+}
+/*# sourceMappingURL=Less1.css.map */

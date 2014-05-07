@@ -1,0 +1,29 @@
+/*
+Create the following web page
+ - Using 60 nested div elements
+*/
+/* 
+    Created on : Feb 2, 2014, 10:35:34 AM
+    Author     : valentin
+*/
+
+/* Fit in smaller displays */
+section { position: absolute; right: 0; left: 0; overflow: auto; }
+
+div {
+    padding-right: 10px;
+    border: 1px solid #f00;
+    border-radius: 60px;
+    background: #000;
+}
+section > div { width: 1300px; }
+
+section > div { padding-right: 130px; }
+section > div > div { padding-right: 110px; }
+section > div > div > div { padding-right: 85px; }
+section > div > div > div > div { padding-right: 70px; }
+section > div > div > div > div > div { padding-right: 50px; }
+section > div > div > div > div > div > div { padding-right: 40px; }
+section > div > div > div > div > div > div > div { padding-right: 30px; }
+section > div > div > div > div > div > div > div > div { padding-right: 20px; }
+section > div > div > div > div > div > div > div > div > div { padding-right: 15px; }

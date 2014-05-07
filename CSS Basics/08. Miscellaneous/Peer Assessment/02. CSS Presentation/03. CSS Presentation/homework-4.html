@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+Create a web page that looks like the Windows calculator in Programmer view
+ - It should look exactly the same
+ - Implement hover effects for the buttons
+ - The calculator should not have any functionality
+-->
+<html>
+    <head>
+        <title>homework #4</title>
+        <link href="css/homework-4.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="calc">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#"><span>V</span>iew</a></li>
+                        <li><a href="#"><span>E</span>dit</a></li>
+                        <li><a href="#"><span>H</span>elp</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="calc-body">
+                <div class="calc-display">
+                    <input type="text" value="8854455">
+                </div>
+                <div class="calc-digits">
+                    <ol>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                    </ol>
+                    <ul>
+                        <li>63</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li>47</li>
+                        <li></li>
+                        <li></li>
+                        <li>32</li>
+                    </ul>
+                    <ol>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>1000</li>
+                        <li>0111</li>
+                        <li>0001</li>
+                        <li>1011</li>
+                        <li>1011</li>
+                        <li>0111</li>
+                    </ol>
+                    <ul>
+                        <li>31</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li>15</li>
+                        <li></li>
+                        <li></li>
+                        <li>0</li>
+                    </ul>
+                </div>
+                <div class="calc-btns">
+                    <table border="0" width="100%" cellpadding="5" cellspacing="5">
+                        <tbody>
+                            <tr>
+                                <td rowspan="3" class="empty">
+                                    <label><input type="radio" name="list1"> Hex</label><br>
+                                    <label><input type="radio" name="list1" checked="checked"> Dec</label><br>
+                                    <label><input type="radio" name="list1"> Oct</label><br>
+                                    <label><input type="radio" name="list1"> Bin</label>
+                                </td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="btn2">Mod</td>
+                                <td class="btn3">A</td>
+                                <td class="btn3">MC</td>
+                                <td class="btn3">MR</td>
+                                <td class="btn3">MS</td>
+                                <td class="btn3">M+</td>
+                                <td class="btn3">M-</td>
+                            </tr>
+                            <tr>
+                                <td class="btn2">(</td>
+                                <td class="btn2">)</td>
+                                <td class="btn3">B</td>
+                                <td class="btn2">&larr;</td>
+                                <td class="btn2">CE</td>
+                                <td class="btn2">C</td>
+                                <td class="btn2">&plusmn;</td>
+                                <td class="btn3">&#8730;</td>
+                            </tr>
+                            <tr>
+                                <td class="btn2">RoL</td>
+                                <td class="btn2">RoR</td>
+                                <td class="btn3">C</td>
+                                <td class="btn">7</td>
+                                <td class="btn">8</td>
+                                <td class="btn">9</td>
+                                <td class="btn2">/</td>
+                                <td class="btn3">%</td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td rowspan="3" class="empty">
+                                    <label><input type="radio" name="list2" checked="checked"> Qword</label><br>
+                                    <label><input type="radio" name="list2"> Dword</label><br>
+                                    <label><input type="radio" name="list2"> Word</label><br>
+                                    <label><input type="radio" name="list2"> Byte</label>
+                                </td>
+                                <td class="btn2">Or</td>
+                                <td class="btn2">Xor</td>
+                                <td class="btn3">D</td>
+                                <td class="btn">4</td>
+                                <td class="btn">5</td>
+                                <td class="btn">6</td>
+                                <td class="btn2">*</td>
+                                <td class="btn3">1<i>/x</i></td>
+                            </tr>
+                            <tr>
+                                <td class="btn2">Lsh</td>
+                                <td class="btn2">Rsh</td>
+                                <td class="btn3">E</td>
+                                <td class="btn">1</td>
+                                <td class="btn">2</td>
+                                <td class="btn">3</td>
+                                <td class="btn2">-</td>
+                                <td rowspan="2" class="btn"><b>=</b></td>
+                            </tr>
+                            <tr>
+                                <td class="btn2">Not</td>
+                                <td class="btn2">And</td>
+                                <td class="btn3">F</td>
+                                <td colspan="2" class="btn">0</td>
+                                <td class="btn3">.</td>
+                                <td class="btn2">+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

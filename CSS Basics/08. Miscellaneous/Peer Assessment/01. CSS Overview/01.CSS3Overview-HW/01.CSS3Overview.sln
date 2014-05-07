@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0226B022-42BB-4B51-9273-4F5D89ECD7AA}"
+	ProjectSection(SolutionItems) = preProject
+		homework-3.html = homework-3.html
+		index.html = index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{0A9775C8-04AF-4627-81FD-D6886D3E93E6}"
+	ProjectSection(SolutionItems) = preProject
+		img\greenDot.png = img\greenDot.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{9544CB2B-15E6-4AE2-853F-56A6910D3D6E}"
+	ProjectSection(SolutionItems) = preProject
+		css\styleone.css = css\styleone.css
+		css\styleThree.css = css\styleThree.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A9775C8-04AF-4627-81FD-D6886D3E93E6} = {0226B022-42BB-4B51-9273-4F5D89ECD7AA}
+		{9544CB2B-15E6-4AE2-853F-56A6910D3D6E} = {0226B022-42BB-4B51-9273-4F5D89ECD7AA}
+	EndGlobalSection
+EndGlobal

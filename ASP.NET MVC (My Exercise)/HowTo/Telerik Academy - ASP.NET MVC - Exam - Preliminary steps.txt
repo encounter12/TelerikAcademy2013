@@ -1,0 +1,113 @@
+Telerik Academy - ASP.NET MVC - Exam - Preliminary steps
+
+
+The solution initial name is SampleApp and respectively the projects names are: SampleApp.Model, SampleApp.Data, SampleApp.Web. After the exam assignment is provided these name could be replaced with the actual one. 
+
+
+1. Set up an account for version control system (e.g. Team Foundation Service, Git, SVN)
+
+2. Create VS Blank Solution
+
+File - New - Project (Ctrl + Shift + N) - Installed - Templates - Other Project Types - Visual Studio Solutions - Blank Solution
+
+3. Link your Solution to the version control system. 
+
+4. Create 3 projects: SampleApp.Models (Class Library), SampleApp.Data (Class Library), SampleApp.Web (ASP.NET Web Application - MVC - Authentication: Individual User Accounts)
+
+To create Class Library Project: Right-click on the blank Solution - Add - New Project - Installed - Visual C# - Class Library
+To Create ASP.NET MVC Application: Right-click on the blank Solution - Add - New Project - Installed - Visual C# - Web - ASP.NET Web Application - MVC - Authentication: Individual User Accounts
+
+5. Set the SampleApp.Web as single startup project 
+
+Right-click on the Solution - Properties (Alt + Enter) - Common Properties - Single Startup Project - SampleApp.Web - Apply - OK. 
+
+5. In SampleApp.Data create a reference to: SampleApp.Models
+Open SampleApp.Data Project - right-click on References - Add reference - Solution - Projects - tick SampleApp.Models; 
+
+6. Add the directive: 
+using SampleApp.Models;
+
+7. In SampleApp.Web add references to: SampleApp.Data and SampleApp.Models 
+
+In the following 3 files: 
+
+In the file: SampleApp.Web project - App_Start folder - Identity.config add the directives: 
+
+using SampleApp.Models;
+using SampleApp.Data;
+
+
+In the file: SampleApp.Web project - App_Start folder - Startup.Auth.cs add the directives: 
+
+using SampleApp.Models;
+using SampleApp.Data;
+
+In the file: SampleApp.Web project - Controllers folder - AccountController.cs add the directive: 
+
+using SampleApp.Models;
+
+
+8. Open SampleApp.Models Project - Right-click on References folder - Manage NuGet Packages - (Online - nuget.org) - Search online field - type: ASP.NET Identity , you will see: Microsoft ASP.NET Identity EntityFramework - Install
+
+9. Open SampleApp.Data Project - Right-click on References folder - Manage NuGet Packages - (Online - nuget.org) - Search online field - type: ASP.NET Identity , you will see: Microsoft ASP.NET Identity EntityFramework - Install - Close
+
+10. In SampleApp.Models Project create new class file: ApplicationUser.cs 
+ 
+11. Add the following directives: 
+
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Security.Claims;
+
+12. Move the ApplicationUser class (from SampleApp.Web - folder "Models" - IdentityModels.cs) into SampleApp.Models - ApplicationUser.cs    
+
+*Set ApplicationUser class to be public. 
+
+13. In SampleApp.Data Project create new class file: ApplicationDbContext.cs
+
+14. Add the directives: 
+
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using SampleApp.Models;
+
+15. Move the ApplicationDbContext class (from SampleApp.Web - Models folder - IdentityModels.cs) to: SampleApp.Data - ApplicationDbContext
+
+*Set ApplicationDbContext class to be public. 
+
+(16. Debug the project) 
+
+17. Enable Automatic Database Migration 
+* In case we change the model by adding / removing properties and do not want to drop and then again create the database. 
+
+A.
+In Visual Studio - Click on SampleApp.Data Project - then in VS Menu Bar click on Tools - NuGet Package Manager - Package Manager Console: enable -migrations -EnableAutomaticMigrations
+
+In the data project in Visual Studio (e.g. SampleApp.Data) - go to folder "Migrations" - Configuration.cs 
+
+Change the Configuration class access modifier from: "internal sealed" to "public sealed"
+
+Add the line below in the Configuration class constructor: 
+
+this.AutomaticMigrationDataLossAllowed = true;
+
+*If this option is not turned on when you remove or add properties in the code and re-start the application then you will get the following error: "Automatic migration was not applied because it would result in data loss." 
+
+
+B. Initialize the database
+
+In the Global.asax add the following code at the bottom: 
+
+Database.SetInitializer(
+    new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>()); 
+)
+
+Reference: 
+IDatabaseInitializer: 
+
+CreateDatabaseIfNotExists (default)
+DropCreateDatabaseIfModelChanges
+DropCreateDatabaseAlways - for automated testing 
+MigrateDatabaseToLatestVersion - we should use this one for migrations 
+
+

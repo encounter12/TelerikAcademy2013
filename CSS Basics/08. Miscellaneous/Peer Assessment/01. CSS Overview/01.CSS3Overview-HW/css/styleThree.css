@@ -1,0 +1,55 @@
+body{
+	padding:0 15px;
+	margin:0;
+	background-color:#A9A9A9;
+}
+
+	a{
+		text-decoration:none;
+	}
+	
+	h1{
+		color:#EFF0C6;
+		font-size:44px;
+		text-align:center;
+	}
+	
+	nav{
+		text-align:center;
+	}
+
+	ul{
+		list-style:none;
+		font-size:20px;
+		font-weight:bold;
+	}
+		
+		ul a{
+			color:#fff;
+		}
+		
+		li:last-child{
+			text-decoration:underline;
+		}
+		
+		.current{
+			background-color:#ECECEC;
+		}
+
+	section + footer{
+		text-align:center;
+	}
+	
+		article h1{
+			font-size:22px;
+			text-align:left;
+		}
+		
+			footer a{
+				color:#000;
+			}
+			
+			footer p{
+				font-size:12px;
+			}
+	

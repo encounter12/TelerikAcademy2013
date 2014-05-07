@@ -1,0 +1,28 @@
+/*
+ * CSS Presentation
+ * Homework 1
+ *
+ * Diana Conachi
+ */
+
+
+/*
+ * Fonts declaration
+ */
+@font-face {
+	font-family: Consolas;
+	src: url(fonts/Consolas.ttf);
+}
+@font-face {
+	font-family: EdwardianScriptITC;
+	src: url(fonts/ITCEdscr.ttf);
+}
+
+
+html * {margin: 0; padding: 0;}
+
+body {font-family: Consolas;}
+
+p {padding: 20px 10px 0 10px; color: #0094ff;}
+p:first-letter {font-family: EdwardianScriptITC; font-size: 2.5em}
+p:first-line {font-weight: bold; line-height: 2em}

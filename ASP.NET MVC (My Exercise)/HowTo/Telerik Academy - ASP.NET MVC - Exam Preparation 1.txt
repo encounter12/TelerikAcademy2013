@@ -1,0 +1,159 @@
+Telerik Academy - ASP.NET MVC - Exam Preparation 1
+
+Step 1 to 9 could be performed in advance before the exam. The name: LaptopSystem could be initially set to: ExamApp (and the projects: ExamApp.Model, ExamAapp.Data, ExamApp.Web). After the exam assignment is provided these name could be replaced with the actual one. 
+
+
+1. Set up an account for version control system (e.g. Team Foundation Service, Git, SVN)
+
+2. Create VS Blank Solution
+
+File - New - Project (Ctrl + Shift + N) - Installed - Templates - Other Project Types - Visual Studio Solutions - Blank Solution
+
+3. Link your Solution to the version control system. 
+
+4. Create 3 projects: LaptopSystem.Models (Class Library), LaptopSystem.Data (Class Library), LaptopSystem.Web (ASP.NET Web Application - MVC - Authentication: Individual User Accounts)
+
+5. Create new class file: ApplicationUser.cs in LaptopSystem.Models Project and move the ApplicationUser class (Project LaptopSystem.Web - folder "Models" - IdentityModels.cs) into it.  
+
+6. Set up email property in ApplicationUser class 
+
+7. Create new class file: ApplicationDbContext.cs in LaptopSystem.Data Project and move the ApplicationDbContext class from LaptopSystem.Web - Models folder - IdentityModels.cs into it.  
+
+8. Open LaptopSystem.Data Project - Right-click on References folder - Manage NuGet Packages - Install ASP.NET Identity 
+
+9. Open LaptopSystem.Models Project - Right-click on References folder - Manage NuGet Packages - Install ASP.NET Identity 
+
+10. Create class file Manufacturer.cs in LaptopSystem.Models Project and set its properties (Name, Id, Laptops list)
+
+11. Create class file Laptop.cs in LaptopSystem.Models Project, make the class public, set up properties (int Id, string Manufacturer, int ManufacturerId, string Model, double Monitor, MonitorSize, int HardDiskSize, int RamMemorySize, string ImageUrl, decimal Price, double Weight, string AdditionalParts).
+
+12. Set the Manufacturer property to be virtual: public virtual Manufacturer Manufacturer { get; set; }; 
+
+13. Set the Weight property to be of nullable type: double?
+
+14. Add data annotation [Required] above the mandatory properties. 
+
+15. Add data annotation [Key] above Id property. 
+
+16. Open Manufacturer class (LaptopSystem.Models Project) and add [Key] for the Id property. (add using: System.ComponentModel.DataAnnotations)
+
+17. Create classes Vote.cs and Comment.cs in LaptopSystem.Models Project, make the classes public and then set up their properties. 
+
+- Properties for the Comment class: 
+
+public int Id { get; set; }; 
+public string AuthorId { get; set;}; 
+public ApplicationUser Author { get; set;}; 
+public int LaptopId { get; set;}; 
+public Laptop Laptop { get; set; }; 
+public string Content { get; set; }
+
+Set public ApplicationUser Author { get; set;} and public Laptop Laptop { get; set; } to be virtual: 
+
+public virtual ApplicationUser Author { get; set;}
+public virtual Laptop Laptop { get; set; }
+
+*these are navigation properties. 
+
+Add [Key] above public int Id { get; set; }
+
+Add [Required] for Author, Laptop and Content properties. 
+
+
+- Properties for the Vote class:
+
+[Key]
+public int Id { get; set; }
+public string VotedById { get; set; }
+[Required]
+public virtual ApplicationUser VotedBy { get; set;}
+public int LaptopId { get; set; }
+[Required]
+public virtual Laptop Laptop { get; set; }
+
+
+18. Open the Manufacturer class file 
+
+18.1. Create private field: private ICollection<Laptop> laptops;
+
+Create the constructor: 
+
+public Manufacturer()
+{
+    this.laptops = new HashSet<Laptop>();
+}
+
+18.2. Create property: public ICollection<Laptop> Laptops: 
+
+public virtual ICollection<Laptop> Laptops
+{
+    get {return this.laptops; }
+    set {this.laptops = value;}
+}
+
+19. Create a reference from LaptopSystem.Data to: LaptopSystem.Models
+Open LaptopSystem.Data Project - right-click on References - Add reference - Solution - Projects - tick LaptopSystem.Models; 
+
+Add - using LaptopSystem.Models by left clicking on ApplicationUser and choosing from the drop-down menu
+
+20. In LaptopSystem.Data - ApplicationDbContext.cs - add IDbSets for the collection properties: Laptops, Manufacturers, Comments, Votes: 
+
+public IDBSet<Laptop> Laptops { get; set; }
+public IDBSet<Manufacturer> Manufacturers { get; set; }
+public IDBSet<Comment> Comments { get; set; }
+public IDBSet<Vote> Votes { get; set; }
+
+
+21. In the LaptopSystem.Models Project - Laptop class - add the following 2 fields and properties: 
+
+private ICollection<Comment> comments; 
+private ICollection<Vote> votes; 
+
+
+public virtual ICollection<Comment> Comments
+{
+    get {return this.comments; }
+    set {this.comments = value;}
+}
+
+public virtual ICollection<Vote> votes
+{
+    get {return this.votes; }
+    set {this.votes = value;}
+}
+
+
+22. Set the constructor: 
+
+public Laptop() 
+{
+    this.comments = new HashSet<Comment>();
+    this.votes = new HashSet<Vote>();
+}
+
+
+--------------
+
+23. Modify the connection string in Web.config: 
+
+Make sure Data Source is "(LocalDb)\v11.0;
+Remove AttachDbFileName section
+Change Initial Catalog value to: LaptopSystem; 
+
+
+23. In LaptopSystem.Web add references to: LaptopSystem.Data and LaptopSystem.Models 
+
+24. In LaptopSystem.Web - Controllers folder - AccountController.cs in Identity store pass an instance of ApplicatioDbContext: 
+
+public AccountController()
+{
+    IdentityManager = new AuthenticationIndentityManager(new IndentityStore(new ApplicationDbContext()));    
+}
+
+25. In AccountController class change all instances of User to: ApplicationUser 
+At the places where new ApplicationUser is instantiated specify anonymous class as parameter: 
+
+e.g. var user = new ApplicationUser() {UserName = model.UserName); 
+
+
+The database initial generation logic is specified in the Seed class located in:    

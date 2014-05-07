@@ -1,0 +1,42 @@
+/*
+Create the following web page:
+ - Fonts used: Consolas, Edwardian Script ITC
+ - Color: #0094ff
+*/
+/* 
+    Created on : Jan 19, 2014, 19:59:47 PM
+    Author     : Valentin Hristov <v.hristov@mail.ru>
+*/
+
+/* Font */
+@font-face
+{
+    font-family: 'Consolas';
+    src: url('../font/Consolas.ttf');
+}
+@font-face
+{
+    font-family: 'Edwardian Script ITC';
+    src: url('../font/itcedscr.ttf');
+}
+
+/* Main */
+body {
+    font-size: 14px;
+    font-family: 'Consolas';
+    color: #0094ff;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.container > p:first-letter {
+    font-family: 'Edwardian Script ITC';
+    font-size: 40px;
+}
+
+.container > p:first-line {
+    line-height: 40px;
+    font-weight: bold;
+}

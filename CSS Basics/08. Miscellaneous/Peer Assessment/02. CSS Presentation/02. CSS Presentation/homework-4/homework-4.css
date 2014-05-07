@@ -1,0 +1,24 @@
+/*
+ * CSS Presentation
+ * Homework 4
+ *
+ * Diana Conachi
+
+ 	Незавършено домашно!!!!!!!!!!!
+ */
+
+html * {margin: 0; padding: 0;}
+
+.calculator {width: 405px; height: 334px;}
+.calculator content {display: block; padding: 10px;}
+
+.calculator .col {float: left}
+
+.calculator fieldset {margin-right: 5px; padding: 2px;}
+.calculator fieldset label {font-size: 12px;}
+
+.calculator input[type="text"] {width: 100%; height: 48px; text-align: right; font-weight: bold;}
+
+.calculator button {width: 32px; height: 25px; float: left; margin-right: 5px; margin-bottom: 5px;}
+.calculator button.long {height: 55px;} 
+.calculator button.zero {width: 70px;}
