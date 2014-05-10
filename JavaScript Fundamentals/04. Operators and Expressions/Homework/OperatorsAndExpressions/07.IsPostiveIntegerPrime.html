@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Task 04</title>
+	    <link rel="stylesheet" type="text/css" href="css/jsConsoleStyles.css" />
+	    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+	<body>
+		<header>
+			<h2>JavaScript Console</h2>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="wrapper">
+			<aside>
+				<ul>
+					<li><a href="01.OddOrEvenInteger.html">01. Odd or even integer</a></li>
+					<li><a href="02.DivisibleBySevenAndFive.html">02. Divisible by 7 and 5</a></li>
+					<li><a href="03.RectangleArea.html">03. Rectangle area</a></li>
+					<li><a href="04.IsThirdDigitSeven.html">04. Is third digit 7.html</a></li>
+                    <li><a href="05.ThirdBitOneOrZero.html">05. Third bit 1 or 0.html</a></li>
+                    <li><a href="06.IsPointWithinACircle.html">06. Is point within a circle</a></li>
+                    <li><a href="07.IsPostiveIntegerPrime.html">07. Is postive integer prime</a></li>
+                    <li><a href="08.TrapezoidArea.html">08. Trapezoid area</a></li>
+                    <li><a href="09.IsPointWithinCircleAndOutsideRectangle.html">09. Is point within circle and outside rectangle</a></li>
+				</ul>
+			</aside>
+			<section>
+				<article>
+					<h3>Is postive integer prime?</h3>
+				    <p>Write an expression that checks if given positive integer number n (n <= 100) is prime. E.g. 37 is prime.</p>
+                    <form>
+						<label for="num">Enter an integer:</label>
+						<input type="text" id="num" onkeydown="return jsConsole.searchKeyPress(event);" />
+						<input type="button" id="process" value="Process" />
+						<input type="button" onclick="jsConsole.clearAll()" id="clear" value="Clear" />
+					</form>
+				</article>
+				<div id="js-console">
+				</div>
+			</section>
+		</div>
+		<footer></footer>
+        <script type="text/javascript" src="js/js-console.js"></script>
+        <script type="text/javascript" src="js/userValidation.js"></script>
+	    <script type="text/javascript" src="js/07.IsPostiveIntegerPrime.js"></script>
+	</body>
+</html>
