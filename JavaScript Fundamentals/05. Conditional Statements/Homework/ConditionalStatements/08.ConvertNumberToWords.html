@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>08. Convert number to words</title>
+        <link rel="stylesheet" type="text/css" href="css/jsConsoleStyles.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <h2>JavaScript Console</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="wrapper">
+            <aside>
+                <ul>
+                    <li><a href="01.CompareIntegers.html">01. Compare integers</a></li>
+                    <li><a href="02.ThreeNumbersProductSign.html">02. Three numbers product sign</a></li>
+                    <li><a href="03.BiggestOfThreeIntegers.html">03. Biggest of three integers</a></li>
+                    <li><a href="04.SortThreeRealValues.html">04. Sort three real values</a></li>
+                    <li><a href="05.PrintNameOfDigit.html">05. Print name of digit</a></li>
+                    <li><a href="06.QuadraticEquationRealRoots.html">06. Quadratic equation real roots</a></li>
+                    <li><a href="07.GreatestOfFiveVariables.html">07. Greatest of five variables</a></li>
+                    <li><a href="08.ConvertNumberToWords.html">08. Convert number to words</a></li>
+                </ul>
+            </aside>
+            <section>
+                <article>
+                    <h3>Convert number to words</h3>
+                    <p>
+                        Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. Examples:<br />
+                        0 -&gt; 'Zero'<br />
+                        273 -&gt; 'Two hundred seventy three'<br />
+                        400 -&gt; 'Four hundred'<br />
+                        501 -&gt; 'Five hundred and one'<br />
+                        711 -&gt; 'Seven hundred and eleven'<br />
+                    </p>
+                    <form>
+                        <label for="num">Enter an integer:</label>
+                        <input type="text" id="num" onkeydown="return jsConsole.searchKeyPress(event);" />
+                        <input type="button" id="process" value="Process" />
+                        <input type="button" onclick="jsConsole.clearAll()" id="clear" value="Clear" />
+                    </form>
+                </article>
+                <div id="js-console">
+                </div>
+            </section>
+        </div>
+        <footer></footer>
+        <script type="text/javascript" src="js/js-console.js"></script>
+        <script type="text/javascript" src="js/userValidation.js"></script>
+        <script type="text/javascript" src="js/08.ConvertNumberToWords.js"></script>
+    </body>
+</html>
