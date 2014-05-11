@@ -1,4 +1,4 @@
-﻿/*global jsConsole, intLit, floatLit, stringLit, booleanLit, doe, arr*/
+﻿/*global jsConsole*/
 
 var applesQuantity = null;
 var pearsQuantity;

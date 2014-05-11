@@ -1,4 +1,5 @@
-﻿var intLit = 15;
+﻿/*exported intLit, floatLit, stringLit, booleanLit, doe, arr*/
+var intLit = 15;
 var floatLit = 12.3;
 var stringLit = "Some text";
 var booleanLit = true;

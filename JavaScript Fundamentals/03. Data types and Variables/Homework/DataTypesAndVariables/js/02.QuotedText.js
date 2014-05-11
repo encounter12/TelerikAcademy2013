@@ -1,4 +1,4 @@
-/*global jsConsole, intLit, floatLit, stringLit, booleanLit, doe, arr*/
+/*global jsConsole*/
 
 var string = "'How you doin'?', Joey said.";
 jsConsole.writeLine(string);
