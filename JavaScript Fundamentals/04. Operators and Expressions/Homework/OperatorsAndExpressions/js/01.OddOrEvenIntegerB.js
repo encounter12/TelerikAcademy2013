@@ -1,4 +1,6 @@
-﻿function isNumberEven(input) {
+﻿/*global jsConsole*/
+
+function isNumberEven(input) {
     if (input % 2 === 0) {
         return true;
     }
@@ -10,7 +12,7 @@ function isInt(n) {
 }
 
 document.getElementById("process").onclick = function () {
-    var input = +document.getElementById("num").value; //the unary plus (+) converts its operand into a number
+    var input = Number(document.getElementById("num").value);
     if (!isNaN(input)) {
         if (isInt(input)) {
             jsConsole.writeLine("The number \"" + input + "\" is " + (isNumberEven(input) ? "even." : "odd."));
@@ -21,4 +23,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("The entered value is not a number. Please enter number.");
     }
-}
+};

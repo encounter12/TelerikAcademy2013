@@ -1,4 +1,6 @@
-﻿/*global jsConsole*/
+﻿/*global jsConsole, isInputValid*/
+/*jslint bitwise: true */
+/*jshint bitwise: false*/
 
 //gets the value (1 or 0) of bit at position in integer's binary representation
 function getBit(number, position) {
@@ -17,4 +19,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("You have entered incorrect data type. Please re-enter");
     }
-}
+};

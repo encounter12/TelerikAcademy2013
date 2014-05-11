@@ -1,4 +1,4 @@
-﻿/*global jsConsole*/
+﻿/*global jsConsole, isInputValid*/
 
 function isPointWithinCircle(pointX, pointY, circleCenterX, circleCenterY, circleRadius) {
     
@@ -51,4 +51,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("You have entered incorrect data type. Please, re-enter.");
     }
-}
+};

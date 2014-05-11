@@ -1,4 +1,4 @@
-﻿/*global jsConsole*/
+﻿/*global jsConsole, isInputValid*/
 
 //Primality Test - Trial division: http://en.wikipedia.org/wiki/Trial_division, http://en.wikipedia.org/wiki/Primality_test 
 function isPrime(input) {
@@ -26,4 +26,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("You have entered incorrect data type. Please re-enter");
     }
-}
+};

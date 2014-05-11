@@ -1,0 +1,5 @@
+﻿{
+  "ignore": [
+    "\\OperatorsAndExpressions\\js\\js-console.js"
+  ]
+}

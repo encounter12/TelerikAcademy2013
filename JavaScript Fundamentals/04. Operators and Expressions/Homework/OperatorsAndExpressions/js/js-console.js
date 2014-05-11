@@ -1,3 +1,4 @@
+/*global jsConsole*/
 /*jslint browser: true*/
 
 (function () {
@@ -23,12 +24,12 @@
             textLine.innerHTML = text;
             textArea.appendChild(textLine);
             consoleElement.scrollTop = consoleElement.scrollHeight;
-        }
+        };
 
         self.writeLine = function jsConsoleWriteLine(text) {
             self.write(text);
             textArea.appendChild(document.createElement("br"));
-        }
+        };
 
         self.read = function readText(inputSelector) {
             var element = document.querySelector(inputSelector);
@@ -37,17 +38,17 @@
             } else {
                 return element.value;
             }
-        }
+        };
 
         self.readInteger = function readInteger(inputSelector) {
             var text = self.read(inputSelector);
             return parseInt(text);
-        }
+        };
 
         self.readFloat = function readFloat(inputSelector) {
             var text = self.read(inputSelector);
             return parseFloat(text);
-        }
+        };
 
         self.clear = function jsConsoleClear() {
             var console = document.getElementById("js-console");
@@ -59,20 +60,20 @@
             for (var i = 0; i < nodes.length; i++) {
                 nodes[i].value = "";
             }
-        }
+        };
 
         self.clearTextFields = function jsConsoleClearTextFields() {
             var nodes = document.querySelectorAll("input[type=text]");
             for (var i = 0; i < nodes.length; i++) {
                 nodes[i].value = "";
             }
-        }
+        };
 
         self.clearAll = function jsConsoleClearAll() {
             //consoleElement.firstElementChild.innerHTML = '';
             //document.querySelector('#js-console > p').innerHTML = '';
             textArea.innerHTML = '';
-            
+
             /*
             while (consoleElement.lastChild) {
                 consoleElement.removeChild(consoleElement.lastChild);
@@ -83,7 +84,7 @@
             for (var i = 0; i < nodes.length; i++) {
                 nodes[i].value = "";
             }
-        }
+        };
 
         self.searchKeyPress = function searchKeyPress(e) {
             if (typeof e === "undefined" && window.event) {
@@ -91,15 +92,15 @@
             }
             if (e.keyCode === 13) {
                 document.getElementById("process").click();
-                
+
                 return false;
             }
             if (e.keyCode === 27) {
                 document.getElementById("clear").click();
-                
+
                 return false;
             }
-        }
+        };
 
         return self;
     }

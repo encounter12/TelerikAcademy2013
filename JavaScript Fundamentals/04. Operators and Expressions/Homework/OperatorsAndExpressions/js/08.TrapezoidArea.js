@@ -1,4 +1,4 @@
-﻿/*global jsConsole*/
+﻿/*global jsConsole, isInputValid*/
 
 function trapezoidArea(a, b, h) {
     return (a + b) * h / 2;
@@ -15,4 +15,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("You have entered incorrect data type. Please, re-enter.");
     }
-}
+};

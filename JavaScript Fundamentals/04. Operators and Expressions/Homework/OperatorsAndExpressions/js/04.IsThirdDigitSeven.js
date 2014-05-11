@@ -1,4 +1,4 @@
-﻿/*global jsConsole*/
+﻿/*global jsConsole, isInputValid*/
 
 function nthDigit(input, position) {
     return (Math.floor(input / Math.pow(10, position - 1))) % 10;
@@ -14,4 +14,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("You have entered incorrect data type. Please re-enter");
     }
-}
+};

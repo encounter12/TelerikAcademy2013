@@ -1,4 +1,4 @@
-/*global jsConsole*/
+/*global jsConsole, isInputValid*/
 
 function isDivisibleBy7And5(input) {
     if (input % 35 === 0) {
@@ -16,4 +16,4 @@ document.getElementById("process").onclick = function () {
     } else {
         jsConsole.writeLine("You have entered incorrect data type. Please re-enter");
     }
-}
+};
