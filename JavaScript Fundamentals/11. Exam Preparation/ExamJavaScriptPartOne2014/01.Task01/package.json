@@ -1,0 +1,10 @@
+{
+  "name": "_01.Task01",
+  "version": "0.0.0",
+  "description": "01.Task01",
+  "main": "01.Task01.js",
+  "author": {
+    "name": "IvayloBotusharov",
+    "email": ""
+  }
+}
