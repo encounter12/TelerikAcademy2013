@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Message Box Plug-in</title>
+    <style>
+        #message-box {
+            width: 220px;
+            height: 80px;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+    </style>
+    <script type="text/javascript" src="scripts/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/message-box-plugin.js" ></script>
+</head>
+<body>
+    <div id="message-box"></div>
+<script>
+  $(function() {
+    var msgBox = $('#message-box').messageBox();
+    msgBox.success("The operation has been performed sucecssfully.");
+  });
+  </script>
+</body>
+</html>

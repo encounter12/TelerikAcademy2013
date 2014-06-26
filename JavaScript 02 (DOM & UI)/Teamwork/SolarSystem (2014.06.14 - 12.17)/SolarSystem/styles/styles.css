@@ -1,0 +1,19 @@
+#wrapper {
+}
+
+#buttons {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+}
+
+#container {
+    display: inline-block;
+    float: left;
+}
+
+input[type=button] {
+    width: 80px;
+    height: 40px;
+    margin: 20px;
+}

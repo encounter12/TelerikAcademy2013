@@ -1,0 +1,293 @@
+Packt - Object-Oriented JavaScript (Stoyan Stefanov, 2013)
+
+When executing f() the browser engine finds out that in the function there is local variable "a" which has not yet been defined within that function and returns "undefined". If variables with same name are defined (with var keyword) both in local and global scope then the local variable overwrites the global one. At the time of the first alert(), the variable "a" was not yet defined (hence the value undefined), but it still existed in the local space due to the special behavior called hoisting.
+
+
+W3Schools.com - JavaScript Hoisting - JavaScript Declarations are Hoisted - In JavaScript, a variable can be declared after it has been used. In other words; a variable can be used before it has been declared.
+
+var a = 123;
+function f() {
+    alert(a);
+    var a = 1;
+    alert(a);
+}
+f();
+
+Output: Alert window: undefined, Alert window: 1
+
+
+var a = 123;
+function f() {
+    alert(a);
+    a = 1;
+    alert(a);
+}
+f();
+
+Output: Alert Window: 123, Alert Window: 1 
+
+
+---------------
+JavaScript variable hoisting (Mozilla Developer Network): 
+
+var hoisting
+
+Because variable declarations (and declarations in general) are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behaviour is called "hoisting", as it appears that the variable declaration is moved to the top of the function or global code.
+
+bla = 2
+var bla;
+// ...
+
+// is implicitly understood as:
+
+var bla;
+bla = 2;
+
+-----------------------
+function f(){return 1;}
+f();
+
+
+-----------
+
+The f() function has not been invoked and "local" is not loaded in the global scope 
+function f(){local = 2;}
+local;
+
+Output: ReferenceError: local is not defined;
+
+
+The f() function is invoked and the variable "local" is initialized but with a global scope (no "var" keyword in front of it). 
+
+function f(){local = 2;}
+f();
+local;
+
+Output: 2; 
+
+
+---------------------------
+function declaration pattern
+function literal notation
+function expression 
+anonymous function
+
+-------------------
+When you pass a function, A, to another function, B, and then B executes A, it's often
+said that A is a callback function. If A doesn't have a name, then you can say that it's
+an anonymous callback function
+-------------------
+
+var myFunc = function(message) {
+    console.log(message);
+}
+
+myFunc("test message");
+
+---------------------------
+
+var add = function(a, b) {
+    return a + b;
+}
+
+function subtract(c, d) {
+    return c - d;
+}
+
+var result = subtract(15, add(3, 5));
+
+console.log(result);
+
+--------------
+
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(c, d) {
+    return c - d;
+}
+
+var result = subtract(15, add(3, 5));
+
+console.log(result);
+
+----------------------
+
+Callback functions: 
+
+function multiplyByTwo(a, b, c) {
+    var i, 
+        numbers = [],
+        len = arguments.length;
+
+    for (i = 0; i < len; i++) {
+        numbers[i] = arguments[i] * 2;
+    }
+    return numbers;
+}
+
+function addOne(a) {
+    return a + 1;
+}
+
+console.log(multiplyByTwo(1, 2, 3));
+
+console.log(addOne(100));
+
+--------------------------
+
+function multiplyByTwo(a, b, c, callback) {
+    var i, 
+        numbers = [],
+        len = arguments.length - 1;
+
+    for (i = 0; i < len; i++) {
+        numbers[i] = callback(arguments[i] * 2);
+    }
+    return numbers;
+}
+
+function addOne(a) {
+    return a + 1;
+}
+
+var myarr = multiplyByTwo(1, 2, 3, addOne);
+
+console.log(myarr);
+--------------------------
+
+
+function a() {
+    console.log('A!');
+    return function () {
+        console.log('B!');
+    };
+}
+
+//the parenthesis () means that the function "a" is being invoked which prints "A!" on the console, after that the return data(anonymous function) is being assigned to newFunc
+
+var newFunc = a();
+
+//every time newFunc is invoked it executes the anonymous function and prints "B!" on the console.
+newFunc();
+newFunc();
+
+-----------------
+
+function a() {
+    console.log('A!');
+    return function () {
+        console.log('B!');
+    };
+}
+
+a()();
+
+-----------------
+Function, rewrite thyself: 
+function a() {
+    console.log('A!');
+    a = function () {
+    console.log('B!');
+    };
+}
+
+a();
+a();
+a();
+
+
+-------------------
+
+var a = function () {
+    function someSetup() {
+        console.log('Initial setup...');
+    }
+    
+    function actualWork() {
+        console.log('Worky-worky');
+    }
+    
+    someSetup();
+    return actualWork;
+}();
+
+//the anonymous function is immediately invoked, "someSetup" is executed only once and it prints "Initial setup" on the console, then the return function "actualWork" is assigned to variable "a";
+a();
+
+//the code from "actualWork" function executes
+a();
+
+//the code from "actualWork" function executes
+a();
+
+------------------------
+
+var a = function () {
+    function someSetup() {
+        console.log('Initial setup...');
+    }
+    
+    function actualWork() {
+        console.log('Worky-worky');
+    }   
+    
+    someSetup();
+    return actualWork;
+};
+
+
+a();
+a();
+a();
+
+
+------------------------
+
+
+var a = function () {
+    function someSetup() {
+        console.log('Initial setup...');
+    }
+    
+    function actualWork() {
+        console.log('Worky-worky');
+    }
+    
+    someSetup();
+    return actualWork();
+};
+
+
+a();
+a();
+a();
+
+-------------------
+
+
+var a = "global variable";
+
+var F = function () {
+    var b = "local variable";
+    var N = function () {
+        var c = "inner local";
+    };
+};
+
+If you're at point a, you're inside the global space. If you're at point b, which is inside the space of the function F, then you have access to the global space and to the F space. If you're at point c, which is inside the function N, then you can access the global space, the F space, and the N space. You cannot reach from a to b,because b is invisible outside F. But, you can get from c to b if you want, or from N to b. The interesting part—the closure effect—happens when somehow N breaks out of F and ends up in the global space. 
+
+What happens then? N is in the same global space as a. And, as functions remember the environment in which they were defined, N will still have access to the F space, and hence can access b. This is interesting, because N is where a is and yet N does have access to b, but a doesn't. And how does N break the chain? By making itself global (omitting var) or by having F deliver (or return) it to the global space. Let's see how this is done in practice: 
+
+
+var a = "global variable";
+
+var F = function () {
+    var b = "local variable";
+    var N = function () {
+        var c = "inner local";
+        return b;
+    };
+    return N;
+};

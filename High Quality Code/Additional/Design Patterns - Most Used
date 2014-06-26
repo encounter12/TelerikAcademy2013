@@ -1,0 +1,47 @@
+Creational Design Patterns 
+Behavioral Design Patterns 
+Structural Design Patterns 
+
+Singleton
+Factory method
+Abstract factory
+Strategy
+State
+Template method
+Adapter
+Builder
+Observer
+Iterator
+Decorator
+Façade
+Object pool
+Visitor
+Proxy
+Composite
+ServiceLocator
+Prototype
+Dispose 
+Chain of responsibility
+Flyweight
+
+Repository 
+Inversion of Control / Dependency injection
+Unit of Work
+
+Data Accessor Object
+Data Transfer Object
+
+
+Model-View-Controller
+Model-View-View-Model
+
+
+Pluralsight Design Patterns Library
+
+
+Fluent API
+
+---------------------------------------------
+
+Refactoring 
+Divergent change is one class that suffers many kinds of changes, and shotgun surgery is one change that alters many classes. Either way you want to arrange things so that, ideally, there is a one-to-one link between common changes and classes.
