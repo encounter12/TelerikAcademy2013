@@ -1,0 +1,47 @@
+JavaScript - Browser issues
+
+-------------------------------
+1. Firefox scope problem:
+
+Returns "Message (from if): message" instead of: "Message (from else): message"
+
+if(true){
+    function printMsg(msg) {
+        console.log("Message (from if): " + msg);
+    }
+}
+else{
+    function printMsg(msg) {
+        console.log("Message (from else): " + msg);
+    }
+}
+printMsg("message");
+
+Details: The curly brackets do not specify scope and that is why both functions should be declared. Then the 2nd function should override the 1st one even though the condition in the if statement is always true.
+ 
+NB: Internet Explorer and Google Chrome display the correct result: "Message (from else): message"
+
+-------------------------------
+
+2.
+
+Issue: Firefox and Chrome should return "printMsg is not a function" but actually returns "Hello!"
+
+If we first run:
+
+var printMsg = new Function("msg","console.log(msg);");
+printMsg("Hello!");
+
+in a specific Firefox tab it displays "Hello!". Then if run:
+
+printMsg("Hello!");
+var printMsg = new Function("msg","console.log(msg);");
+
+in the same tab it displays "Hello!" again instead of "printMsg is not a function". Clearing the console with "console.clear()" does not fix the problem. When running the 2nd piece of code in a new Firefox tab then the correct result is displayed: "printMsg is not a function"
+
+
+Details: The problem was that the variable "printMsg" was first initialized within the current window / tab and even after console.clear() the variable is not cleared from the memory.
+
+Solution: Either to run the 2nd piece of JS code in a new browser tab / window or restart the browser. 
+
+-------------------------------
