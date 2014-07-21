@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body id="body">
+    <script id="people-template" type="text/x-handlebars-template">
+
+        <div class="person-item" id="person-item-{{id}}">
+            <strong class="person-name">{{name}}</strong><p class="person-age">{{age}}</p>
+            <img src="{{avatarUrl}}" width="100px" />
+        </div>
+
+    </script>
+
+    <script src="ExternalLibs/require.js" data-main="app"></script>
+    
+    <div id="container"></div>
+</body>
+</html>

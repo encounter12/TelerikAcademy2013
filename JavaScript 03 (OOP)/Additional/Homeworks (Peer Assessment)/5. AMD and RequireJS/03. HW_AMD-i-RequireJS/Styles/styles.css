@@ -1,0 +1,11 @@
+.person-item{
+    display: none;
+}
+
+.person-item.current{
+    display: block;
+}
+
+.person-item.expand{
+    display: block;
+}

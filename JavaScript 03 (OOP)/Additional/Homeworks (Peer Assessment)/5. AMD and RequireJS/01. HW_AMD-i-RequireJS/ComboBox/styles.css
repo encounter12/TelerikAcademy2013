@@ -1,0 +1,16 @@
+﻿img {
+    width: 220px;
+    height: 200px;
+}
+
+.person-item {
+    border: 1px solid darkgrey;
+    width: 220px;
+    padding: 10px;
+}
+
+#selected {
+    border: 1px solid green;
+    width: 220px;
+    padding: 10px;
+}
