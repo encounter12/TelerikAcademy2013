@@ -18,7 +18,7 @@
 
         var players = new Players(),
             TOP_PLAYERS_NUMBER = 2;
-        createNewGame();
+        var game = createNewGame();
 
         $("#submit").click(function() {
 
@@ -44,7 +44,7 @@
                     var isNewGameConfirmed = startNewGamePrompt();
                     if (isNewGameConfirmed) {
                         clearPrintboard();
-                        createNewGame();
+                        game = createNewGame();
                     }
                     else {
                         
@@ -83,7 +83,7 @@
         }
 
         function createNewGame() {
-            game = new Game(1000, 9999);
+            return new Game(1000, 9999);
         }
 
         function isGameComplete(currentGuess, randomNumber) {
