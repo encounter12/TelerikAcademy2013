@@ -1,0 +1,54 @@
+Colorful Rabbits, My Test Data
+1 - red
+1 - red
+1 - purple
+1 - purple
+2 - green
+2 - green
+2 - green
+2 - yellow
+2 - yellow
+2 - yellow
+2 - brown
+2 - brown
+2 - brown
+3 - black
+3 - black
+3 - black
+3 - black
+
+
+red - 2
+purple - 2
+green - 3
+yellow - 3
+brown - 3
+black - 4
+
+----------------------------
+
+1 - red
+1 - red
+1 - purple
+1 - purple
+2 - green
+2 - green
+2 - green
+2 - yellow
+2 - yellow
+2 - yellow
+
+4 
+6 
+10
+
+
+1 - red
+1 - red
+1 - purple
+2 - green
+2 - green
+2 - yellow
+2 - yellow
+3 - brown
+3 - brown

@@ -1,0 +1,221 @@
+RAM Memory
+
+Methods: Save, Load
+
+-----------------------------------
+CPU 
+
+Properties: 
+
+CoresNumber
+
+Methods:
+
+GenerateRandomNumber(int min, int max)
+SaveRandomNumberToRAM(int number)
+
+GetDataFromRAM()
+SaveDataToRAM()
+SquareNumber(int number) - send output to Video Card
+
+-----------------------------------
+
+Cpu32Bit
+
+Methods:
+CalculatePowerOfTwo(int number), Numbers range: 0 - 500 inclusive
+-----------------------------------
+
+CPU64Bit
+
+Methods:
+CalculatePowerOfTwo(int number), Numbers range: 0 - 1000 inclusive
+
+Exception handling: 
+lower - Number too low.
+higher - Number too high.
+
+
+
+
+Storage: 
+-----------------------------------
+HardDiskDrive
+
+Properties: 
+Capacity
+
+Methods:
+
+SaveTextData(int address) - save text data on given integer address
+LoadTextData(int address) - load data from given integer address
+
+-----------------------------------
+RaidArray
+
+Properties: 
+Capacity - equal to one of the hard drives capacity
+List<HardDiskDrive> HardDrives
+
+Methods:
+
+SaveTextData(int address) - saves it on all hard drives in its collection
+LoadTextData(int address) - returns the data from the first working hard drive in its collection.
+
+LoadTextData Exception Handling: 
+
+trying to load data and there are no hard drives in the collection - error: No hard drive in the RAID array!
+
+
+-----------------------------------
+VideoCard
+
+DrawTextData()
+
+-----------------------------------
+
+MonchromeVideoCard
+
+Properties: 
+
+PrintColor - grey
+
+Methods: 
+
+PrintOnConsole() - prints text on the console in grey
+
+
+-----------------------------------
+
+ColorfulVideoCard
+
+PrintColor - green
+
+Methods: 
+
+PrintOnConsole() - prints text on the console in green
+
+
+
+-----------------------------------
+Battery: 
+
+Properties: 
+
+PowerLeftInPercentage
+
+Methods: 
+
+Charge()
+
+-----------------------------------
+
+LaptopBattery
+
+
+Properties: 
+
+PowerLeftInPercentage = 50 %
+
+
+Methods: 
+
+Charge()
+It can charge itself with certain amount but never above 100 and below 0.
+
+
+-----------------------------------
+Motherboard
+
+Methods:
+LoadValueFromRAM()
+SaveValueToRAM()
+Draw() - draws on Video Card
+
+
+-----------------------------------
+
+Computers (Computer): 
+
+Properties: CPU, RAM
+
+-----------------------------------
+PersonalComputer
+
+Properties: CPU, RAM, VideoCard, List<HardDiskDrive> HardDisks
+
+
+Methods:
+
+PlayVideoGame()
+
+The computer generates random number between 1 and 10, inclusive. The user enters a number between 1 and 10 and if the numbers are the same as the random number generated, the video card should print “You win!” Otherwise, it should print “You didn’t guess the number {0}.” (where “{0}” is the random number generated).
+
+-----------------------------------
+Laptop
+
+Properties: 
+CPU, RAM, VideoCard, List<HardDiskDrive> HardDisks, LaptopBattery
+
+Methods: 
+ChargeBattery()
+The laptop can charge its battery by a given percentage and every time it charges, the video card should print “Battery status: {0}%”
+
+-----------------------------------
+Server
+
+Properties: CPU, RAM, List<HardDiskDrive> HardDisks, MonchromeVideoCard
+
+Methods:
+PrintSquareNumber(int number) 
+Currently the server can print the square number of given integer by using its CPU and RAM.
+
+
+-----------------------------------
+
+Factory: 
+Manufacturers (Manufacturer): 
+
+
+Dell
+
+Methods: 
+
+CreateDellComputer()
+
+PC – 64 bit CPU with 4 cores, 8GB RAM, one 1000GB hard drive and colorful video card.
+Server – 64 bit CPU with 8 cores, 64GB RAM, one Raid with two 2000GB hard drives.
+Laptop – 32 bit CPU with 4 cores, 8GB RAM, one 1000GB hard drive, colorful video card
+
+-----------------------------------
+HP
+
+PC – 32 bit CPU with 2 cores, 2GB RAM, one 500GB hard drive and colorful video card.
+Server – 32 bit CPU with 4 cores, 32GB RAM, one Raid with two 1000GB hard drives.
+Laptop – 64 bit CPU with 2 cores, 4GB RAM, one 500GB hard drive, colorful video card and laptop battery.
+
+
+-----------------------------------
+Lenovo (new feature) - 128 bit CPU
+
+
+PC – 64 bit CPU with 2 cores, 4GB RAM, one 2000GB hard drive and monochrome video card.
+Server – 128 bit CPU with 2 cores, 8GB RAM, one Raid with two 500GB hard drives.
+Laptop – 64 bit CPU with 2 cores, 16GB RAM, one 1000GB hard drive, colorful video card and laptop battery.
+10
+
+Commands: 
+
+Command parameter
+
+Charge [number] – charges the laptop by given percentage
+Process [number] – makes request to the server and calculates the square of a number
+Play [number] – plays the game on the personal computer with the given number
+Exit – indicates the end of the input sequence of commands. "Exit" stops the commands processing without any output. It is always the last command in the input sequence.
+
+Execute commands on all 3 computers created by specified manufacturer
+
+If Invalid manuf - error “Invalid manufacturer!”
+
+
+IMotherboard interface - not allowed to change

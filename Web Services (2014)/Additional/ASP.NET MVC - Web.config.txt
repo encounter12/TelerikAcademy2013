@@ -1,0 +1,15 @@
+Web.config 
+
+
+<connectionStrings>
+    <add name="BunniesCraftConnection" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BunniesCraft;Integrated Security=true" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+
+Allows client side JavaScript validation: 
+<configuration>
+  <appSettings>
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  </appSettings>
+</configuration>

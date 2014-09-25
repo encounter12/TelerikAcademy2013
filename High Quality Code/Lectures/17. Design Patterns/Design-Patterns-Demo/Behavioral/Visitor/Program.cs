@@ -15,9 +15,6 @@
             // Employees are 'visited'
             employees.Accept(new IncomeVisitor());
             employees.Accept(new VacationVisitor());
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

@@ -16,9 +16,6 @@
             ibm.Price = 121.00;
             ibm.Price = 120.50;
             ibm.Price = 120.75;
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

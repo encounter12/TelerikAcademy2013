@@ -1,0 +1,35 @@
+1. Start your Visual Studio Web API Project (Ctrl + F5) and copy the Url (for me it is: http://localhost:51860/) in a text document
+
+2. Configure the Web Client app.js baseUrl
+
+2.1. Open the Web Client app.js file located in the Web Client 'js' folder
+
+2.2. Change the baseUrl in app.js
+
+Replace the Url string in the line looking like: .constant('baseUrl', 'http://localhost:51860')
+
+with the one you have copied in step 1 (the Url address of your Web API Project)
+
+2.3. Save the changes made in app.js and close the file
+
+
+3. Start the NodeJS Web Server (located in the Web Client folder) 
+
+3.1. Open cmd in the Web Client folder
+
+Open the Web Client folder, Shift + Right-click - Open Command Window Here
+
+3.2. Copy and Paste the name of the .bat file (including the extension) in cmd, for me it is: 'start-server.bat'
+Press Enter.
+
+In the cmd window a message will appear, look at the bottom, you will see something like: 
+
+Http Server running at http://localhost:5000/
+
+3.3. Copy the web address in a text document (we will need it in step 4).
+
+4. Open the Web client (through the running NodeJS Server) in the browser
+
+Copy the web address from the CMD Window bottom (see step 3.3, for me it is: http://localhost:5000/) and paste it in the web browser. Press Enter.
+
+The Web Client will open in the browser - in the browser web address field it will be written something like: http://localhost:5000/#/home.

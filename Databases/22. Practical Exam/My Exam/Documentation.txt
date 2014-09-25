@@ -1,0 +1,23 @@
+Connection string for "Company" database: (location)
+In the App.config files of ALL THREE projects in the Company solution (Company.Data, Company.Models and Company.SampleDataGenerator)
+
+<connectionStrings>
+    <add name="ToysStoreDbContext" connectionString="data source=.;initial catalog=ToysStore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+Connection string for "Cars" database: (location)
+In the App.config files of ALL THREE projects in the Cars solution (Cars.Data, Cars.Models and Cars.DataImporter)
+
+Relationships for "Company" database: (first-table : second-table - type of relationship)
+Employees : EmployeesProjects - 1 : Many
+Projects : EmployeesProjects - 1 : Many
+Employees : Departments - Many : 1
+Employees : Reports - 1 : Many
+Employees : Projects - Many : Many
+
+Relationships for "Cars" database: (first-table : second-table - type of relationship)
+Car : Dealer - 1 : Many
+Car : Manufacturer - Many : 1
+Dealer : City - Many : Many
+
+Query files: (file location in solution)

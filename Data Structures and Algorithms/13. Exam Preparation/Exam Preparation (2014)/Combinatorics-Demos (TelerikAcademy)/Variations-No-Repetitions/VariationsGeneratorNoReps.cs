@@ -1,0 +1,49 @@
+﻿using System;
+
+class VariationsGeneratorNoReps
+{
+	const int n = 3;
+	const int k = 2;
+	static string[] objects = new string[n] 
+	{
+		"0", "1", "2"
+	};
+	static int[] arr = new int[k];
+	static bool[] used = new bool[n];
+
+	static void Main()
+	{
+		GenerateVariationsNoRepetitions(0);
+	}
+
+	static void GenerateVariationsNoRepetitions(int index)
+	{
+		if (index >= k)
+		{
+			PrintVariations();
+		}
+		else
+		{
+			for (int i = 0; i < n; i++)
+			{
+				if (!used[i])
+				{
+					used[i] = true;
+					arr[index] = i;
+					GenerateVariationsNoRepetitions(index + 1);
+					used[i] = false;
+				}
+			}
+		}
+	}
+
+	static void PrintVariations()
+	{
+		Console.Write("(" + String.Join(", ", arr) + ") --> ( ");
+		for (int i = 0; i < arr.Length; i++)
+		{
+			Console.Write(objects[arr[i]] + " ");
+		}
+		Console.WriteLine(")");
+	}
+}

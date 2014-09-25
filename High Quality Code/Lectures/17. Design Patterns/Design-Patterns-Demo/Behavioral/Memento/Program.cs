@@ -19,9 +19,6 @@
 
             // Restore saved state
             sale.RestoreMemento(memory.Memento);
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

@@ -1,0 +1,400 @@
+ASP.NET Web API Application Architecture - TicTacToe Game 
+
+
+1. Create VS Blank Solution
+
+2. Create TicTacToe.Models Project
+
+Right-click on the Solution - Add - New - Project - Installed - Visual C# - Class Library - Name: TicTacToe.Models - OK.
+
+Delete the Class1.cs file
+
+3. Create TicTacToe.Data Project
+
+4. For TicTacToe.Data add reference to the Models Project (e.g. TicTacToe.Models)
+
+In Solution Explorer - click on TicTacToe.Data Project - Right-click on References - Add Reference... - mark the Models Project (e.g. TicTacToe.Models) - OK.
+
+
+5. Create Tic Tac Toe - Web API Project with Individual User Accounts
+
+Right click on the Solution - Add - New Project - Installed - Visual C# - ASP.NET Web Application - set a name for the WebAPI Project (e.g. TicTacToe.Web or TicTacToe.Services, or TicTacToe.WebServices) - OK - Web API - Change Authentication - Individual User Accounts - OK
+
+
+*AccountController.cs (located in Controllers folder) - has methods for registration, login, logout, password change 
+
+Change the Startup Project to "Current Selection"
+
+
+6. Change all the settings in IdentityConfig.cs Password Validator to false:
+
+Web API Project - App_Start folder - IdentityConfig.cs: 
+
+Method: public static ApplicationUserManager Create
+
+manager.UserValidator
+
+
+Change all the settings to false:
+
+manager.PasswordValidator = new PasswordValidator
+{
+    RequiredLength = 6,
+    RequireNonLetterOrDigit = false,
+    RequireDigit = false,
+    RequireLowerCase = false,
+    RequireUpperCase = false
+}
+
+7. ASP.NET Web API - Enable Cross-Origin Requests:
+
+In order to enable CORS we should install Microsoft ASP.NET Web API 2.2 Cross-Origin Support NuGet Package 
+
+
+    7.1 Install Web API Cors NuGet Package 
+
+Right-click on the Web API Project in Visual Studio - Manage NuGet Packages and search for: Web API Cors. You should see: "Microsoft ASP.NET Web API 2.2 Cross-Origin Support" - highlight it and click on Install.
+(NuGet Id: Microsoft.AspNet.WebApi.Cors)
+
+    7.2 Enable Cors in the Web API Configuration file
+
+In the Web API Project (e.g. TicTacToe.Web) go to folder "App_Start" and open file: WebApiConfig.cs
+
+Add the directive (if it is not already added): 
+using System.Web.Http;
+
+In Web API Project - App_Start folder - WebApiConfig.cs file - Register method add: 
+
+var cors = new EnableCorsAttribute("*", "*", "*");
+config.EnableCors(cors);
+
+*you should add the directive: using System.Web.Http.Cors; for EnableCorsAttribute method to work.
+
+
+8. Enable OData Query string support: 
+
+For the WebAPI Project install NuGetPackage 'Microsoft ASP.NET Web API 2.2 for OData v4.0' (just search for OData v4), then in WebApiConfig.cs file add: 
+
+using System.Web.OData.Extensions;
+
+config.AddODataQueryFilter();
+
+When we create the Controllers Methods in the signature the return type should be: IQueryable and in the method body the returned data should be converted to IQueryable e.g. return this.GetData().AsQueryable();
+
+
+9. Install 'Ninject OWIN host for WebApi 2' in the Web API Project - it is used for Inversion of Control
+
+Right-click on the Web API Project - click on Manage NuGetPackages - (make sure on the left Online - nuget.org is selected) - find 'Ninject OWIN host for WebApi 2' and install it.
+(NuGet Id: Ninject.Web.WebApi.OwinHost)
+
+
+10. Register user through POSTMAN
+
+Sample URL: http://localhost:33257/api/Account/Register
+
+Request Type: POST
+Click on: x-www-form-urlencoded
+Delete all prepopulated fields (if any) by clicking on the X signs.
+
+Enter the key-value pairs: 
+
+Key: Email, Value: ivo@ivo.com
+Key: Password, Value: ivoivo
+Key: ConfirmPassword, Value: ivoivo
+
+*MAKE SURE that THERE ARE NO HEADERS specified !!! (you can check this in top right corner of POSTMAN - Headers button)
+If there are any headers left delete them by clicking on the X button.
+
+Click on Send
+
+11. Login with new user account using POSTMAN
+
+URL: http://localhost:33257/Token
+Query Type: POST
+Click on: x-www-form-urlencoded
+
+Below 'x-www-form-urlencoded' enter the key - value pairs:
+
+Key: grant_type, Value: password
+Key: username, Value: ivo@ivo.com
+Key: password, Value: ivoivo
+Click on Send
+
+
+Copy the value of "access_token" in the Response Body into Text Editor app (we will need it below).
+
+---------
+We can change the Access Token Expiration time from: 
+
+Startup.Auth.cs
+OAuthOptions = new OAuthAuthorizationServerOptions
+{
+    TokenEndpointPath = new PathString("/Token"),
+    Provider = new ApplicationOAuthProvider(PublicClientId),
+    AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
+    AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
+    AllowInsecureHttp = true
+}
+
+AccessTokenExpireTimeSpan = TimeSpan.FromDays(14)
+
+------------
+
+[Authorize()] - all logged in users can access the method
+
+[Authorize(Roles="Admin")] -only administrators can access the specified method or class
+
+
+12. Make a request as logged-in user through POSTMAN
+
+After we have logged in (see step 5 - Login via POSTMAN) open again Google Chrome POSTMAN and type: 
+
+URL: http://localhost:33257/api/Values
+
+Request Type: GET (change the request type to GET from the DropDown Menu)
+
+In the fields below make sure you type in the Header and Value fields. 
+*You can display the Headers input fields by clicking on 'Headers' button on the POSTMAN top right corner.
+
+Header: Authorization, Value: Bearer AuthorizationTokenValueHere
+
+*you should paste the access_token copied from step 6 (Login with new user account using POSTMAN).
+
+Click on Send
+
+There should be Status 200 OK and in the Response Body you should see the result returned by the Values Controller Get method. 
+
+---------------
+
+Models - IdentityModels.cs
+public class ApplicationUser : IdentityUser
+public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
+
+
+
+13. For TicTacToe.Web add references to the Models and Data Projects (e.g. TicTacToe.Models, TicTacToe.Data). 
+
+In Solution Explorer - click on TicTacToe.Web Project - Right-click on References - Add Reference... - mark the Models and Data Projects (e.g. TicTacToe.Models, TicTacToe.Data) - OK.
+
+
+14. Install Entity Framework for all Projects (TicTacToe.Models, TicTacToe.Data, TicTacToe.Web) through NuGet
+
+15. Install Microsoft ASP.NET Identity EntityFramework through NuGet for all projects in the Solution.
+(NuGet Id: Microsoft.AspNet.Identity.EntityFramework)
+
+16. Move the ApplicationUser class (public class ApplicationUser : IdentityUser) to the Models Project 
+
+Create new class ApplicationUser.cs in the Models Project (e.g. TicTacToe.Models) then move the ApplicationUser class from the Web API Project (e.g. TicTacToe.Web) - Models folder - IdentityModels.cs into the newly created class
+
+Add all usings by Ctrl + . , then press Enter for each object that is missing directive
+
+17. In TicTacToe.Web Project - App_Start - IdentityConfig.cs add the following directive:
+
+using TicTacToe.Models;
+
+18. Move the ApplicationDbContext class in the Data Project
+
+Open the Data Project (e.g. TicTacToe.Data) - create a new class ApplicationDbContext.cs - and move the ApplicationDbContext class from the Web API Project (e.g. TicTacToe.Web) - Models folder - IdentityModels.cs to the newly created class.
+
+Add the following directives to: TicTacToe.Data - ApplicationDbContext.cs:
+
+using Microsoft.AspNet.Identity.EntityFramework;
+using TicTacToe.Models;
+
+
+19. Build the Soluion (Ctrl + Shift + B) 
+Double click on the displayed errors and add the needed usings (directives). 
+
+20. Rename ApplicationDbContext class (located in TicTacToe.Data) to TicTacToeDbContext
+
+21. Rename all instances of ApplicationDbContext in TicTacToe.Web to TicTacToeDbContext 
+
+
+21.1. In the TicTacToe.Web Project - App_Start folder - Startup.Auth.cs
+    - add using directive: using TicTacToe.Data;
+    - and rename the ApplicationDbContext to TicTacToeDbContext
+
+21.2. In the TicTacToe.Web Project - App_Start folder - IdentityConfig.cs:
+
+add using directive:
+using TicTacToe.Data;
+
+and rename ApplicationDbContext to TicTacToeDbContext
+
+
+22. Build the solution (Ctrl + Shift + B)
+
+23. Rename ApplicationUser class (located in TicTacToe.Models) to User. 
+
+24. Rename all ApplicationUser instances (located in TicTacToe.Web) to User. 
+
+24.1. Open TicTacToe.Web - App_Start folder - IdentityConfig.cs
+and rename all instances of ApplicationUser to User
+
+24.2. Open TicTacToe.Web - Providers folder - ApplicationOAuthProvider.cs and:
+    - add using directive: using TicTacToe.Models;
+    - rename all instances of 'ApplicationUser' to 'User'
+
+24.3. Open TicTacToe.Web - Controllers folder - AccountController.cs and: 
+    - add the using directive: using TicTacToe.Models;
+    - rename all instances of 'ApplicationUser' to 'User'
+
+
+25. Change the connection string in Web.Config file (located in TicTacToe.Web) to:
+
+<connectionStrings>
+    <add name="DefaultConnection" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=TicTacToe;Integrated Security=True" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+*Make sure you enter the Data Source that is relevant to your SQL Server (for me it is: .\SQLEXPRESS). 
+
+
+26. Enable Migrations 
+
+26.1 Start the Package Manager Console.
+In the Quick Launch (Ctrl + Q) Search bar (Top right corner) type Console (or go to: View - Other Windows - Package Manager Console)
+
+26.2. In Package Manager Console window on the top right corner the "Default Project" should be our Data VS Project (TicTacToe.Data)
+
+26.3. Type the command: Enable-Migrations, then press Enter
+
+26.4. Set AutomaticMigrationsEnabled and AutomaticMigrationDataLossAllowed to TRUE 
+
+In our VS Data Project (e.g. TicTacToe.Data) expand the Migrations folder, open the Configuration.cs file and make the constructor like the one below: 
+
+public Configuration()
+{
+    this.AutomaticMigrationsEnabled = true;
+    this.AutomaticMigrationDataLossAllowed = true;
+}
+
+
+Add the following using directives in TicTacToeDbContext class:
+
+using TicTacToe.Data.Migrations;
+using System.Data.Entity;
+
+
+26.5. Go to the DbContext class file (e.g. TicTacToeDbContext.cs or ApplicationDbContext.cs located in TicTacToe.Data) and add Database.SetInitializer to the DbContext constructor: 
+
+public TicTacToeDbContext()
+    : base("DefaultConnection")
+{
+    Database.SetInitializer(new MigrateDatabaseToLatestVersion<TicTacToeDbContext, Configuration>());
+}
+
+
+27. Register new user using POSTMAN (through Google Chrome)
+
+
+Open POSTMAN and click on RESET button (will clear all previously filled forms including Headers)
+
+Enter the details below: 
+
+URL: http://localhost:33257/api/Account/Register
+*the port above should be specific to your Visual Studio Web Server. 
+
+Request Type: POST (change the request type to POST from the DropDown Menu)
+Click on: x-www-form-urlencoded
+Delete all prepopulated fields (if any) by clicking on the X signs.
+
+Enter the key-value pairs: 
+
+Key: Email, Value: john.doe@joe.com
+Key: Password, Value: 123456
+Key: ConfirmPassword, Value: 123456
+Click on Send
+
+*There should be Status: 200 OK.
+
+------------------------------------
+
+28. Login with new user account using POSTMAN
+
+URL: http://localhost:33257/Token
+Request Type: POST (change the request type to POST from the DropDown Menu)
+
+Click on: x-www-form-urlencoded
+Delete all prepopulated fields (if any) by clicking on the X signs.
+
+Below x-www-form-urlencoded enter the key - value pairs:
+
+Key: grant_type, Value: password
+Key: username, Value: john.doe@joe.com
+Key: password, Value: 123456
+Click on Send
+
+Copy the value of "access_token" in the Response Body into Text Editor app (we will need it below).
+
+------------------------------------
+
+29. Make a request as logged-in user through POSTMAN
+
+After we have logged in open again Google Chrome POSTMAN and type: 
+
+URL: http://localhost:33257/api/Values
+
+Request Type: GET (change the request type to GET from the DropDown Menu)
+
+In the fields below make sure you type in the Header and Value fields. 
+*You can display the Headers input fields by clicking on 'Headers' button on the POSTMAN top right corner.
+
+Header: Authorization, Value: Bearer AuthorizationTokenValueHere
+
+*you should paste the access_token copied from step 26 (Login with new user account using POSTMAN).
+
+Click on Send
+
+There should be Status 200 OK and in the Response Body you should see the result returned by the Values Controller Get method. 
+
+
+30. Create database diagram in MS SQL Server Management Studio 2014
+
+30.1. Open SQL Server Management Studio and connect to your local SQL Server
+
+30.2. Expand the Databases folder in the tree on the left
+*There should be TicTacToe databases listed
+
+30.3 Expand the TicTacToe database folder, right click on Database Diagrams - New Database Diagram
+30.4. Highlight all listed tables excluding _MigrationHistory and click on Add, then Close.
+
+Now you should see the Diagram.
+
+
+31. Create Entities in the Models Project (e.g. TicTacToe.Models)
+
+Classes: 
+    - Game
+
+Enums: 
+    - GameState
+
+...
+
+Here create all entities and game logic  - his is left to the reader.
+
+
+--------------------------------------------------
+
+Additional information: 
+
+How to use Facebook, Google, Twitter, Microsoft Authentication: 
+
+For Facebook: 
+
+http://www.asp.net/mvc/tutorials/mvc-5/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
+
+
+1. Log into:  https://developers.facebook.com/apps
+2. Create new app (there are some additional details when creating the app, see link above)
+3. Get the App Id and the AppSecret
+
+4. In the MVC / Web API Project navigate to: 
+
+App_Start folder - Startup.Auth.cs and add: 
+
+app.UseFacebookAuthentication(
+    appId: "enter App Id here",
+    appSecret: "enter App Secret Here");
+
+--------------------------------------------------

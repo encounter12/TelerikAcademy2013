@@ -21,9 +21,6 @@
 
             purchase = new Purchase(2036, 122100.00);
             teamLead.ProcessRequest(purchase);
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

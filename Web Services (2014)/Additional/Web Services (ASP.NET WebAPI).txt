@@ -1,0 +1,48 @@
+In WebApiConfig.cs file - Register method add: 
+config.Formatters.JsonFormatter.SerializeSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None;
+config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+
+
+if this.ModelState.IsValid in the Controllers methods and data annotations in the business objects properties
+
+Install WebAPI 2.2. with OData from NuGet
+
+
+In the WebApiConfig.cs Register method add:  
+config.AddODataQueryFilter()
+
+in the method located in specific controller class change the method return type to IQueryable 
+
+return this.GetData().AsQueryable()
+
+Then you can make OData queries using the query string in the browser address field.
+
+Or above the Controller's method add attribute: [EnableQuery]
+
+(see: Querying the Entity Set - from MS website) 
+
+
+Cross-Origin requests
+
+Enable Cross-Origin requests in ASP.NET Web API
+
+Install NuGet Package: 
+Microsoft ASP.NET Web API 2.2 Cross-Origin Support 5.2.2
+
+https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Cors/
+Command:
+PM> Install-Package Microsoft.AspNet.WebApi.Cors
+
+In WebApiConfig.cs file in the Register method add: 
+
+config.EnableCors();
+
+or add: [EnableCors(origins: "http://telerikacademy.com", headers: "*", methods: "*")] above the specific Controller's class
+
+-------------
+In Web.config there are some configuration options: 
+
+For example, AppSettings - add key ClientValidationEnabled value=true
+
+

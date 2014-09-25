@@ -1,0 +1,8 @@
+Relationships between tables: 
+
+Toys - Categories - many-to-one
+Toys - Manufacturers - many-to-one
+Toys - AgeRanges - many-to-one
+
+Toys - ToysCategories - many-to-many
+Categories - ToysCategories - many-to-many

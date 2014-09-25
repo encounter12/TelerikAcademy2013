@@ -25,9 +25,6 @@
             ringo.Send("George", "My sweet Lord");
             paul.Send("John", "Can't buy me love");
             john.Send("Yoko", "My sweet love");
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

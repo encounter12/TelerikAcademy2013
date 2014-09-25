@@ -1,0 +1,7 @@
+Relationships between tables: 
+
+Employees - EmployeesProjects -> one-to-many
+Projects - EmployeesProjects -> one-to-many
+Employees - Departments -> many-to-one
+Employees - Reports -> one-to-many
+Employees - Projects -> many-to-many

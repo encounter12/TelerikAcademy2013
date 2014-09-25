@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Frames", "Frames\01.Frames.csproj", "{DB4B98C1-3B33-4F0A-A109-E2455EE68A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.AcademyTasks", "AcademyTasks\02.AcademyTasks.csproj", "{0FB591ED-9D1A-4D7F-92F8-49BFEA7C166C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.MessagesInABottleV1", "MessagesInABottle\01.MessagesInABottleV1.csproj", "{A4C4CA83-6DA7-4EEB-90FA-564A1E537B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.MessagesInABottleV2", "MessagesInABottleV2\01.MessagesInABottleV2.csproj", "{1CC19E84-D24B-4219-886B-4B5C8F6187B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryPasswords", "BinaryPasswords\BinaryPasswords.csproj", "{F1FBEE7A-480B-47E9-B050-0A28382E89D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorBunnies", "ColorBunnies\ColorBunnies.csproj", "{702C76B5-8394-4E99-8993-95BA5422B3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divisors", "Divisors\Divisors.csproj", "{04281938-E864-4DA9-9E63-07BBC5A42F02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB4B98C1-3B33-4F0A-A109-E2455EE68A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4B98C1-3B33-4F0A-A109-E2455EE68A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4B98C1-3B33-4F0A-A109-E2455EE68A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4B98C1-3B33-4F0A-A109-E2455EE68A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB591ED-9D1A-4D7F-92F8-49BFEA7C166C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB591ED-9D1A-4D7F-92F8-49BFEA7C166C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB591ED-9D1A-4D7F-92F8-49BFEA7C166C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB591ED-9D1A-4D7F-92F8-49BFEA7C166C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C4CA83-6DA7-4EEB-90FA-564A1E537B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C4CA83-6DA7-4EEB-90FA-564A1E537B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C4CA83-6DA7-4EEB-90FA-564A1E537B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C4CA83-6DA7-4EEB-90FA-564A1E537B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC19E84-D24B-4219-886B-4B5C8F6187B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC19E84-D24B-4219-886B-4B5C8F6187B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC19E84-D24B-4219-886B-4B5C8F6187B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC19E84-D24B-4219-886B-4B5C8F6187B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FBEE7A-480B-47E9-B050-0A28382E89D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FBEE7A-480B-47E9-B050-0A28382E89D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FBEE7A-480B-47E9-B050-0A28382E89D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FBEE7A-480B-47E9-B050-0A28382E89D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702C76B5-8394-4E99-8993-95BA5422B3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702C76B5-8394-4E99-8993-95BA5422B3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702C76B5-8394-4E99-8993-95BA5422B3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702C76B5-8394-4E99-8993-95BA5422B3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04281938-E864-4DA9-9E63-07BBC5A42F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04281938-E864-4DA9-9E63-07BBC5A42F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04281938-E864-4DA9-9E63-07BBC5A42F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04281938-E864-4DA9-9E63-07BBC5A42F02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

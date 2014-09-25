@@ -1,0 +1,17 @@
+1. What is SQL? What is DML? What is DDL? Recite the most important SQL commands.
+
+1.1. What is SQL?
+
+SQL stands for Structured Query Language and is used to communicate with a database. It is the standard language for relational database management systems. SQL statements are used to perform tasks such as update data on a database, or retrieve data from a database.
+
+1.2. What is DML?
+
+A data manipulation language (DML) is a family of syntax elements similar to a computer programming language used for selecting, inserting, deleting and updating data in a database. A popular data manipulation language is that of Structured Query Language (SQL), which is used to retrieve and manipulate data in a relational database. Data manipulation language comprises the SQL data change statements, which modify stored data but not the schema or database objects. 
+
+1.3. What is DDL? 
+
+A data definition language or data description language (DDL) is a syntax similar to a computer programming language for defining data structures, especially database schemas. Mainly used commands in DDL are: CREATE, USE, ALTER, DROP, TRUNCATE
+
+1.4. Recite the most important SQL commands.
+
+SELECT, INSERT, UPDATE, DELETE.

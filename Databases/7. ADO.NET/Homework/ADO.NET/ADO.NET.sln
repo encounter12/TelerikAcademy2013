@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NorthwindCategoriesRowsNumber", "NorthwindCategoriesRowsNumber\01.NorthwindCategoriesRowsNumber.csproj", "{BA915610-CE72-4F15-B78A-9E6D06E2A6F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NorthwindDBCategoriesNameDescription", "NorthwindDBCategoriesNameDescription\02.NorthwindDBCategoriesNameDescription.csproj", "{2DD246FE-8060-43B3-8750-7B74589353C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CategoriesAndProductNames", "CategoriesAndProductNames\03.CategoriesAndProductNames.csproj", "{FA7C0ECC-DFB0-44EC-B4F0-9B884D4441F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.NewProductInsertion", "NewProductInsertion\04.NewProductInsertion.csproj", "{8FD2E732-C1A1-4CA3-AE9E-1376E68145C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.NorthwindDBImagesSavingToDisk", "NorthwindDBImagesSavingToDisk\05.NorthwindDBImagesSavingToDisk.csproj", "{0F530459-2E86-4B62-B14E-AD6F110A21D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA915610-CE72-4F15-B78A-9E6D06E2A6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA915610-CE72-4F15-B78A-9E6D06E2A6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA915610-CE72-4F15-B78A-9E6D06E2A6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA915610-CE72-4F15-B78A-9E6D06E2A6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD246FE-8060-43B3-8750-7B74589353C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD246FE-8060-43B3-8750-7B74589353C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD246FE-8060-43B3-8750-7B74589353C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD246FE-8060-43B3-8750-7B74589353C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7C0ECC-DFB0-44EC-B4F0-9B884D4441F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7C0ECC-DFB0-44EC-B4F0-9B884D4441F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7C0ECC-DFB0-44EC-B4F0-9B884D4441F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7C0ECC-DFB0-44EC-B4F0-9B884D4441F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD2E732-C1A1-4CA3-AE9E-1376E68145C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD2E732-C1A1-4CA3-AE9E-1376E68145C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD2E732-C1A1-4CA3-AE9E-1376E68145C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD2E732-C1A1-4CA3-AE9E-1376E68145C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F530459-2E86-4B62-B14E-AD6F110A21D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F530459-2E86-4B62-B14E-AD6F110A21D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F530459-2E86-4B62-B14E-AD6F110A21D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F530459-2E86-4B62-B14E-AD6F110A21D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

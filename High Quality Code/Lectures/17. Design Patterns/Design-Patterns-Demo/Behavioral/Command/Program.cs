@@ -16,9 +16,6 @@
             user.Undo(4);
 
             user.Redo(3);
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

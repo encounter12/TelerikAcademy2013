@@ -1,0 +1,14 @@
+http://msdn.microsoft.com/en-us/data/jj554735.aspx
+
+Your First Automatic Migration
+
+Code First Migrations has two commands that you are going to become familiar with.
+
+    Add-Migration will scaffold the next migration based on changes you have made to your model.
+    Update-Database will apply any pending changes to the database.
+
+We are going to avoid using Add-Migration (unless we really need to) and focus on letting Code First Migrations automatically calculate and apply the changes. Let’s use Update-Database to get Code First Migrations to push the changes to our model (the new Blog.Url property) to the database.
+
+    Run the Update-Database command in Package Manager Console.
+
+Code First Migrations has now updated the MigrationsAutomaticDemo.BlogContext database to include the Url column in the Blogs table.

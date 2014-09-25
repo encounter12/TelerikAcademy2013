@@ -1,0 +1,33 @@
+body {
+  color: darkslategray;
+  font-family: Tahoma, sans-serif;
+}
+body #wrapper .explanation {
+  font-size: 0.8em;
+  color: red;
+}
+body #wrapper h2 {
+  text-align: center;
+}
+body #wrapper ul {
+  list-style-type: none;
+}
+body #wrapper ul li {
+  margin: 5px;
+  padding: 5px;
+  border-top: 1px solid gray;
+}
+body #wrapper ul li .author {
+  text-decoration: underline;
+  font-weight: bold;
+  color: black;
+}
+body #wrapper ul li .text {
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+body footer p {
+  text-align: right;
+  font-size: 0.6em;
+  color: lightgray;
+}

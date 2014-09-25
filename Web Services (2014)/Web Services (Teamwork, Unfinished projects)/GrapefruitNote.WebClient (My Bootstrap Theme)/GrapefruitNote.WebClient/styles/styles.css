@@ -1,0 +1,28 @@
+﻿body {
+    padding-top: 70px;
+}
+
+.center-block {
+    float: none;
+}
+
+.submit-button {
+    font-size: 16px;
+}
+
+#main-content {
+    width: 800px;
+    height: 600px;
+    background-image: url('../images/Grapefruit-09-c.png');
+    background-repeat: no-repeat;
+    background-size: 600px auto;
+}
+
+#wrapper {
+    width: 900px;
+    height: 700px;
+}
+
+#home-page-heading {
+    margin-left: 220px;
+}

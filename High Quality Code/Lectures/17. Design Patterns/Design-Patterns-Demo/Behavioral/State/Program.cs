@@ -14,9 +14,6 @@
             account.PayInterest();
             account.Withdraw(2000.00);
             account.Withdraw(1100.00);
-
-            // Wait for user
-            Console.ReadKey();
         }
     }
 }

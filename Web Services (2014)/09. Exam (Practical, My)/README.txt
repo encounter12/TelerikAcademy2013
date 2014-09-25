@@ -1,0 +1,1 @@
+Please, check the connection string in Web.config (located in WebServices.WebApi) and if needed it replace it with your SQL Server path.

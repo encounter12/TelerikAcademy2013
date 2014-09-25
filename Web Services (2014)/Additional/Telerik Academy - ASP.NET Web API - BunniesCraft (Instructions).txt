@@ -1,0 +1,248 @@
+Part I - Code First
+
+1. Create blank Visual Studio Solution 
+2. Create project containing the Entities (Models) e.g. BunniesCraft.Models
+    - here create the Entity classes with their respective Properties.
+
+3. Create project with the connection to the database (the Data Layer) e.g. BunniesCraft.Data
+
+4. Add Reference to the Models Project
+In Solution Explorer - Right-click on References - Add Reference... - mark the Models Project (e.g. BunniesCraft.Models) - OK. 
+
+
+5. Install Entity Framework for the Data Project (e.g. BunniesCraft.Data) through NuGet.
+6. Add the connection string in the App.config file e.g.: 
+
+<connectionStrings>
+    <add name="BunniesCraftConnection" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BunniesCraft;Integrated Security=true" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+*The Data Source should be your SQL Server location
+
+
+7. Add the DbContext and Repository interfaces and classes:
+
+- IBunniesDbContext
+- BunniesDbContext (should inherit DbContext and implement IBunniesDbContext)
+
+Create "Repositories" folder. In it create the following two files (interface and class): 
+
+- IRepository<T>
+- Repository<T> (should implement IRepository<T>)
+
+
+8. Enable Migrations
+
+8.1. Open the Package Manager Console (View - Other Windows - Package Manager Console) 
+
+8.2. In Package Manager Console window on the top right corner the "Default Project" should be our Data VS Project (BunniesCraft.Data)
+
+8.3. Type the command: Enable-Migrations, then press Enter
+
+8.4. Set AutomaticMigrationsEnabled and AutomaticMigrationDataLossAllowed to TRUE 
+
+In our VS Data Project (e.g. BunniesCraft.Data) expand the Migrations folder, open the Configurations.cs file and make the constructor like the one below: 
+
+public Configuration()
+{
+    this.AutomaticMigrationsEnabled = true;
+    this.AutomaticMigrationDataLossAllowed = true;
+}
+
+
+8.5. Add BunniesCraft.Data.Migrations directive in BunniesDbContext class
+
+8.6. Go to the DbContext class file (e.g. BunniesDbContext.cs) and add Database.SetInitializer to the constructor e.g.: 
+
+public BunniesDbContext()
+    : base("BunniesCraftConnection")
+{
+    Database.SetInitializer(new MigrateDatabaseToLatestVersion<BunniesDbContext, Configuration>());
+}
+
+
+9. Create Unit of Work
+
+In the SolutionName.Data project create new class: 
+
+e.g. BunniesData
+
+that will contain all the repositories
+
+and then interface that this class will implement (e.g. IBunniesData) 
+
+In the controllers files define private field e.g. private IBunniesData data; 
+
+If you have created the Web API Project before implementing 'Unit of Work' (in the Data Project) then replace the entity instances in the Controllers classes with data field
+
+e.g. 
+
+public AirCraftsController(IRepository<AirCraft> aircrafts, IRepository<Bunny> bunnies)
+{
+    this.airCrafts = aircrafts;
+    this.bunnies = bunnies;
+}
+
+should be replaced with: 
+
+public AirCraftsController(IBunnies data)
+{
+    this.data = data;
+}
+
+--
+Another example: 
+
+Replace: 
+
+this.airCrafts.Add(newAirCraft);
+
+with: 
+this.data.AirCrafts.Add(newAirCraft);
+
+--
+Another example: 
+Replace: 
+this.airCrafts.SaveChanges();
+
+with:
+this.data.SaveChanges();
+
+-------------------------------
+
+Part II - Web API Project with Services
+
+
+10. Create Web API Project
+
+Right-click on the Solution - Add - New Project - Installed - Visual C# - Web - ASP.NET Web Application - set a name (e.g. BunniesCraft.Services) - click on OK - choose Web API (from the templates) - click on OK. 
+
+11. Add References to Data and Models Projects
+
+In Solution Explorer - Right-click on References - Add Reference... - mark the Models and Data Projects (e.g. BunniesCraft.Models, BunniesCraft.Data) - OK. 
+
+12. Install Entity Framework for the Web Services project (e.g. BunniesCraft.Services)
+
+13. Add the connection string in the Web.config file e.g.: 
+
+<connectionStrings>
+    <add name="BunniesCraftConnection" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BunniesCraft;Integrated Security=true" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+* Make sure the connection string is at the bottom part of the file just above <system.webServer> tag. 
+
+
+Right-click on the VS Solution (e.g. BunniesCraft) - Manage NuGet Packages for Solution... - (on the left hand side) click on 'Installed packages - All' - Entity Framework should be listed (we have installed it for the Data Project) - Manage - check the box next to the Web Services Project (e.g. BunniesCraft.Services) and click on OK.  
+
+
+14. Enable OData Query string support: 
+
+For the WebAPI Project install NuGetPackage 'Microsoft ASP.NET Web API 2.2 for OData v4.0' (just search for OData v4), then in WebApiConfig.cs file add: 
+
+using System.Web.OData.Extensions;
+
+config.AddODataQueryFilter();
+
+When we create the Controllers Methods in the signature the return type should be: IQueryable and in the method body the returned data should be converted to IQueryable e.g. return this.GetData().AsQueryable();
+
+* GetData() is a custom private method we have created in the Controller which is just used for testing purposes.
+
+
+------------------------
+15. ASP.NET Web API - Enable Cross-Origin Requests:
+
+In order to enable CORS we should install Microsoft ASP.NET Web API 2.2 Cross-Origin Support NuGet Package 
+
+
+15.1 Install Web API Cors NuGet Package 
+
+Right-click on the Web API Project in Visual Studio - Manage NuGet Packages and search for: Web API Cors. You should see: "Microsoft ASP.NET Web API 2.2 Cross-Origin Support" - highlight it and click on Install.
+
+15.2 Enable Cors in the Web API Configuration file
+
+In the Web API Project (e.g. BunniesCraft.Services) go to folder "App_Start" and open file: WebApiConfig.cs
+
+Add the directive: 
+using System.Web.Http;
+
+In the Register method add: 
+config.EnableCors();
+
+------------------------
+
+16. Configure web services to get and return Json: 
+
+In the Web API Project (e.g. BunniesCraft.Services) open: App_Start folder - WebApiConfig.cs file 
+
+Add the directive: 
+using System.Net.Http.Headers;
+
+In the Register method add: 
+config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None; 
+config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+-----------------------
+
+17. Create Output Models for the entities 
+
+in Web API Services Project - Models folder - Create new classes for the entities and specify as properties the data that should be output e.g. 
+
+public class AirCraftModel
+{
+    public static Expression<Func<AirCraft, AirCraftModel>> FromAirCraft
+    {
+        get
+        {
+            return a => new AirCraftModel
+            {
+                Id = a.Id,
+                Model = a.Model
+            };
+        }
+    }
+
+    public int Id { get; set; }
+
+    [Required]
+    [MinLength(3)]
+    [MaxLength(10)]
+    public string Model { get; set; }
+}
+
+*Properties that should not be serialized (containing confidential information) should be excluded from the model. 
+
+* If you have first created the Web API Project controllers then in the relevant Controller files change the methods generic parameters from the entity object to the output model object.
+
+----------------------
+
+18. Create Empty controllers for the entities that will have methods 
+
+WebAPI Project - Controllers - Add - Web API 2 Controller - Empty
+
+Sample name: BunniesController, or AircraftsController
+
+----------------------
+
+19. Enter the CRUD (Create, Read, Update, Delete) , All(), ById methods for each controller
+
+There could be some additional methods (web services) e.g. public IHttpActionResult ByAirCraftId(int id) - for getting all the bunnies that are located in aircraft having specific Id.
+
+public IHttpActionResult ByAirCraftId(int id)
+{
+    var bunnies = this.db.Bunnies.Where(b => b.AirCraftId == id).Select(
+    {
+        Id = b.Id,
+        Name = b.Name,
+        Health = b.Health,
+        ColorType = b.ColorType,
+        AirCraftId = b.AirCraftId
+    });
+}
+
+*it is better to create output model for Bunnies too and replace the expression above with: 
+
+var bunnies = this.data.Bunnies.All().Where(b => b.Id = id).Select(BunniesModel.FromBunny).FirstOrDefault();
+
+* Best option will be to use abstraction with Generic base controller that will implement full CRUD operations, then in our controllers we inherit the generic base controller and add some custom /additional methods (if needed). 
+
+----------------------

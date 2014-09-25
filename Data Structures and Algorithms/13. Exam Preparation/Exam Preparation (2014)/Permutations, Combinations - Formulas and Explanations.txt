@@ -1,0 +1,86 @@
+Permutation:
+Set: 1, 2, 3
+
+Partial permutation (in old literature called: variation)
+k = 2 (k is the number of disctinct elements that we select from the set)
+n = 3 (the number of elements in the set)
+
+
+k-permutations of n 
+2-permutations of 3
+
+1, 2
+2, 1
+
+1, 3
+3, 1
+
+
+2, 3
+3, 2
+
+
+n! / (n - k)! = 3! / (3 - 2)! = 6 
+
+
+When k = n the number of permutations n is: n! / (n - k)! = n! / 0! = n! 
+
+In our case 3! / (3 - 3)! = 3! / 0! = 3! = 1 * 2 * 3 = 6
+
+1, 2, 3
+1, 3, 2
+2, 1, 3
+2, 3, 1
+3, 1, 2
+3, 2, 1
+
+
+------------------------
+
+Combinations:
+
+
+Combinations without repetition 
+
+Set: 1, 2, 3
+
+k = 2 (k is the number of disctinct elements that we select from the set)
+n = 3 (the number of elements in the set)
+
+1, 2
+1, 3
+2, 3
+
+(n k) = n! / (n - k)! k! = 3! / (3 - 2)! * 2! = 3
+
+(n k) - binomial coefficient (often read as: often read as "n choose k")
+
+
+Set: 1, 2, 3
+k = 3
+n = 3
+
+1, 2, 3
+
+(n k) = n! / (n - k)! k! = 3! / (3 - 3)! * 3! = 3! / 3! = 1
+
+
+----------------------------------------------------------------------------
+
+
+Number of combinations with repetition (a k-combination with repetitions or k-multicombination, or multisubset of size k from a set S ): 
+- given by a sequence of k not necessarily distinct elements of S
+
+
+((n k)) 
+read as "n multichoose k"
+
+((n k)) = (n + k - 1   k)
+, where (n + k - 1   k) is binomial coefficient
+
+(n + k - 1   k) = (n + k - 1)! / (n + k - 1 - k)! k! = (n + k - 1)! / (n - 1)! k! 
+
+
+((13 10)) = ((13 + 10 - 1)  10)  = (22 10) = 22! / (22 - 10)! 10! = 22! / 12! * 10!
+
+((13 10)) = 22! / 12! * 10!
