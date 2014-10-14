@@ -14,9 +14,10 @@ For me the connection string looks like:
 
 02. Delete all folders with the names below from the Solution: 
 
-\packages
 \bin
 \obj
+
+and delete all files and folders inside folder "packages" EXCLUDING repositories.config file.
 
 
 03. Empty the content of "SampleApp.Web\App_Data"

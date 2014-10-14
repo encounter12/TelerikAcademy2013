@@ -1,0 +1,85 @@
+doncho@minkov.it
+
+{
+    "access_token": "rK89sNSC8mxAQsWP_ABZSg3Erhw03McUjRLwsOYUfySxaUyw3f2S_Rl3QDsXxovolNXkViznAR2cgHfLiB4bpsPKkDwm6hZPjHidft0iDom1bfHioBQAoyzY2oOuylSQVEXuLCWjxeK60jqrJIVlrLtHcwxP4lWgWVjsPMk-bWzuI_3H8UTC3AVl5J5z34Uqe0aLeV9kspKM317jv_oM6mbt12QuNiJDIUOqu7wjgIE9JLfwT-tJ265zZCw3ToQB5wBldvMIVQDQ1w5b9EQ8Cb5ncViq1n3iTbqtUAu4jGyoB86WRXS522t0PBq_NlQjhi5bDGrzlHKsSI_d64ZuexBUCwCRivHhLcHB-fKEheE2dHflj9fXis-dYabMfvTdzR5iNomxXwGZarJxd0GpuAbohcNAHI_SZmyJqmwE5l12tifLpfm0SsaReFwWI26LvUtdiaNsn2XZUAiQe2RBpoklEhcvyBBWB6yzPK0Mbmw",
+    "token_type": "bearer",
+    "expires_in": 1209599,
+    "userName": "doncho@minkov.it",
+    ".issued": "Sun, 05 Oct 2014 12:30:58 GMT",
+    ".expires": "Sun, 19 Oct 2014 12:30:58 GMT"
+}
+
+
+{
+    "Id": 1,
+    "Name": "The Empire strikes back!",
+    "Blue": "No blue player yet",
+    "Red": "doncho@minkov.it",
+    "GameState": "WaitingForOpponent",
+    "DateCreated": "2014-10-05T15:33:03.5856144+03:00"
+}
+
+
+{
+    "Id": 1,
+    "UserId": "88156f94-928c-4a83-b992-abc948e57d3f",
+    "Username": "pencho@petkov.it",
+    "GameId": 1,
+    "Number": "2159",
+    "DateMade": "2014-10-05T15:39:48.987",
+    "CowsCount": 2,
+    "BullsCount": 0
+}
+
+
+
+{
+    "Id": 2,
+    "Name": "Lord of the Rings",
+    "Blue": "No blue player yet",
+    "Red": "doncho@minkov.it",
+    "GameState": "WaitingForOpponent",
+    "DateCreated": "2014-10-05T15:33:28.0117282+03:00"
+}
+
+{
+    "Id": 3,
+    "Name": "Dancing Queen",
+    "Blue": "No blue player yet",
+    "Red": "doncho@minkov.it",
+    "GameState": "WaitingForOpponent",
+    "DateCreated": "2014-10-05T15:34:11.0282168+03:00"
+}
+
+
+
+pencho@petkov.it
+
+{
+    "access_token": "KbOLk5uvBE8U6b6xE8iJOPUZbTqy98tlWxO_JzLH91X8tZBGm60g4lEoINluXMQnRa17-PzOx1jK-2BQnc19gmlk5MNrQp0-WNdq2NiXNURgmvlC-3hjesVkRiknv6vpqwmEkjEcp_ncnHcfDoIDIp_WZeOnnZqMvDah_czR3cXID90esZY5EKUyt-cz6Ir9CBJ4msiU-QMTl-iNXJzkXJykfwZuBwFUOLIwD6cvNSeQZagzrJp5-eImdjNa07_yvR2lZVUKi4azCi4Nb62H8db-vcNeYzUsDtnH-sNkI1eorWg5K95oDISeUhIqPDIPCez09aCb6fIaMmrUmwD3SNVDAj2JZaokXwBwsjKgAqZleFzr8YsSrKI39jagpeFb0BWDxpzgHz36XtLSABriYNHW2iA3wYqTFEtHgfonS8gicj7yqHHhVfIJK6fn6qlOluqwJgyw_s4qdMvCYDWBLkVfZpbYTFS6Tuafy_6gJtc",
+    "token_type": "bearer",
+    "expires_in": 1209599,
+    "userName": "pencho@petkov.it",
+    ".issued": "Sun, 05 Oct 2014 12:31:11 GMT",
+    ".expires": "Sun, 19 Oct 2014 12:31:11 GMT"
+}
+
+
+nikolay@kostov.it
+
+{
+    "access_token": "pxr4T6K8IUUNSgqpY5-x4XQ3qSPPOhUZnA3ihqmlU0dEDDU-iS9mvc_4zT16gyfpzCIIWkDSEAvk9Vd7kMm0B84T815M-hYdhXL2m8Zh5bQZ1i1XCuuuA6uzGwgYi3JoGgcEDRByLCW3z7D0n2lv8j0ld-t34PXeysQESpBQNkGQugOGOUBX0gs3sJz-hpjMrAb0p8rvIHsJv6YgObZFDpy9qP1iPXRLeXv8H9JMrNI86RIC5Nru8jwnXrgVicfsYqfLpCZ9FtZitgKZiwA_l65T0B1jJDAXw1VhPQ4ilS2ESakN4eWp-NXKQrnhwAei1Dt6apPZumbWA6XlrpoBq0qVkyWxa0Cv_Y4DQFKQVdJ25AVsakOoIXxx4tIIArxKRl_S4Jd2JO4nnjldmKmcm9WcLyRnx-GUcpVZTsPxDKoX1W4OKO7TNvQvgJlDUsNpEs8ZidbLJXekUfBEclrUZVmwplAB16oVrmenKM_9HmE",
+    "token_type": "bearer",
+    "expires_in": 1209599,
+    "userName": "nikolay@kostov.it",
+    ".issued": "Sun, 05 Oct 2014 12:31:20 GMT",
+    ".expires": "Sun, 19 Oct 2014 12:31:20 GMT"
+}
+
+
+
+
+services/users.svc/
+
+
+services/users.svc
